@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this corpus, please cite it as below."
+title: "Uzbek–Karakalpak Parallel Corpus"
+type: dataset
+authors:
+  - family-names: "Akhmedova"
+    given-names: "Aynura"
+year: 2026
+repository-code: "https://github.com/aynuraaxmedova345-max/uzbek-karakalpak-parallel-corpus"
+license: MIT
+keywords:
+  - Uzbek NLP
+  - Karakalpak NLP
+  - parallel corpus
+  - computational linguistics

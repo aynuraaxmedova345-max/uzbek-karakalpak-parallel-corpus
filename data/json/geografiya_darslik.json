@@ -1,0 +1,1694 @@
+[
+  {
+    "id": 1,
+    "uzbek": "Aziz o‘quvchilar!",
+    "karakalpak": "Áziz oqıwshılar!",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 2,
+    "uzbek": "Siz 6- sinfda «Materiklar va okeanlar tabiiy geografiyasi» bilan tanishganingizda Yer yuzining rang-barangligini, har bir materik, okean tabiati betakror ekanini, har bir qit’aning o‘rganilish tarixini bilib oldingiz, geografik komplekslarni o‘rgandingiz.",
+    "karakalpak": "Siz 6-klasta «Materikler hám okeanlar tábiyiy geografiyası» menen tanısqanıńızda, jer betiniń ráńbe-ráńligin, hárbir materik, okeannıń tábiyatı biytákirar ekenin, hárbir kontinenttiń úyreniliw tariyxın bilip aldıńız, geografiyalıq komplekslerdi úyrendińiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 3,
+    "uzbek": "Tabiat bilan inson o‘rtasidagi o‘zaro aloqa va ta’sirlar, insonning tabiatdan foydalanish masalalari, tabiatni muhofaza qilish muammolari bilan tanishdingiz.",
+    "karakalpak": "Usınıń menen birge, tábiyat penen insan arasındaǵı óz ara baylanıs hám tásirler, insannıń tábiyattan paydalanıw máseleleri, tábiyattı qorǵaw mashqalaları menen tanıstıńız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 4,
+    "uzbek": "7- sinfda Siz mamlakatimiz — O‘zbekiston Respublikasi joylashgan tabiiy geografik o‘lka — O‘rta Osiyo tabiiy geografiyasi bilan Vatanimiz tabiiy geografiyasini o‘rganasiz.",
+    "karakalpak": "7-klasta siz elimiz — Ózbekistan Respublikası jaylasqan tábiyiy geografiyalıq úlke — Orta Aziya tábiyiy geografiyası menen Watanımız tábiyiy geografiyasın úyrenesiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 5,
+    "uzbek": "O‘rta Osiyoning geografik o‘rni, o‘ziga xos xususiyatlari, geologik tuzilishi, relyefi, foydali qazilmalari, iqlimi, suvlari, tuproqlari, o‘simliklari, hayvonot dunyosi, tabiatdan, uning boyliklaridan oqilona foydalanish masalalari bilan tanishasiz.",
+    "karakalpak": "Orta Aziyanıń geografiyalıq ornı, ózine tán ózgeshelikleri, geologiyalıq dúzilisi, relyefi, paydalı qazılmaları, klimatı, suwları, topıraqları, ósimlikleri, haywanat dúnyası, tábiyattan, onıń baylıqlarınan aqılǵa muwapıq paydalanıw máseleleri menen tanısasız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 6,
+    "uzbek": "Shu bilan birga, geografiyani o‘rganishda xaritalardan foydalanishni, xaritalarning qanday ishlanishini, turlarini, topografik xaritalar, ulardan qanday foydalanishni bilib olasiz.",
+    "karakalpak": "Usınıń menen birge, geografiyanı úyreniwde kartalardan paydalanıwdı, kartalardıń qalay isleniwin, túrlerin, topografiyalıq kartalar, olardan qalay paydalanıwdı bilip alasız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 7,
+    "uzbek": "Yana vaqt hisobi, soat mintaqalari, iqlim hosil qiluvchi omillar, tuproqlar haqida umumiy tushunchalarga ega bo‘lasiz.",
+    "karakalpak": "Jáne jergilikli waqıt, saat poyasları, klimat payda etiwshi faktorlar, topıraqlar haqqında ulıwma túsiniklerge iye bolasız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 8,
+    "uzbek": "O‘rta Osiyo tabiiy geografiyasini o‘rganib bo‘lganingizdan keyin o‘quv yilining ikkinchi yarmidan boshlab, jonajon Vatanimiz — O‘zbekistonning tabiiy geografiyasini chuqur o‘rganishga kirishasiz.",
+    "karakalpak": "Orta Aziya tábiyiy geografiyasın úyrenip bolǵanıńızdan keyin oqıw jılınıń ekinshi yarımınan baslap janajan Watanımız — Ózbekistannıń tábiyiy geografiyasın tereń úyreniwge kirisesiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 9,
+    "uzbek": "Bunda Siz Vatanimizning dunyo geografik xaritasida tutgan o‘rni, ma’muriy bo‘linishi, geologik tuzilishi, relyefi, foydali qazilmalari, iqlim xususiyatlari, ichki suvlari, tuproqlari, o‘simliklari, hayvonot olamini bilib olasiz.",
+    "karakalpak": "Bunda siz watanımızdıń dúnya geografiyalıq kartasında tutqan ornın, administrativlik bóliniwi, geologiyalıq dúzilisi, relyefi, paydalı qazılmaları, klimat ózgeshelikleri, ishki suwları, topıraqları, ósimlikleri, haywanat dúnyasın bilip alasız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 10,
+    "uzbek": "Mamlakatimizning tabiat komplekslarini o‘rganishda siz Vatanimizning turli hududlari tabiati bir-biridan qanday farq qilishi, u yerlarda tabiatdan, uning boyliklaridan qanday foydalanilayotgani, tabiat qanday qilib muhofaza qilinayotganini bilib olasiz.",
+    "karakalpak": "Elimizdiń tábiyat komplekslerin úyreniwde siz watanımızdıń túrli aymaqlarınıń tábiyatı bir-birinen qanday ózgesheleniwi, ol jerlerde tábiyattan, onıń baylıqlarınan qalay paydalanıp atırǵanı, tábiyat qalay qorǵalıp atırǵanlıǵın bilip alasız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 11,
+    "uzbek": "Siz bilishingiz lozim bo‘lgan tushuncha va atamalar alohida harflar bilan ajratib yozilgan.",
+    "karakalpak": "Biliwińiz zárúr bolǵan túsinik hám atamalar arnawlı háripler menen ajıratıp jazılǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 12,
+    "uzbek": "Siz har bir mavzuni qanchalik o‘zlashtirib olganligingizni tekshirib ko‘rish uchun «Savol va topshiriqlar» berilgan.",
+    "karakalpak": "Siz hárbir temanı qanshelli ózlestirip alǵanlıǵıńızdı tekserip kóriw ushın «Sorawlar hám tapsırmalar» berilgen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 13,
+    "uzbek": "Bu savollarga javob berishda, topshiriqlarni bajarishda 7- sinf uchun nashr qilingan geografik atlasdan foydalaning.",
+    "karakalpak": "Bul sorawlarǵa juwap beriwde, tapsırmalardı orınlawda 7-klass ushın basıp shıǵarılǵan geografiyalıq atlastan paydalanıń.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 14,
+    "uzbek": "Bolalar, sizlar «Materiklar va okeanlar tabiiy geografiyasi» kursini o‘rganganingizda tabiiy geografik rayonlashtirish haqida tushuncha olgan edingiz.",
+    "karakalpak": "Balalar, sizler «Materikler hám okeanlar tábiyiy geografiyası» kursın úyrengenińizde tábiyiy geografiyalıq rayonlastırıw haqqında túsinik alǵan edińiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 15,
+    "uzbek": "Shunda Yevrosiyo joyning tabiiy xususiyatlariga qarab bir qancha tabiiy geografik o‘lkalarga bo‘linganligi bilan tanishgansiz.",
+    "karakalpak": "Sonda Evraziya óziniń tábiyiy ózgesheliklerine qarap birqansha tábiyiy geografiyalıq úlkelerge bólingenligi menen tanısqansız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 16,
+    "uzbek": "Endi biz ana shu tabiiy geografik o‘lkalardan biri bo‘lgan O‘rta Osiyoni o‘rganamiz.",
+    "karakalpak": "Endi, biz, mine usı tábiyiy geografiyalıq úlkelerden biri bolǵan Orta Aziyanı úyrenemiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 17,
+    "uzbek": "O‘rta Osiyo tabiiy o‘lkasi o‘zining tabiiy sharoiti, tabiiy geografik xususiyatlariga ega bo‘lgan, boshqa o‘lkalardan tabiiy chegaralari bilan ajralib turadigan yirik tabiiy geografik kompleksdir.",
+    "karakalpak": "Orta Aziya tábiyiy úlkesi óziniń tábiyiy sharayatı, tábiyiy geografiyalıq ózgesheliklerine iye bolǵan, basqa úlkelerden tábiyiy shegaraları menen ajıralıp turatuǵın iri tábiyiy geografiyalıq kompleks bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 18,
+    "uzbek": "Bolalar, Siz Yevrosiyoning tabiiy xaritasidan O‘rta Osiyo joylashgan yerlarni e’tibor berib ko‘rib chiqing.",
+    "karakalpak": "Balalar, siz Evraziyanıń tábiyiy kartasınan Orta Aziya jaylasqan jerlerdi dıqqat penen kórip shıǵıń.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 19,
+    "uzbek": "Shunda O‘rta Osiyo yer yuzasining tuzilishiga ko‘ra uch qismga bo‘linganini ko‘rasiz.",
+    "karakalpak": "Sonda Orta Aziya jer betiniń dúzilisine qarap úsh bólimge bólingenligin kóresiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 20,
+    "uzbek": "O‘lkaning g‘arbiy qismi cho‘llar egallagan keng pasttekisliklar, shimoliy qismi cho‘l, chalacho‘l va dashtlardan iborat qir va tekisliklar ekanini, sharqiy va janubiy qismlarida osmono‘par baland tog‘lar ko‘tarilib turganini ko‘rasiz.",
+    "karakalpak": "Úlkeniń batıs bólimi shóller iyelegen keń pástegislikler, arqa bólimi shól, yarımshól hám dalalardan ibarat qır hám tegislikler ekenin, shıǵıs hám qubla bólimlerinde júdá biyik tawlar kóterilip turǵanın kóresiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 21,
+    "uzbek": "O‘rta Osiyo — Yevrosiyo materigining deyarli qoq o‘rtasida joylashgan juda katta berk havzali o‘lka.",
+    "karakalpak": "Orta Aziya — Evraziya materiginiń derlik qaq ortasında jaylasqan oǵada úlken jabıq basseynli úlke.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 22,
+    "uzbek": "Iqlimi quruq va kontinental.",
+    "karakalpak": "Klimatı qurǵaq hám kontinental klimat.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 23,
+    "uzbek": "Qishi ancha sovuq.",
+    "karakalpak": "Qısı ádewir suwıq keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 24,
+    "uzbek": "Shimoli-sharqiy qismida –50°C sovuq kuzatilgan.",
+    "karakalpak": "Arqa-shıǵıs bóliminde —50oC suwıq baqlanǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 25,
+    "uzbek": "Yozi esa juda issiq.",
+    "karakalpak": "Al, jazı júdá ıssı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 26,
+    "uzbek": "Termizda harorat +50°C ga, Qoraqumda +54°C ga yetgani kuzatilgan.",
+    "karakalpak": "Termizde temperatura +50oC qa, Qaraqumda +54oC qa jetkenligi baqlanǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 27,
+    "uzbek": "Suvsiz cho‘llar minglab kilometrga cho‘zilgan.",
+    "karakalpak": "Suwsız shóller mıńlaǵan kilometrlerge sozılǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 28,
+    "uzbek": "Shu bilan birga, sharqdagi tog‘larda juda katta maydonlarni doimiy qor va muzliklar qoplab yotadi.",
+    "karakalpak": "Usınıń menen birge, shıǵıstaǵı tawlarda oǵada úlken maydanlardı máńgi qar hám muzlıqlar qaplap jatadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 29,
+    "uzbek": "O‘lkada tabiat turli xil o‘tlar o‘sadigan dashtlardan, janubda quruq subtropiklargacha o‘zgaradi.",
+    "karakalpak": "Úlkede tábiyat hár túrli ot-shópler ósetuǵın dalalardan, qublada qurǵaq subtropiklerge shekem ózgeredi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 30,
+    "uzbek": "O‘rta Osiyoda butun dunyoga dong‘i ketgan tarixiy me’morchilik yodgorliklari, muzey-shaharlar mavjud.",
+    "karakalpak": "Orta Aziyada pútkil dúnyaǵa dańqı jayılǵan tariyxıy arxitekturalıq estelikleri, muzey-qalalar bar.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 31,
+    "uzbek": "Buxoro, Samarqand, Xiva dunyoga mashhur shaharlardir.",
+    "karakalpak": "Buxara, Samarqand, Xiywa dúnyaǵa belgili qalalardan esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 32,
+    "uzbek": "O‘rta Osiyo o‘lkasidan jahon fani rivojiga ulkan hissa qo‘shgan Ahmad alFarg‘oniy, Abu Nasr Forobiy, Abu Rayhon Beruniy, Abu Abdulloh Muhammad ibn Muso al-Xorazmiy, Abu Ali ibn Sino kabi olimlar, Jaloliddin Manguberdi, Amir Òemur, Zahiriddin Muhammad Bobur, Muhammad Shayboniyxon kabi sarkardalar, Abdurahmon Jomiy, Alisher Navoiy, Abu Abdulloh Rudakiy, Ahmad Yassaviy, Boborahim Mashrab kabi buyuk shoirlar, Imom al-Buxoriy, Hakim at-Termiziy, Bahouddin Naqshband kabi hadisshunos mutafakkirlar yetishib chiqqan.",
+    "karakalpak": "Orta Aziya úlkesinen pútkil dúnya iliminiń rawajlanıwına úlken úles qosqan Ahmad al-Ferǵaniy, Abu Nasr Farabiy, Abu Rayxan Beruniy, Abu Abdullah Muhammed ibn Musa al-Xorezmiy, Abu Ali ibn Sina usaǵan alımlar, Amir Temur, Zahiriddin Muhammed Babur, Muhammed Shaybaniyxan usaǵan sárkardalar, Alisher Nawayı, Abdirahman Jomiy, Abu Abdullah Rudakiy, Ahmad Yassawiy, Babarahim Mashrab usaǵan ullı shayırlar, Imam al Buxariy, Hakim at-Termiziy, Bahowiddin Naqshbandiy usaǵan hádis izertlewshiler jetisip shıqqan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 33,
+    "uzbek": "O‘rta Osiyo Yevrosiyo materigining o‘rtasida joylashgan.",
+    "karakalpak": "Orta Aziya Evraziya materiginiń ortasında jaylasqan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 34,
+    "uzbek": "O‘lkaning eng shimoliy nuqtasi 53,8° shimoliy kenglikda, Ayirtov yaqinida, eng janubiy nuqtasi Hindukush tog‘larining g‘arbiy tarmog‘i bo‘lgan.",
+    "karakalpak": "Úlkeniń eń arqa noqatı 53,8o arqa keńlikte, Ayırtawǵa jaqın jerde, eń qubla noqatı Hindikush tawlarınıń batıs tarmaǵı bolǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 35,
+    "uzbek": "7 lari tutashgan joyda (34° shimoliy kenglik), g‘arbiy nuqtasi Kaspiy dengizining Mang‘ishloq yarimorolidagi Òubqarag‘ay burnida (50,3° sharqiy uzunlik) va sharqiy nuqtasi Savir tog‘- larining etagidagi Qora Irtish daryosi vodiysida (85,6° sharqiy uzunlik) joylashgan.",
+    "karakalpak": "7 kuh taw dizbegi menen Nishapur tawları tutasqan jerde — (34o a.k), batıs noqatı Kaspiy teńiziniń Mańǵıshlaq yarım atawındaǵı Tubqaraǵay tumsıǵında (50,3o sh.b) hám shıǵıs noqatı Savir tawlarınıń etegindegi Qara Irtish dáryası alabında (85,6o sh.b.) jaylasqan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 36,
+    "uzbek": "Shimoldan janubga 2200 km va g‘arbdan sharqqa 2750 km ga yaqin masofaga cho‘zilgan.",
+    "karakalpak": "Arqadan qublaǵa 2200 km hám batıstan shıǵısqa 2750 km ge jaqın aralıqqa sozılǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 37,
+    "uzbek": "O‘rta Osiyo o‘lkasining geografik kengligi Janubiy Yevropa o‘lkasi, Afrikadagi Atlas tog‘lari geografik kengligiga to‘g‘ri keladi.",
+    "karakalpak": "Orta Aziya úlkesiniń geografiyalıq keńligi Qubla Evropa úlkesi, Afrikadaǵı Atlas tawları geografiyalıq keńligine tuwrı keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 38,
+    "uzbek": "U yerlardagi mamlakatlar iliq mo‘tadil va subtropik tabiatli mamlakatlardir.",
+    "karakalpak": "Bul jerdegi eller jıllı, ortasha hám subtropikalıq tábiyatlı eller esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 39,
+    "uzbek": "O‘rta Osiyo yirik materikning o‘rtasida, dengiz va okeanlardan uzoqda joylashganligi sababli juda qurg‘oqchil o‘lkadir.",
+    "karakalpak": "Orta Aziya úlken materiktiń ortasında, teńiz hám okeanlardan uzaqta jaylasqanlıqtan júdá qurǵaq úlke esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 40,
+    "uzbek": "O‘lkaning chegarasi juda murakkab.",
+    "karakalpak": "Úlkeniń shegarası júdá quramalı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 41,
+    "uzbek": "Janub va sharq tomonlarida chegara tog‘larning suvayirg‘ichidan o‘tkaziladi.",
+    "karakalpak": "Qubla hám shıǵıs táreplerinen shegara tawlardıń suw ayırǵıshlarınan ótkeriledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 42,
+    "uzbek": "Chunki bu tog‘lar iqlimiy va gidrografik chegaralar hisoblanadi.",
+    "karakalpak": "Sebebi bul tawlar klimatlıq hám gidrografikalıq shegaralar bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 43,
+    "uzbek": "Lekin shimoli-g‘arbiy, shimoliy va shimoli-sharqiy chegaralarni aniqlash ancha murakkab.",
+    "karakalpak": "Biraq arqa-batıs, arqa hám arqa-shıǵıs shegaralardı anıqlaw birqansha qıyın.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 44,
+    "uzbek": "Bu yerda iqlimiy chegaralar yo‘q desa ham bo‘ladi.",
+    "karakalpak": "Bul jerde klimatlıq shegaralar joq dewge de boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 45,
+    "uzbek": "Shuning uchun bu yerda tektonik chegaralar asos qilib olinadi.",
+    "karakalpak": "Sonlıqtan bul jerde tektonikalıq shegaralardı tiykar etip alıwǵa boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 46,
+    "uzbek": "Shunday qilib, O‘rta Osiyo o‘lkasi chegaralarini quyidagicha belgilash mumkin.",
+    "karakalpak": "Solay etip, Orta Aziya úlkesi shegaraların tómendegishe belgilew múmkin.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 47,
+    "uzbek": "G‘arb tomonda Kaspiy dengizi qirg‘oqlari chegara bo‘ladi.",
+    "karakalpak": "Batıs tárepte Kaspiy teńiziniń jaǵaları shegara boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 48,
+    "uzbek": "Shimoli-g‘arbiy chegara Emba daryosining quyar joyidan janubroqdan boshlanib, Ustyurt platosi shimoliy chinklari bo‘ylab o‘tadi va Mug‘ojar tog‘larining janubiy etaklarigacha boradi.",
+    "karakalpak": "Arqa-batıs shegara Emba dáryasınıń quyar jerinen qublaraqtan baslanıp, Ústirt platosı arqa chinkleri boylap ótedi hám Muǵojar tawlarınıń qubla eteklerine shekem baradı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 49,
+    "uzbek": "Bu chegara Sharqiy Yevropa platformasi bilan yosh Turon platformasi chegarasiga to‘g‘ri keladi.",
+    "karakalpak": "Bul shegara Shıǵıs Evropa platforması menen Turan platforması shegarasına tuwrı keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 50,
+    "uzbek": "Chegara 58° sharqiy uzunlik va 48° shimoliy kenglikka yetgandan keyin shimolga, shimoli sharqqa burilib Qustonoygacha davom etadi va undan Ayirtovga boradi.",
+    "karakalpak": "Shegara 58o sh.b hám 48o a.k jetkennen keyin arqaǵa, arqa-shıǵısqa qaray Qostanayǵa shekem dawam etedi hám onnan Ayırtawǵa baradı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 51,
+    "uzbek": "So‘ngra chegara sharq va janubi sharqqa tomon Qozog‘iston past tog‘larining shimoliy etaklari bo‘ylab davom etib, Qozog‘iston — Xitoy chegarasida Savir tog‘larining shimoliy etagiga keladi.",
+    "karakalpak": "Soń shegara shıǵıs hám qublashıǵısqa qaray Qazaqstannıń páskeltek tawlarınıń arqa etekleri boylap dawam etip, Qazaqstan — Qıtay shegarasındaǵı Savir tawlarınıń arqa etegine keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 52,
+    "uzbek": "Sharqiy chegara Savir, O‘rkashar, Moylitog‘, Jung‘oriya, Boroxoro, Iren-Xabirga tizmalari, Adenkur dovoni, Qarat, Xoliqtog‘ tizmalari suvayirg‘ichi orqali o‘tib, Xontangri tog‘ tuguniga keladi.",
+    "karakalpak": "Shıǵıs shegara Savir, Órkashar, Maylıtaw, Junǵariya, Boroxoro, Iren-Xabirga taw dizbekleri, Adenkur ótkeli, Qarat, Xalıqtaw dizbekleri suwayırǵıshı arqalı ótip, Xantańri taw túyinine shekem keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 53,
+    "uzbek": "Undan so‘ng Ko‘kshag‘al, Otboshi tizmalari suvayirg‘ichi orqali o‘tib, Farg‘ona tizmasiga tutashadi, so‘ngra Oloy tog‘larining sharqiy qismi va Sariko‘l tizmasi bo‘ylab o‘tib, Hindukush tog‘lariga tutashadi.",
+    "karakalpak": "Onnan keyin Kókshaǵal, Atbası dizbekleriniń suw ayırǵıshı arqalı ótip, Ferǵana dizbegine tutasadı, sońınan Alay tawlarınıń shıǵıs bólimi hám Sarıkól dizbegi boylap ótip Hindikush tawlarına tutasadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 54,
+    "uzbek": "Janubiy chegara Hindikush, Safedko‘h, Nishopur tog‘ tizmalari suvayirg‘ichi bo‘ylab o‘tib, Kaspiy dengizi qirg‘og‘i bilan tutashadi.",
+    "karakalpak": "Qubla shegara Hindikush, Safedkuh, Nishapur taw dizbekleriniń suw ayırǵıshları boylap ótip, Kaspiy teńizi jaǵası menen tutasadı (Kartadan bul shegaralardı kórip shıǵıń).",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 55,
+    "uzbek": "O‘rta Osiyoni alohida tabiiy geografik o‘lka sifatida ajratishga asos bo‘ladigan tabiiy xususiyatlari quyidagilar.",
+    "karakalpak": "Orta Aziyanıń ayrıqsha tábiyiy geografiyalıq úlke sıpatında ajıratıwǵa bolatuǵın ózine tán tábiyiy ózgeshelikleri tómendegiler.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 56,
+    "uzbek": "O‘rta Osiyo okeanlardan uzoqda, materikning o‘rtasida joylashgan.",
+    "karakalpak": "Orta Aziya okeanlardan uzaqta, materiktiń ortasında jaylasqan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 57,
+    "uzbek": "Eng yaqin okean — Hind okeanigacha bo‘lgan masofa 1000 km dan ortiq.",
+    "karakalpak": "Eń jaqın okean — Hind okeanına shekem aralıq 1000 km den aslam.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 58,
+    "uzbek": "Iqlimi — qishi ancha sovuq, yozi issiq, yog‘in kam bo‘lgan keskin kontinental iqlim.",
+    "karakalpak": "Klimatı — qısı ádewir suwıq, jazı ıssı, jawın az bolǵan keskin kontinental klimat.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 59,
+    "uzbek": "Suvlari tashqariga chiqib ketmaydigan, gidrografik jihatdan yaxlit berk o‘lka (shimoli-sharqiy kichik qismidan tashqari).",
+    "karakalpak": "Suwları sırtqa shıǵıp ketpeytuǵın, gidrografikalıq jaqtan bir pútin tuyıq úlke (arqa-shıǵıs kishi bóliminen tısqarı).",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 60,
+    "uzbek": "Tabiatida o‘ziga xos keskinliklar mavjud, ya’ni bu yerda dengiz sathidan 132 m past bo‘lgan Qoragiyo botig‘i bilan birga, balandligi 7000 m dan oshadigan tog‘lar bor.",
+    "karakalpak": "Tábiyatında ózine tán keskinlikler bar, yaǵnıy bul jerde teńiz qáddinen 132 m tómen bolǵan Qaragiya batıǵı menen birge, biyikligi 7000 m den asatuǵın tawlar bar.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 61,
+    "uzbek": "Cho‘llarda yog‘in miqdori 70—80 mm dan, tog‘larda 1000 mm gacha boradi.",
+    "karakalpak": "Shóllerde jawınshashın muǵdarı 70—80 mm ge shekem, tawlarda 1000 mm ge shekem jetedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 62,
+    "uzbek": "Qishda shimoli-sharqiy qismida –50°C li sovuq, yozda janubida +50°C li jazirama issiq kunlar kuzatiladi.",
+    "karakalpak": "Qısta arqa-shıǵıs bóliminde—50o C lıq suwıq, jazda qublada +50o C lıq jazıyrama ıssı kúnler baqlanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 63,
+    "uzbek": "Janub va sharq tomonlari baland tog‘lar bilan o‘ralgan.",
+    "karakalpak": "Qubla hám shıǵıs tárepleri biyik tawlar menen qorshalǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 64,
+    "uzbek": "Shimol va shimoli g‘arb tomonlari tekisliklardan iborat.",
+    "karakalpak": "Arqa hám arqa-batıs tárepleri tegisliklerden ibarat.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 65,
+    "uzbek": "G‘arbdan iliq shamollar, shimoldan sovuq, quruq shamollar bemalol kirib kela oladi.",
+    "karakalpak": "Batıstan jıllı samallar, arqadan suwıq, qurǵaq samallar irkinishsiz kirip kele aladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 66,
+    "uzbek": "G‘arbiy shamollar tog‘larning g‘arbiy yonbag‘irlariga anchagina yog‘in keltiradi.",
+    "karakalpak": "Batıs samallar tawlardıń batıs janbawırlarına kóp jawın-shashın alıp keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 67,
+    "uzbek": "Baland tog‘larda qor, muz to‘planib, yoz davomida daryolarga suv berib turadi.",
+    "karakalpak": "Biyik tawlarda qar, muz toplanıp, jaz dawamında dáryalarǵa suw berip turadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 68,
+    "uzbek": "Bu yerda o‘simliksiz ko‘chma qumlar ham, o‘tish qiyin bo‘lgan chakalakzorlar ham, ekinzor va bog‘lardan iborat obod vohalar ham mavjud.",
+    "karakalpak": "Bul jerde ósimliksiz kóshpeli qumlardı, ótiw qıyın bolǵan putalıqlardı, egislik hám baǵlardan ibarat oazislerdi ushıratıw múmkin.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 69,
+    "uzbek": "O‘rta Osiyoning gidrografik berk o‘lka ekanligi va sharq, janub tomonlardan baland tog‘lar bilan o‘ralganligi ekologik jihatdan noqulay vaziyat tarkib topishiga sabab bo‘ladi.",
+    "karakalpak": "Orta Aziyanıń gidrografikalıq tuyıq úlke ekenligi hám shıǵıs, qubla táreplerden biyik tawlar menen qorshalǵanlıǵı ekologiyalıq jaqtan qolaysız jaǵday júzege keliwine sebep boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 70,
+    "uzbek": "O‘rta Osiyo tabiatini o‘rganish juda qadim davrlardan boshlangan.",
+    "karakalpak": "Orta Aziya tábiyatın úyreniw oǵada áyyemgi dáwirlerden baslanǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 71,
+    "uzbek": "Chunki O‘rta Osiyo G‘arb va Sharq davlatlari o‘rtasidagi muhim xalqaro savdo yo‘lida joylashgan.",
+    "karakalpak": "Sebebi Orta Aziya Batıs hám Shıǵıs mámleketleri arasındaǵı áhmiyetli xalıqaralıq sawda jolında jaylasqan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 72,
+    "uzbek": "O‘rta Osiyo haqidagi dastlabki ma’lumotlarni Gerodot, Strabon, Arrian, Ptolemey va boshqalarning asarlarida uchratish mumkin.",
+    "karakalpak": "Orta Aziya haqqındaǵı dáslepki maǵlıwmatlardı Gerodot, Strabon, Arrian, Ptolemey hám basqalardıń shıǵarmalarında ushıratıw múmkin.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 73,
+    "uzbek": "O‘rta Osiyo tabiatini o‘rganish tarixi bir necha bosqichdan iborat.",
+    "karakalpak": "Orta Aziya tábiyatın izertlew tariyxı birneshe basqıshlardan ibarat.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 74,
+    "uzbek": "Birinchi bosqich — «Buyuk ipak yo‘li» mavjud bo‘lgan davr.",
+    "karakalpak": "Birinshi basqısh — «Ullı jipek jolı» payda bolǵan dáwir.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 75,
+    "uzbek": "Ipak yo‘li miloddan avvalgi II asrdan milodning XVI asrigacha asosiy savdo yo‘li hisoblangan.",
+    "karakalpak": "Jipek jolı biziń eramızǵa shekemgi II ásirden biziń eramızdıń XVI ásirine shekem tiykarǵı sawda jolı bolıp esaplanǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 76,
+    "uzbek": "Bu davrda O‘rta Osiyo tabiati xitoy, arab va mahalliy olimlar tomonidan o‘rganildi.",
+    "karakalpak": "Bul dáwirde Orta Aziya tábiyatı qıtay, arab hám jergilikli alımlar tárepinen izertlengen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 77,
+    "uzbek": "Xitoy sayyohi Chjan-Syan 13 yil davomida (miloddan avvalgi 138—126- yillar) Issiqko‘l atrofi, Farg‘ona va Xorazm tabiatini, aholisi va xo‘jaligini o‘rgandi.",
+    "karakalpak": "Qıtay sayaxatshısı Chjan-Cyan 13 jıl dawamında (b.e.sh. 138—126-jıllar) Issıqkól átirapın, Ferǵana hám Xorezm tábiyatın, xalqın hám xojalıǵın úyrendi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 78,
+    "uzbek": "Milodning VII asrida Syuan-Szan 16 yil davomida (629—645- yillar) Òyanshan, Yettisuv, Chu vodiysi, Òoshkent, Samarqand va Pomir tabiatini o‘rganib, muhim geografik asar yozib qoldirgan.",
+    "karakalpak": "Biziń eramızdıń VII ásirinde Syuan-Czan 16 jıl dawamında (629—645-jıllar) Tyanshan, Jetisuw, Chu oypatlıǵı, Tashkent, Samarqand hám Pamir tábiyatın izertlep, áhmiyetli geografiyalıq shıǵarma jazıp qaldırǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 79,
+    "uzbek": "O‘rta asrlarda O‘rta Osiyo tabiati arab olimlari tomonidan o‘rganilgan.",
+    "karakalpak": "Orta ásirlerde Orta Aziya tábiyatı Arab alımları tárepinen izertlengen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 80,
+    "uzbek": "Arab sayyohlari va olimlari tomonidan O‘rta Osiyo tabiati va uning tabiiy geografik o‘lkalari haqida juda ko‘p geografik ma’lumotlar yozib qoldirilgan.",
+    "karakalpak": "Arab sayaxatshıları hám alımları Orta Aziya tábiyatı hám onıń tábiyiy geografiyalıq úlkeleri haqqında júdá kóp geografiyalıq maǵlıwmatlar jazıp qaldırǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 81,
+    "uzbek": "Abul Hasan Ali Ma’sudiy (X asr) O‘rta Osiyo va Kavkaz geografiyasi haqida asar yozgan, Abu Is’hoq Istaxriy (X asr) «Iqlimlar kitobi», Yoqut ibn Abdulla (XII—XIII asrlar) «Mamlakatlarning alifbo tartibida ro‘yxati» nomli asar yozgan.",
+    "karakalpak": "Abul Xasan Aliy Masudiy (X ásir) Orta Aziya hám Kavkaz geografiyası haqqında shıǵarma jazǵan, Abu Isxaq Istaxriy (X ásir) «Klimatlar kitabı», Yaqut ibn Abdulla (XII—XIII ásirler) «Ellerdiń álipbe tártibindegi dizimi» atamasındaǵı shıǵarma jazǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 82,
+    "uzbek": "O‘rta Osiyo tabiatini o‘rganishga shu yerlik olimlar ham juda katta hissa qo‘shgan.",
+    "karakalpak": "Orta Aziya tábiyatın izertlewde jergilikli alımlar da júdá úlken úles qosqan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 83,
+    "uzbek": "Muhammad ibn Muso al-Xorazmiy (IX asr) O‘rta Osiyo geografiyasiga asos solgan, uning «Yer tasviri» nomli asari o‘z zamonasida eng mukammal geografik asar bo‘lgan.",
+    "karakalpak": "Muxammad ibn Musa al-Xorezmiy (IX ásir) Orta Aziya geografiyasına tiykar salǵan, onıń «Jer kórinisi» degen shıǵarması óz zamanında eń tolıq geografiyalıq shıǵarma bolǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 84,
+    "uzbek": "Bu asar 1878- yilda rus tiliga tarjima qilingan.",
+    "karakalpak": "Bul shıǵarma 1878-jılı rus tiline awdarılǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 85,
+    "uzbek": "O‘rta Osiyo tabiati, geologik tuzilishi, foydali qazilmalari, xo‘jaligi, tarixi haqida buyuk olim Abu Rayhon Beruniy (X—XI asrlar) juda qimmatli ma’lumotlar yozib qoldirgan.",
+    "karakalpak": "Orta Aziya tábiyatı, geologiyalıq dúzilisi, paydalı qazılmaları, xojalıǵı, tariyxı haqqında ullı alım Abu Rayxan Beruniy (X—XI ásirler) oǵada bahalı maǵlıwmatlar jazıp qaldırǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 86,
+    "uzbek": "Uning dunyo xaritasida O‘rta Osiyodagi ko‘p joylar va ularning nomlari berilgan.",
+    "karakalpak": "Onıń dúnya kartasında Orta Aziyadaǵı kóp jerler hám olardıń atları berilgen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 87,
+    "uzbek": "Mahmud Koshg‘ariy (XI asr) ham O‘rta Osiyoni, uning tabiatini o‘rgangan bo‘lib, o‘zining mashhur «Devon-u lug‘otit turk» asarida ko‘p joy nomlari va geografik atamalar haqida yozib qoldirgan.",
+    "karakalpak": "Maxmud Qashǵariy (XI ásir) da Orta Aziyanı, onıń tábiyatın izertlegen, óziniń belgili «Devonu luǵotit turk» shıǵarmasında kóp jerlerdiń atamaları hám geografiyalıq terminler haqqında jazıp qaldırǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 88,
+    "uzbek": "Zahiriddin Muhammad Bobur (XV—XVI asrlar) «Boburnoma» asarida O‘rta Osiyo tabiati, ayniqsa, Farg‘ona vodiysidagi joylar haqida muhim ma’lumotlar keltirgan.",
+    "karakalpak": "Zahiriddin Muhammed Babur (XV—XVI ásirler) «Baburnama» shıǵarmasında Orta Aziya tábiyatı, ásirese Ferǵana alabındaǵı jerler haqqında áhmiyetli maǵlıwmatlar keltirgen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 89,
+    "uzbek": "Ikkinchi bosqich — bu davr O‘rta Osiyoning Rossiya imperiyasi tomonidan bosib olinishi arafasidan to oktabr to‘ntarishigacha bo‘lgan davrni o‘z ichiga oladi.",
+    "karakalpak": "Ekinshi basqısh — bul dáwir Orta Aziyanıń Rossiya imperiyası tárepinen basıp alınıwı qarsańınan tap oktyabr revolyuciyasına shekem bolǵan dáwirdi óz ishine aladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 90,
+    "uzbek": "O‘rta Osiyo bu bosqichda har tomonlama turli maqsadlarda, shu jumladan, harbiy maqsadda o‘rganildi.",
+    "karakalpak": "Orta Aziya bul basqıshta hár tárepleme túrli maqsetlerde, sonıń menen birge áskeriy maqsette izertlendi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 91,
+    "uzbek": "O‘rta Osiyo Rossiya imperiyasi tomonidan bosib olinguniga qadar uning tabiati I.Xoxlov (1620), B.Pazuxin (1669—1673), Benevini (1718—1725), F.Yefremov, G.Karelin va boshqalar tomonidan o‘rganildi.",
+    "karakalpak": "Orta Aziya Rossiya imperiyası tárepinen basıp alınǵanǵa shekem onıń tábiyatı I.Xoxlov (1620), B.Pazuxin (1669—1673), Benevini (1718—1725), F.Efremov, G.Karelin hám basqalar tárepinen izertlendi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 92,
+    "uzbek": "Ular, asosan, Xorazm, Qoraqum, Qizilqum, Markaziy Qozog‘iston, Orol dengizi tabiatini o‘rgandilar.",
+    "karakalpak": "Olar tiykarınan Xorezm, Qaraqum, Qızılqum, Oraylıq Qazaqstan, Aral teńizi tábiyatın úyrendi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 93,
+    "uzbek": "O‘rta Osiyo Rossiyaning mustamlakasiga aylantirilgandan keyin tabiiy boyliklaridan ko‘proq, to‘liqroq foydalanish maqsadida uning tabiatini o‘rganish yana ham kengaydi.",
+    "karakalpak": "Orta Aziya Rossiyanıń koloniyasına aylandırılǵannan keyin onıń tábiyiy baylıqlarınan kóbirek, tolıǵıraq paydalanıw maqsetinde tábiyatın úyreniw jáne de en jaydı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 94,
+    "uzbek": "Bu davrda uning tabiati, xo‘jaligini P.P.Semyonov-Òyanshanskiy (1856—1897), N.A.Seversov (1864—1878), A.P.Fedchenko (1868—1871) va boshqalar o‘rgandilar.",
+    "karakalpak": "Bul dáwirde onıń tábiyatın, xojalıǵın P.P.Semyonov-Tyanshanskiy (1856— 1897), N.A.Severcev (1864—1878), A.P.Fedchenko (1868—1871) hám basqalar izertledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 95,
+    "uzbek": "Natijada, O‘rta Osiyoning geologik tuzilishi, foydali qazilmalari, o‘simliklari, hayvonot dunyosi haqida muhim ilmiy ma’lumotlar olindi.",
+    "karakalpak": "Nátiyjede, Orta Aziyanıń geologiyalıq dúzilisi, paydalı qazılmaları, ósimlikları, haywanat dúnyası haqqında áhmiyetli ilimiy maǵlıwmatlar alındı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 96,
+    "uzbek": "Uchinchi bosqich — oktabr to‘ntarishidan O‘zbekiston mustaqillikka erishgungacha bo‘lgan davr.",
+    "karakalpak": "Úshinshi basqısh — oktyabr revolyuciyasınan Ózbekistan ǵárezsizlikke eriskenge shekem bolǵan dáwir.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 97,
+    "uzbek": "Bu davrda O‘rta Osiyo tabiiy boyliklari tez sur’atlar bilan o‘zlashtirila boshlandi.",
+    "karakalpak": "Bul dáwirde Orta Aziya tábiyiy baylıqları tez pát penen ózlestirildi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 98,
+    "uzbek": "Uning geologiyasi, relyefi, iqlimi, ichki suvlari, tuprog‘i, o‘simligi va hayvonot dunyosi, chuqur va har tomonlama o‘rganildi.",
+    "karakalpak": "Onıń geologiyası, relyefi, klimatı, ishki suwları, topıraǵı, ósimligi, haywanat dúnyası, tereń hám hár tárepleme izertlendi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 99,
+    "uzbek": "Bu davrda O‘rta Osiyo tabiatini o‘rganishga N.L.Korjenevskiy va boshqa olimlar katta hissa qo‘shdilar.",
+    "karakalpak": "Bul dáwirde Orta Aziya tábiyatın izertlewde N.L.Korjenevskiy h.t.b. ilimpazlar úlken úles qostı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 100,
+    "uzbek": "Mamlakatimiz mustaqillikka erishgandan keyin geografik tadqiqotlar tabiatdan, uning boyliklaridan to‘g‘ri foydalanish, muhofaza qilish masalalarini o‘rganishga yo‘naltirildi.",
+    "karakalpak": "Elimiz ǵárezsizlikke eriskennen soń geografiyalıq izertlewler tábiyattan, onıń baylıqlarınan durıs paydalanıw, qorǵaw máselelerin úyreniwge baǵdarlandı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 101,
+    "uzbek": "Ayniqsa, suv boyligimiz va uni muhofaza qilish, atrof-muhitni toza tutish, tabiiy geografik jarayonlarni, inson va tabiat munosabatlari masalalarini o‘rganishga e’tibor berilmoqda.",
+    "karakalpak": "Ásirese, suw baylıǵımız hám onı qorǵaw, qorshaǵan ortalıqtı taza saqlaw, tábiyiy geografiyalıq processlerdi, adam hám tábiyat qatnasları máselelerin úyreniwge itibar berilmekte.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 102,
+    "uzbek": "O‘rta Osiyoning tub aholisiga o‘zbeklar, tojiklar, qozoqlar, qirg‘izlar, turkmanlar, qoraqalpoqlar, afg‘onlar, forslar kiradi.",
+    "karakalpak": "Orta Aziyanıń túpkilikli xalqına ózbekler, qaraqalpaqlar, tájikler, qazaqlar, qırǵızlar, túrkmenler, awǵanlar, parsılar kiredi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 103,
+    "uzbek": "O‘rta Osiyo xalqlari jahon fani va madaniyatiga, davlatchilik ilmiga katta hissa qo‘shgan buyuk allomalari, sarkardalari bilan faxrlanadi.",
+    "karakalpak": "Orta Aziya xalıqları jáhán ilimi hám mádeniyatına, mámleketshilik ilimine úlken úles qosqan ullı alımlar, sárkardaları menen maqtanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 104,
+    "uzbek": "O‘rta Osiyoda tub millatlardan tashqari turli vaqtlarda ko‘- chib kelib, o‘troq yashab qolgan ruslar, tatarlar, yahudiylar, ukrainlar, boshqirdlar, koreyslar, uyg‘urlar, turklar va boshqa millatlar ham mavjud.",
+    "karakalpak": "Orta Aziyada tiykarǵı milletlerden basqa túrli waqıtlarda kóship kelip, otırıqlı jasap qalǵan ruslar, tatarlar, evreyler, ukraynlar, bashqurtlar, koreecler, uyǵırlar, túrkler hám basqa milletler de bar.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 105,
+    "uzbek": "Shunday buyuk insonlardan kimlarni bilasiz?",
+    "karakalpak": "Usınday ullı insanlardan kimlerdi bilesiz?",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 106,
+    "uzbek": "Hozirgi paytda O‘rta Osiyo aholisi 75 mln kishidan ortiq.",
+    "karakalpak": "Házirgi waqıtta Orta Aziya xalqı 75 mln adamnan aslam.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 107,
+    "uzbek": "O‘rta Osiyo cho‘l va chalacho‘l zonalarida joylashganligidan aholi azaldan vodiylarda, suv manbalari — daryo bo‘ylarida, vohalarda bir-biriga moslashib, yelkadosh bo‘lib yashashga o‘rgangan.",
+    "karakalpak": "Orta Aziya shól hám yarımshól zonalarında jaylasqanlıqtan xalqı burınnan alaplarda, suw derekleri — dáryalar boylarında, oazislerde bir-birine maslasıp, birlesip jasawǵa úyrengen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 108,
+    "uzbek": "O‘rta Osiyo tabiati, hayotning o‘zi bu yerdagi xalqlarni shu ruhda tarbiyalagan.",
+    "karakalpak": "Orta Aziya tábiyatı, turmıstıń ózi bul jerdegi xalıqlardı usınday ruxta tárbiyalaǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 109,
+    "uzbek": "O‘rta osiyolik ulug‘ alloma-mutafakkirlar — Abdullo Rudakiy, Alisher Navoiy, Maxtumquli, Abay, To‘xtag‘ul xalqlarni mehr-oqibatli, do‘st, birodar bo‘lib yashashga da’vat qilishgan.",
+    "karakalpak": "Orta Aziyalı ullı alım-oyshıllar — Alisher Nawayı, Rudakiy, Maqtumqulı, Abay, Toqtaǵul xalıqlardı mehir-aqıbetli, dos, awızbirshilikli bolıp jasawǵa shaqırǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 110,
+    "uzbek": "Bunday da’vat hozirgi vaqtda yanada muhim ahamiyat kasb etadi.",
+    "karakalpak": "Bunday shaqırıq házirgi waqıtta oǵada áhmiyetli.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 111,
+    "uzbek": "Siyosiy xarita deb jahondagi yoki uning qaysidir qismidagi davlatlarning ma’lum bir tarixiy davrdagi holati aks etgan xaritaga aytiladi.",
+    "karakalpak": "Siyasiy karta dep dúnya júzindegi yamasa onıń bir bólimindegi mámleketlerdiń belgili bir tariyxıy dáwirdegi jaǵdayın belgileytuǵın kartaǵa aytıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 112,
+    "uzbek": "Siyosiy xaritalar inqiloblar, urushlar va davlatlarning o‘zaro kelishuvlari asosida o‘zgarib, qayta tarkib topib turadi.",
+    "karakalpak": "Siyasiy kartalar revolyuciyalar, urıslar hám mámleketlerdiń óz ara kelisiwleri tiykarında ózgerip, qaytadan dúzilip turadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 113,
+    "uzbek": "O‘rta Osiyo siyosiy xaritasining keyingi ikki asr davomidagi tarkib topishida bir necha bosqich ajratiladi: birinchi bosqich O‘rta Osiyoning Rossiya imperiyasi tomonidan bosib olinishi arafasidagi davrni o‘z ichiga oladi.",
+    "karakalpak": "Orta Aziya siyasiy kartasınıń keyingi eki ásir dawamındaǵı dúziliwin birneshe basqıshlarǵa bóliwge boladı: birinshi basqısh Or ta Aziyanıń Rossiya imperiyası tárepinen basıp alınıwı aldındaǵı dáwirdi óz ishine aladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 114,
+    "uzbek": "Bu bosqichda O‘rta Osiyoda uchta yirik davlat — Qo‘qon xonligi, Xiva xonligi va Buxoro amirligi mavjud bo‘lgan.",
+    "karakalpak": "Bul basqıshta Orta Aziyada úsh iri mámleket — Qoqan xanlıǵı, Xiywa xanlıǵı hám Buxara ámirligi bolǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 115,
+    "uzbek": "Ikkinchi bosqich mustamlakachilik davrini o‘z ichiga oladi.",
+    "karakalpak": "Ekinshi basqısh koloniyalıq dáwirdi óz ishine aladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 116,
+    "uzbek": "Bu bosqichda O‘rta Osiyoda Rossiya imperiyasining Turkiston general-gubernatorligi hamda Rossiyaning yarimmustamlakalariga aylantirilgan Xiva xonligi va Buxoro amirligi joylashgan edi.",
+    "karakalpak": "Bul basqıshta Orta Aziya Rossiya imperiyasınıń Túrkstan general-gubernatorlıǵı hám de Rossiyanıń yarım koloniyalarına aylandırılǵan Xiywa xanlıǵı hám Buxara ámirligi jaylasqan edi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 117,
+    "uzbek": "Uchinchi bosqich juda qisqa davrni (1917—1920/22) o‘z ichiga oladi.",
+    "karakalpak": "Úshinshi basqısh júdá qısqa dáwirdi (1917—1920/22) óz ishine aladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 118,
+    "uzbek": "Bu bosqichda O‘rta Osiyoda uchta mustaqil davlat paydo bo‘ldi: Turkiston (Qo‘qon) muxtoriyati, Buxoro va Xorazm respublikalari.",
+    "karakalpak": "Bul basqıshta Orta Aziyada úsh ǵárezsiz mámleket payda boldı: Túrkstan (Qoqan) avtonomiyası, Buxara hám Xorezm respublikaları.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 119,
+    "uzbek": "To‘rtinchi bosqich 1924—1991- yillarni o‘z ichiga oladi.",
+    "karakalpak": "Tórtinshi basqısh 1924—1991-jıllardı óz ishine qamtıydı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 120,
+    "uzbek": "Bu davrda O‘rta Osiyo hududida 5 ta ittifoqdosh respublika tashkil qilindi: O‘zbekiston, Qozog‘iston, Qirg‘iziston, Tojikiston, Turkmaniston.",
+    "karakalpak": "Bul dáwirde Orta Aziya aymaǵında 5 awqamlas respublika dúzildi: Ózbekistan, Qazaqstan, Qırǵızstan, Tájikstan, Túrkmenstan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 121,
+    "uzbek": "O‘lkaning janubi Afg‘oniston va Eron davlatlari tarkibiga kiradi.",
+    "karakalpak": "Úlkeniń qublası Awǵanstan hám Iran mámleketleriniń quramına kiredi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 122,
+    "uzbek": "Beshinchi bosqich 1991- yildan boshlanadi.",
+    "karakalpak": "Besinshi basqısh 1991-jıldan baslanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 123,
+    "uzbek": "Bu davrda sobiq Ittifoqning parchalanishi oqibatida O‘rta Osiyo hududidagi ittifoqdosh respublikalar o‘rnida mustaqil davlatlar — O‘zbekiston, Qozog‘iston, Òojikiston, Òurkmaniston va Qirg‘iziston tashkil topdi.",
+    "karakalpak": "Bul dáwirde burınǵı Awqamnıń bólshekleniwi aqıbetinde Orta Aziya aymaǵındaǵı awqamlas respublikalar ornında ǵárezsiz mámleketler — Ózbekistan, Qazaqstan, Tájikstan, Túrkmenstan hám Qırǵızstan Respublikaları dúzildi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 124,
+    "uzbek": "Geografiyani globus va dunyoning tabiiy xaritasisiz tasavvur qilish qiyin.",
+    "karakalpak": "Geografiyanı globus hám dúnyanıń tábiyiy kartasısız kóz aldıǵa keltiriw qıyın.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 125,
+    "uzbek": "Globus Yerning modeli ekanini bilasiz.",
+    "karakalpak": "Globus jerdiń modeli ekenin bilesiz.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 126,
+    "uzbek": "Globusda Yer yuzasi — quruqliklar, okeanlar, dengizlar, orollar sayyoramizda aslida qanday shaklda bo‘lsa, deyarli shunday shaklda, lekin juda kichraytirib tasvirlangan.",
+    "karakalpak": "Globusta Jer beti —qurǵaqlıqlar, okeanlar, teńizler, atawlar planetamızda tiykarınan qanday formada bolsa, derlik sonday formada, biraq júdá kishireytilip súwretlengen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 127,
+    "uzbek": "Tabiatdagi obyektlar juda kichraytirib tasvirlanganda ko‘p narsalarni ko‘rsatish mumkin emas.",
+    "karakalpak": "Tábiyattaǵı obyektler júdá kishireytip súwretlengende kóp nárselerdi kórsetiw múmkin emes.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 128,
+    "uzbek": "Shu sababli Yer yuzini, undagi geografik obyektlarni tasvirlash uchun geografik xaritalardan foydalaniladi.",
+    "karakalpak": "Sonlıqtan, Jer betin, ondaǵı geografiyalıq obyektlerdi súwretlew ushın geografiyalıq kartalardan paydalanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 129,
+    "uzbek": "Geografik xaritalar Yer yuzidagi geografik obyektlarni tasvirlashning asosiy usuli hisoblanadi.",
+    "karakalpak": "Geografiyalıq kartalar Jer betindegi geografiyalıq obyektlerdi súwretlewdiń tiykarǵı usılı bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 130,
+    "uzbek": "Biroq geografik xaritalarda Yerning qavariq yuzasi tekis yuzada tasvirlanadi.",
+    "karakalpak": "Biraq geografiyalıq kartalarda jerdiń oylı-biyikli beti tegis túrinde súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 131,
+    "uzbek": "Buning oqibatida geografik xaritada Yer qavariq yuzasining ayrim qismlarini cho‘zib, ayrim qismlarini qisqartirib tasvirlashga to‘g‘ri keladi.",
+    "karakalpak": "Usınıń nátiyjesinde geografiyalıq kartada Jer betiniń ayırım bóleklerin úlkeytińkirep, al ayırım bóleklerin qısqartıp súwretlewge tuwrı keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 132,
+    "uzbek": "Qavariq Yer yuzasini tekis yuzada tasvirlash uchun xarita andazalaridan foydalaniladi.",
+    "karakalpak": "Oylı-biyikli Jer betin tegis bette súwretlew ushın karta úlgilerinen paydalanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 133,
+    "uzbek": "Xarita andazalari sayyoramizning qavariq yuzasini tekis yuzada tasvirlashning matematik usullaridir.",
+    "karakalpak": "Karta úlgileri planetamızdıń oylı-biyikli betin tegis bette súwretlewdiń matematikalıq usılları bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 134,
+    "uzbek": "Yerning qavariq yuzasi tekis yuzaga tushirilayotganda tasvirda uzilishlar ro‘y beradi.",
+    "karakalpak": "Jerdiń oylı-biyikli beti tegis betke túsirilip atırǵanda súwrette úzilisler júz beredi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 135,
+    "uzbek": "Uzilishlarni to‘ldirish uchun, odatda, xaritadagi tasvirlarni cho‘zishga to‘g‘ri keladi.",
+    "karakalpak": "Úzilislerdi toltırıw ushın ádette kartadaǵı súwretlerdi sozıwǵa tuwra keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 136,
+    "uzbek": "Buning oqibatida burchaklar, chiziqlar uzunligi, maydonlar, obyektlarning shaklida xatoliklarga yo‘l qo‘yiladi.",
+    "karakalpak": "Usınıń sebebinen múyeshler, sızıqlar uzınlıǵı, maydanları, obyektlerdiń formasında qáteliklerge jol qoyıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 137,
+    "uzbek": "Yerning qavariq yuzasini tekis sathga — xaritaga tushirish chog‘ida ana shunday xatoliklardan birontasini kamaytirishga yoki yo‘qotishga harakat qilinadi.",
+    "karakalpak": "Jerdiń oylı-biyikli betin tegis jazıqlıqqa kartaǵa túsiriw waqtında mine usınday qáteliklerden birewin kemeytiwge yamasa saplastırıwǵa háreket etiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 138,
+    "uzbek": "Shu maqsadda turli xil xarita andazalaridan foydalaniladi.",
+    "karakalpak": "Sol maqsette hár túrli karta úlgilerinen paydalanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 139,
+    "uzbek": "Xarita andazalari, asosan, uch xil bo‘ladi.",
+    "karakalpak": "Karta úlgileri tiykarınan úsh túrli boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 140,
+    "uzbek": "Bunday andazalarda tuzilgan xaritalardagi burchaklar globusdagi, ya’ni joydagi burchaklarga teng bo‘ladi.",
+    "karakalpak": "Bunday úlgilerde dúzilgen kartalardaǵı múyeshler globustaǵı, yaǵnıy orındaǵı múyeshlerge teń boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 141,
+    "uzbek": "Teng burchakli andazalar asosida tuzilgan xaritalarda yo‘nalishlarni aniqlash qulay, biroq maydonlar va masofalarni tasvirlashda xatolarga yo‘l qo‘yiladi.",
+    "karakalpak": "Teń múyeshli úlgiler tiykarında dúzilgen kartalarda baǵdarlardı anıqlaw qolay, biraq maydanlar hám aralıqlardı súwretlewde qátege jol qoyıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 142,
+    "uzbek": "Teng maydonli yoki teng hajmli andazalardan foydalanilganda materiklar, davlatlar, dengizlar, orollar va boshqalarning maydonlari xatosiz tasvirlanadi.",
+    "karakalpak": "Teń maydanlı yamasa teń kólemli úlgilerden paydalanılǵanda materikler, mámleketler, teńizler, atawlar hám basqalardıń maydanları qátesiz súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 143,
+    "uzbek": "Lekin burchaklar, shakllarni tasvirlashda ancha xatoliklarga yo‘l qo‘yiladi.",
+    "karakalpak": "Biraq múyeshler, formalardı súwretlewde ádewir qáteliklerge jol qoyıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 144,
+    "uzbek": "Teng maydonli xaritalardan geografik obyektlar maydoni o‘lchanadi.",
+    "karakalpak": "Teń maydanlı kartalardan geografiyalıq obyektler maydanları ólshenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 145,
+    "uzbek": "Ixtiyoriy andazalar asosida tuzilgan xaritalarda burchaklar ham, maydonlar ham xatoliklar bilan tasvirlanadi, lekin xatolik kamroq bo‘ladi.",
+    "karakalpak": "Erkin úlgiler tiykarında dúzilgen kartalarda múyeshler de, maydanlar da qátelikler menen súwretlenedi, biraq qátelik kemirek boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 146,
+    "uzbek": "Ixtiyoriy andazalar orasida teng masofali andazalar boshqalaridan ko‘ra ko‘proq ishlatiladi.",
+    "karakalpak": "Erkin úlgiler arasında teń aralıqlı úlgiler basqalarına qaraǵanda kóbirek qollanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 147,
+    "uzbek": "Bunday xaritalarda uzunlik masshtabi bir meridian (odatda, o‘rtadagi) yoki bir paralleldagina saqlanadi.",
+    "karakalpak": "Bunday kartalarda uzınlıq masshtabı bir meridian (ádette ortadaǵı) yamasa bir parallelde ǵana saqlanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 148,
+    "uzbek": "Qavariq Yer yuzasining meridianlar va parallellar to‘rini tekis yuzaga (qog‘ozga) tushirishda yordamchi geometrik sirtlardan, xususan, silindr, konus, tekislik va boshqalardan foydalaniladi.",
+    "karakalpak": "Oylı-biyikli Jer betiniń meridianlar hám paralleller torın tegis betke (qaǵazǵa) túsiriwde járdemshi geometriyalıq betlerinen, ásirese cilindr, konus, tegislik hám basqalardan paydalanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 149,
+    "uzbek": "Xarita andazalari foydalanilgan yordamchi geometrik sirtlarning turiga qarab konussimon, silindrsimon, azimutli andazalarga bo‘linadi.",
+    "karakalpak": "Karta úlgileri paydalanılǵan járdemshi geometriyalıq betlerdiń túrine qarap konus tárizli, cilindr tárizli, azimutlı úlgilerge bólinedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 150,
+    "uzbek": "Silindrsimon andazalarda tuzilgan xaritalarda meridianlar bilan parallellar bir-biri bilan 90° li burchak ostida kesishadigan to‘g‘ri chiziqlardan iborat to‘r hosil qiladi.",
+    "karakalpak": "Cilindr tárizli úlgilerde dúzilgen kartalarda meridianlar menen paralleller bir-biri menen 90o C lı múyesh jasap kesisetuǵın tuwrı sızıqlardan ibarat bolǵan tor payda etedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 151,
+    "uzbek": "Bunday andazalar yordamida, ko‘pincha, dunyo xaritalari tuziladi.",
+    "karakalpak": "Bunday úlgiler járdeminde kóbinese dúnya júzilik kartalar islenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 152,
+    "uzbek": "Materiklar, ayrim davlatlar, asosan, konussimon andaza yordamida tasvirlanadi.",
+    "karakalpak": "Materikler, ayırım mámleketler, tiykarınan, konus tárizli úlgi járdeminde kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 153,
+    "uzbek": "O‘rta Osiyo va O‘zbekiston xaritalari konussimon andazadan foydalanib tuzilgan.",
+    "karakalpak": "Orta Aziya hám Ózbekistan kartaları konus tárizli úlgiden paydalanıp dúzilgen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 154,
+    "uzbek": "Geografik xaritalarda turli-tuman voqea va hodisalar tasvirlangani uchun ular juda xilma-xil bo‘ladi.",
+    "karakalpak": "Geografiyalıq kartalarda hár qıylı waqıya hám qubılıslar súwretlengenlikten olar júdá hár túrli boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 155,
+    "uzbek": "Xaritalarni turlarga bo‘lishdan oldin ular to‘g‘risidagi umumiy tushunchalarni ko‘rib chiqamiz.",
+    "karakalpak": "Kartalardı túrlerge bólmesten burın olar haqqında ulıwma túsiniklerdi kórip shıǵamız.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 156,
+    "uzbek": "Geografik xaritalarni yaxshi tushunish, ular bilan ishlashni bilish uchun joy plani, xarita, aerosurat, kosmosurat tushunchalari mazmunini yaxshi bilib olish kerak.",
+    "karakalpak": "Geografiyalıq kartalardı jaqsı túsiniw, paydalana biliw ushın orın jobası, karta, aerosúwret, kosmosúwret túsinikleriniń mazmunın jaqsı biliw kerek.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 157,
+    "uzbek": "Joy plani — joyning yirik masshtabda (1:5000 va undan yirikroq) tuzilgan chizmasidir.",
+    "karakalpak": "Orın jobası—maydannıń úlken masshtabta (1:5000 hám onnanda úlkenirek) dúzilgen sızılması esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 158,
+    "uzbek": "Planda maydoni uncha katta bo‘lmagan kichik-kichik joylar tasvirlanadi.",
+    "karakalpak": "Jobada maydanı onsha úlken bolmaǵan kishi orınlar kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 159,
+    "uzbek": "Xarita — Yerning va boshqa sayyoralar yuzasining kichraytirilib va umumlashtirilib, shartli belgilar bilan tekis yuzaga tushirilgan tasviri.",
+    "karakalpak": "Karta—Jerdiń hám basqa planetalar betiniń kishireytilip hám ulıwmalastırılıp, shártli belgiler menen tegis betke túsirilgen kórinisi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 160,
+    "uzbek": "Xaritalarda tabiiy va iqtisodiy-ijtimoiy voqea va hodisalar tasvirlanadi.",
+    "karakalpak": "Kartalarda tábiyiy hám ekonomikalıq-sociallıq waqıya hám qubılıslar súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 161,
+    "uzbek": "Aerosurat — Yer yuzasi bir qismining samolyot va boshqa uchuvchi asboblar yordamida olingan tasviri.",
+    "karakalpak": "Aerosúwret — Jer beti bir bóliminiń samolyot hám basqa ushıwshı úskeneler járdeminde alınǵan kórinisi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 162,
+    "uzbek": "Kosmosurat — Yerning va boshqa sayyoralarning kosmik kemalar yordamida olingan tasviri.",
+    "karakalpak": "Kosmosúwret — Jerdiń hám basqa planetalardıń kosmos kemeleri járdeminde alınǵan kórinisi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 163,
+    "uzbek": "Ular fan va xalq xo‘jaligining turli sohalarida keng qo‘llaniladi.",
+    "karakalpak": "Olar ilim hám xalıq xojalıǵınıń túrli tarawlarında keń qollanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 164,
+    "uzbek": "Har bir plan, xarita, aerosurat, kosmosurat ma’lum bir masshtabga ega bo‘ladi.",
+    "karakalpak": "Hárbir joba, kar ta, aerosúwret, kosmosúwret belgili bir masshtabqa iye boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 165,
+    "uzbek": "Masshtabning nima ekanligini 5- sinf geografiyasidan eslang.",
+    "karakalpak": "Masshtab degenimiz ne ekenligin 5-klass geografiyasınan esińizge túsiriń.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 166,
+    "uzbek": "Xaritalarning shartli belgilari.",
+    "karakalpak": "Kartalardıń shártli belgileri.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 167,
+    "uzbek": "Voqea va hodisalar hamma xaritalarda ham ma’lum shartli belgilar bilan tasvirlanadi.",
+    "karakalpak": "Waqıya hám qubılıslar barlıq kartalarda da belgili bir shártli belgiler menen súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 168,
+    "uzbek": "Shartli belgilar xaritalarni boshqa geografik ma’lumot manbalaridan, ya’ni aerosurat, kosmosurat, jadval va hokazolardan ajratib turadigan muhim xususiyatlardan biridir.",
+    "karakalpak": "Shártli belgiler kartalardı basqa geografiyalıq maǵlıwmatlar dereklerinen, yaǵnıy aerosúwret, kosmosúwret, keste hám taǵı basqalardan ajıratıp turatuǵın áhmiyetli ózgesheliklerdiń biri bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 169,
+    "uzbek": "Shartli belgilarga qarab, voqea va hodisalarning joylanishini, miqdorini, sifatini bilib olish mumkin.",
+    "karakalpak": "Shártli belgilerge qarap waqıya hám qubılıslardıń jaylasıwın, muǵdarın, sapasın bilip alıwǵa boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 170,
+    "uzbek": "Shartli belgilar bir necha turga bo‘linadi.",
+    "karakalpak": "Shártli belgiler birneshe túrge bólinedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 171,
+    "uzbek": "Masshtabli shartli belgilar yordamida voqea va hodisalarning haqiqiy o‘lchamlari aks ettiriladi.",
+    "karakalpak": "Masshtablı shártli belgiler járdeminde waqıya hám qubılıslardıń haqıyqıy ólshemleri kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 172,
+    "uzbek": "Ular yordamida qum cho‘llari egallagan maydonni, muz qoplagan yerlar maydonini bilish mumkin.",
+    "karakalpak": "Olar járdeminde, qum shólleri iyelegen maydandı, muz qaplaǵan jerlerdiń maydanın biliw múmkin.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 173,
+    "uzbek": "Masshtabsiz shartli belgilar bilan xaritalarning masshtabida ko‘rsatib bo‘lmaydigan voqea va hodisalar tasvirlanadi.",
+    "karakalpak": "Masshtabsız shártli belgiler menen kartalardıń masshtabında kórsetip bolmaytuǵın waqıya hám qubılıslar súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 174,
+    "uzbek": "Masalan, turli xil shakllar, chizmalar, harfli belgilar, aholi yashaydigan joylar, GESlar, foydali qazilma konlari belgilari masshtabsiz bo‘ladi.",
+    "karakalpak": "Mısalı, hár qıylı formalar, sızılmalar, háripli belgiler, xalıq jasaytuǵın orınlar, GESler, paydalı qazılma kánlerdiń belgileri masshtabsız boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 175,
+    "uzbek": "Chiziqli shartli belgilar bilan daryolar, yo‘llar, chegaralar ko‘rsatiladi. ",
+    "karakalpak": "Sızıqlı shártli belgiler menen dáryalar, jollar, shegaralar kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 176,
+    "uzbek": "Tushuntirish belgilari bilan daryo oqimining yo‘nalishi, o‘rmondagi daraxtlarning turlari ko‘rsatiladi.",
+    "karakalpak": "Túsindiriw belgileri menen dárya aǵısınıń baǵdarı, toǵaydaǵı aǵashlardıń túrleri kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 177,
+    "uzbek": "Bulardan tashqari yozuvli, harfli, sonli shartli belgilar ham mavjud bo‘ladi.",
+    "karakalpak": "Bulardan basqa jazıwlı, háripli, sanlı shártli belgiler de boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 178,
+    "uzbek": "Xaritalar masshtabiga, ularda tasvirlangan hududning katta-kichikligiga, mazmuni, vazifasi va tuzilishiga ko‘ra bir qancha turlarga bo‘linadi.",
+    "karakalpak": "Kartalar masshtabına, olarda súwretlengen maydanlardıń kólemine, mazmunı, wazıypası hám dúzilisine qarap birqansha túrlerge bólinedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 179,
+    "uzbek": "Xaritalar masshtabiga qarab quyidagi turlarga bo‘linadi: yirik masshtabli — 1:10000 dan 1:200000 gacha, o‘rta masshtabli —1:200000 dan 1:1000000 gacha, mayda masshtabli — 1:1000000 dan kichik.",
+    "karakalpak": "Kartalar masshtabına qarap tómendegi túrlerge bólinedi: iri masshtablı — 1:10000 nan 1:200000 ǵa shekem, orta masshtablı — 1:200000 nan 1:000000 ǵa shekem, mayda masshtablı — 1:1000000 nan kishi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 180,
+    "uzbek": "Turli masshtabli xaritalarda voqea va hodisalar turli xil aniqlikda tasvirlanadi.",
+    "karakalpak": "Hár qıylı masshtablı kartalarda waqıya hám qubılıslar hár túrli anıqlıqta súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 181,
+    "uzbek": "Xaritalar ularda nima tasvirlanganligi va hududning kattakichikligiga qarab quyidagi turlarga bo‘linadi: yulduzlar xaritasi, sayyoralar va Yer xaritasi, yarimsharlar xaritasi, materiklar va okeanlar xaritalari, tabiiy geografik o‘lkalar va dengizlar xaritasi, mamlakatlar xaritasi, ma’muriy birliklar xaritasi, maxsus hudud (qo‘riqxona, sayohatbop joy)lar xaritasi, shahar, viloyat va tumanlar xaritasi.",
+    "karakalpak": "Kartalar olarda ne súwretlengenligi hám aymaqtıń kólemine qarap tómendegi túrlerge bólinedi: juldızlar kartası, planetalar hám Jer kartası, yarım sharlar kartaları, materikler hám okeanlar kartaları, tábiyiy geografiyalıq úlkeler hám teńizler kartaları, mámleketler kartaları, administrativlik birlikler kartaları, arnawlı aymaqlar (qorıqxanalar, sayaxatlıq orınlar) kartaları, qala hám wálayatlar, rayonlar kartaları.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 182,
+    "uzbek": "Mazmuniga ko‘ra xaritalar ikkita yirik guruhga bo‘linadi: umumiy geografik xaritalar va mavzuli xaritalar.",
+    "karakalpak": "Mazmunı boyınsha kartalar eki iri toparǵa bólinedi: ulıwma geografiyalıq kartalar hám tematikalıq kartalar.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 183,
+    "uzbek": "Umumiy geografik xaritalarda joy geografik sharoitining asosiy tarkibiy qismlari bir xil aniqlikda tasvirlanadi: relyef, daryo, ko‘l, muzliklar, tuproq va o‘simlik qoplami, aholi yashaydigan joylar, xo‘jalik tarmoqlarining tarkibi, aloqa yo‘llari, chegaralar va h. k.",
+    "karakalpak": "Ulıwma geografiyalıq kartalarda orınnıń geografiyalıq sharayatınıń tiykarǵı quramlıq bólimleri birdey anıqlıqta súwretlenedi: relyef, dárya, kól, muzlıqlar, topıraq, ósimlikler qatlamı, xalıq jasaytuǵın orınlar, xojalıq tarmaqlarınıń quramı, baylanıs jolları, shegaralar h.t.b.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 184,
+    "uzbek": "Mavzuli xaritalar, o‘z navbatida, yana ikki guruhga — tabiiy va iqtisodiy xaritalarga bo‘linadi.",
+    "karakalpak": "Tematikalıq kartalar óz náwbetinde jáne eki toparǵa—tábiyiy hám ekonomikalıq kartalarǵa bólinedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 185,
+    "uzbek": "Tabiiy geografik xaritalarga Yer yuzasi va okean tagi relyefi, iqlim, tuproq, o‘simlik, hayvonlar, landshaft, tabiatni qo‘riqlash, foydali qazilma konlari xaritasi kiradi.",
+    "karakalpak": "Tábiyiy geografiyalıq kartalarǵa Jer beti hám okean astı relyefi, klimatı, topıraq, ósimlik, haywanat, landshaft, tábiyattı qorǵaw, paydalı qazılma kánleri kartaları kiredi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 186,
+    "uzbek": "Ijtimoiy-iqtisodiy xaritalar iqtisodiy, tarixiy, madaniy-siyosiy, siyosiy-ma’muriy xaritalardan iborat.",
+    "karakalpak": "Sociallıq-ekonomikalıq kartalar ekonomikalıq, tariyxıy, mádeniy-siyasiy, siyasiy-administrativlik kartalardan ibarat boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 187,
+    "uzbek": "Vazifasiga ko‘ra xaritalar yana ilmiy, madaniyat va targ‘ibot, texnik, sayohat hamda o‘quv xaritalariga bo‘linadi.",
+    "karakalpak": "Wazıypalarına qaray kartalar jáne de ilimiy, mádeniyat hám úgit-násiyat, texnikalıq, sayaxat kartaları, oqıw kartalarına bólinedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 188,
+    "uzbek": "Atlas — to‘la va aniq ma’lumotga ega bo‘lgan, yagona dastur asosida tuzilgan, tartibga solingan xaritalar to‘plamidir.",
+    "karakalpak": "Atlas tolıq, anıq maǵlıwmatqa iye bolǵan, birden-bir baǵdarlama tiykarında dúzilgen, tártipke salınǵan kartalar toplamı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 189,
+    "uzbek": "«Atlas» atamasi fanga flamand xaritashunosi Merkator tomonidan kiritilgan.",
+    "karakalpak": "«Atlas» ataması ilimge flamand karta tanıwshı Merkator tárepinen kirgizilgen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 190,
+    "uzbek": "U o‘zi tuzgan xaritalar to‘plamini (1595- yil) Livanning afsonaviy qiroli Atlas nomi bilan ataydi.",
+    "karakalpak": "Ol ózi dúzgen kartalar toplamın (1595-jıl) Livannıń ápsanaǵa aylanǵan korolı Atlas atı menen ataǵan.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 191,
+    "uzbek": "Birinchi xaritalar to‘plami II asrda Klavdiy Ptolemey tomonidan tuzilgan.",
+    "karakalpak": "Birinshi kartalar toplamı II ásirde Klavdiy Ptolemey tárepinen dúzilgen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 192,
+    "uzbek": "Hozirgi zamon atlaslarining asosiy xususiyatlari undagi xaritalarning bir butunligi, bir-biriga muvofiqligi va bir-birini to‘ldirishidir.",
+    "karakalpak": "Házirgi zaman atlaslarınıń tiykarǵı ózgeshelikleri ondaǵı kartalardıń bir pútinligi, bir-birine sáykesligi hám bir-birin tolıqtırıwı bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 193,
+    "uzbek": "Atlaslar ham xaritalarga o‘xshab juda xilma-xil bo‘ladi.",
+    "karakalpak": "Atlaslar da kartalarǵa usap júdá hár qıylı boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 194,
+    "uzbek": "Ular qamrab olgan maydoniga ko‘ra sayyoralar, dunyo, materiklar, tabiiy geografik o‘lkalar, davlatlar, viloyatlar atlaslariga; mazmuniga ko‘ra umumiy geografik va mavzuli atlaslarga bo‘linadi.",
+    "karakalpak": "Olar ózine qamtıǵan maydanına qarap planetalar, dúnya, materikler, tábiyiy-geografiyalıq úlkeler, mámleketler, wálayatlar atlaslarına, mazmunına qaray ulıwma geografiyalıq hám tematikalıq atlaslarǵa bo'linedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 195,
+    "uzbek": "Vazifasiga ko‘ra ilmiy, ommabop (o‘lkashunoslik), o‘quv atlaslari, sayohat va yo‘l atlaslariga bo‘linadi.",
+    "karakalpak": "Wazıypasına qaray ilimiy, massalıq (úlketanıw), oqıw atlasları, sayaxatlar hám jollar atlaslarına bólinedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 196,
+    "uzbek": "Ilmiy atlaslar ma’lum bir joy haqida to‘la, ilmiy asoslangan ma’lumot beruvchi atlaslardir.",
+    "karakalpak": "Ilimiy atlaslar belgili bir orın haqqında tolıq, ilimiy jaqtan tiykarlanǵan maǵlıwmat beriwshi atlaslar bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 197,
+    "uzbek": "Bunday atlaslarda shu joyning tabiiy sharoiti, xo‘jaligi, aholisi va madaniyati ko‘rsatiladi.",
+    "karakalpak": "Bularda sol orınnıń tábiyiy sharayatı, xojalıǵı, xalqı hám mádeniyatı kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 198,
+    "uzbek": "Ommabop (o‘lkashunoslik) atlaslar keng o‘quvchilar ommasiga mo‘ljallangan bo‘lib, ular foydalanishga qulay va oson qilib tuziladi.",
+    "karakalpak": "Massalıq (úlketanıw) atlaslar keń oqıwshılar massasına arnalıp paydalanıwǵa qolaylı, ańsat dúziledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 199,
+    "uzbek": "Ularda rasmlar, chizmalar, ma’lum bir hudud to‘g‘risidagi ma’lumotlar, tarixiy yodgorliklar ko‘rsatiladi.",
+    "karakalpak": "Olarda súwretler, sızılmalar, belgili bir aymaq haqqındaǵı maǵlıwmatlar, tariyxıy estelikler kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 200,
+    "uzbek": "O‘quv atlaslari maktablar va oliy o‘quv yurtlarida foydalanish uchun mo‘ljallanadi.",
+    "karakalpak": "Oqıw atlasları mektepler hám joqarı oqıw orınlarında paydalanıw ushın arnaladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 201,
+    "uzbek": "Hozirgi paytda xarita va atlaslar xalq xo‘jaligining turli sohalarida, tadqiqot ishlarida keng qo‘llaniladi.",
+    "karakalpak": "Házirgi waqıtta karta hám atlaslar xalıq xojalıǵınıń túrli tarawlarında, izertlew jumıslarında keń qollanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 202,
+    "uzbek": "Ulardan joyning aniq o‘rnini belgilashda, ilmiy tekshirish ishlarida, xalq xo‘- jaligi (dasturlar tuzish, loyihalashtirish, qurilish, yerlarni o‘zlashtirish, foydali qazilma konlarini qidirish, ob-havoni bashorat qilish va h. k.)da, harbiy va o‘quv ishlarida foydalaniladi.",
+    "karakalpak": "Olardan jerdiń anıq ornın belgilewde, ilimiy tekseriw jumısları, xalıq xojalıǵında (baǵdarlamalar dúziw, joybarlaw, qurılıs, jerlerdi ózlestiriw, paydalı qazılma kánlerin izlew, hawa rayın boljaw hám t.b.), áskeriy hám oqıw islerinde paydalanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 203,
+    "uzbek": "Xarita yordamida masofa, maydon va burchaklar ham o‘lchanadi.",
+    "karakalpak": "Karta járdeminde aralıq, maydan hám múyeshler de ólshenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 204,
+    "uzbek": "Xaritada masofa masshtab yordamida quyidagi tartibda aniqlanadi.",
+    "karakalpak": "Kar tada aralıq masshtab járdeminde tómendegi tár tipte anıqlanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 205,
+    "uzbek": "Xarita masshtabidan xaritadagi 1 sm masofa joyda necha km ga teng ekani topiladi.",
+    "karakalpak": "Karta masshtabınan kartadaǵı 1 sm aralıq ornında neshe km ge teń ekeni tabıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 206,
+    "uzbek": "Berilgan ikki nuqta orasi xaritada necha sm ekani aniqlanadi.",
+    "karakalpak": "Berilgen eki noqat arası kartada neshe sm ekeni anıqlanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 207,
+    "uzbek": "Bu ikki son (km va sm) ko‘paytirilsa, berilgan nuqtalar oralig‘i necha km ga teng ekani, ya’ni haqiqiy masofa chiqadi.",
+    "karakalpak": "Bul eki san (km hám sm) kóbeytilse, berilgen noqatlar aralıǵı neshe km ge teń ekeni, yaǵnıy haqıyqıy aralıq shıǵadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 208,
+    "uzbek": "Masalan, xaritaning masshtabi 1:1000 000, ya’ni 1 sm 10 km ga teng.",
+    "karakalpak": "Mısalı, kartanıń masshtabı 1:1000000, yaǵnıy 1 sm 10 km ge teń.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 209,
+    "uzbek": "Xaritada ikki nuqta oralig‘i 4,5 sm ga teng.",
+    "karakalpak": "Kartada eki noqat aralıǵı 4,5 sm ge teń.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 210,
+    "uzbek": "Binobarin, 4,5 × 10 = 45 km yoki 45 000 m.",
+    "karakalpak": "Demek 4,5x10=45 km yaki 45000 m.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 211,
+    "uzbek": "Uning markazida nuqta tasvirlangan.",
+    "karakalpak": "Onıń ortasında noqta súwretlengen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 212,
+    "uzbek": "Nuqta geodeziya tayanchining haqiqiy o‘rnini bildiradi.",
+    "karakalpak": "Noqta geodeziya tayanchınıń haqıyqıy ornın bildirédi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 213,
+    "uzbek": "Geografik koordinata Yer yuzasidagi haqiqiy o‘rnini ko‘rsatadi.",
+    "karakalpak": "Geografiyalıq koordinata jer betindegi haqıyqıy ornın kórsetedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 214,
+    "uzbek": "Aholi manzilgohlari egallagan maydoni bilan ko‘rsatiladi.",
+    "karakalpak": "Ahalı mekemeleri iyelegen maydanı menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 215,
+    "uzbek": "Shaharlar nomi yirik harflar bilan yoziladi.",
+    "karakalpak": "Qalalar atı iri haripler menen jazıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 216,
+    "uzbek": "Qishloqlar nomi kichik harflar bilan yoziladi.",
+    "karakalpak": "Awıllar atı kishirek haripler menen jazıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 217,
+    "uzbek": "Daryolar ko‘k rangda tasvirlanadi.",
+    "karakalpak": "Dáryalar kók ráng menen súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 218,
+    "uzbek": "Ko‘llar va suv omborlari havorangda tasvirlanadi.",
+    "karakalpak": "Kóller hám suw ombarları háwa ráng menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 219,
+    "uzbek": "Daryo oqimining yo‘nalishi va tezligi ko‘rsatiladi.",
+    "karakalpak": "Dárya aǵısınıń baǵıtı hám tezligi kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 220,
+    "uzbek": "Ko‘priklar va paromlar maxsus belgilar bilan ko‘rsatiladi.",
+    "karakalpak": "Kópirler hám paromlar arnawlı belgiler menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 221,
+    "uzbek": "Yo‘llar turli qalinlikdagi chiziqlar bilan beriladi.",
+    "karakalpak": "Jollar túrli qalıńlıqtakı sızıqlar menen beriledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 222,
+    "uzbek": "Temiryo‘l, avtomobil yo‘llari alohida belgilanadi.",
+    "karakalpak": "Temir jol, avtomobil jolları ayrı belgilenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 223,
+    "uzbek": "O‘simlik qoplami yashil ranglarda beriladi.",
+    "karakalpak": "Ósimlik qaplamı jasıl ránglarda beriledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 224,
+    "uzbek": "Bog‘lar va botqoqlar alohida belgilar bilan tasvirlanadi.",
+    "karakalpak": "Baǵlar hám batpaqlıqlar arnawlı belgiler menen súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 225,
+    "uzbek": "Relyef gorizontallar bilan ko‘rsatiladi.",
+    "karakalpak": "Relyef gorizontallar menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 226,
+    "uzbek": "Gorizontallar ko‘p bo‘lsa balandlik yuqori bo‘ladi.",
+    "karakalpak": "Gorizontallar kóp bolsa biyiklik joqarı boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 227,
+    "uzbek": "Gorizontallar yaqin bo‘lsa yonbag‘ir tik bo‘ladi.",
+    "karakalpak": "Gorizontallar jaqın bolsa janbawır tik boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 228,
+    "uzbek": "Gorizontallar orqali balandlik farqi aniqlanadi.",
+    "karakalpak": "Gorizontallar arqalı biyiklik parqı anıqlanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 229,
+    "uzbek": "Ularning shartli belgisi — to‘g‘ri uchburchakdan iborat.",
+    "karakalpak": "Olardıń shártli belgisi — tuwrı úshmúyeshlikten ibarat.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 230,
+    "uzbek": "Uning markazida nuqta tasvirlangan.",
+    "karakalpak": "Onıń ortasında noqta súwretlengen.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 231,
+    "uzbek": "Nuqta geodeziya tayanchining haqiqiy o‘rniga to‘g‘ri keladi.",
+    "karakalpak": "Noqta geodeziya tayanchınıń haqıyqıy ornına tuwrı keledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 232,
+    "uzbek": "Uning geografik koordinatasi Yer yuzasidagi haqiqiy o‘rnini bildiradi.",
+    "karakalpak": "Onıń geografiyalıq koordinatası jer betindegi haqıyqıy ornın bildirédi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 233,
+    "uzbek": "Shartli belgi yoniga yozilgan sonlar uning mutlaq balandligini bildiradi.",
+    "karakalpak": "Shártli belgi qaptalına jazılǵan sanlar onıń absolyut biyikligin bildirédi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 234,
+    "uzbek": "Aholi manzilgohlari ular egallagan maydon qiyofasi bilan ko‘rsatiladi.",
+    "karakalpak": "Ahalı mekemeleri iyelegen maydan kórinisi menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 235,
+    "uzbek": "Aholi manzilgohlarining nomlari turli kattalikdagi harflar bilan beriladi.",
+    "karakalpak": "Ahalı mekemeleriniń atları túrli úlkenliktegi háripler menen beriledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 236,
+    "uzbek": "Shaharlar nomi yirik harflar bilan yoziladi.",
+    "karakalpak": "Qalalar atı iri háripler menen jazıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 237,
+    "uzbek": "Qishloqlar nomi kichikroq harflar bilan yoziladi.",
+    "karakalpak": "Awıllar atı kishirek háripler menen jazıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 238,
+    "uzbek": "Aholi manzilgohlari nomi ostidagi raqamlar ulardagi xonadonlar sonini ifodalaydi.",
+    "karakalpak": "Ahalı mekemeleri atı astındaǵı sanlar olardaǵı xojalıqlar sanın bildirédi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 239,
+    "uzbek": "Masshtabsiz shartli belgilar bilan sanoat va madaniy binolar, korxonalar, ayrim zavodlar, elektrostansiya va konlar ko‘rsatiladi.",
+    "karakalpak": "Masshtabsız shártli belgiler menen sanaat hám mádeniy imaratlar, kárxanalar, ayrım zavodlar, elektrostansiya hám kánler kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 240,
+    "uzbek": "Daryolar, soylar hamda ularning irmoqlari ko‘k rangda tasvirlanadi.",
+    "karakalpak": "Dáryalar, saylar hám olardıń tarmaqları kók ráńde súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 241,
+    "uzbek": "Ko‘llar, suv omborlari va hovuzlar havorang bilan tasvirlanadi.",
+    "karakalpak": "Kóller, suw ombarları hám háwizler háwa ráń menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 242,
+    "uzbek": "Daryo oqimining yo‘nalishi, tezligi, kengligi, chuqurligi va kechuv joylari ko‘rsatiladi.",
+    "karakalpak": "Dárya aǵısınıń baǵıtı, tezligi, keńligi, tereńligi hám ótúw jayları kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 243,
+    "uzbek": "Paromlar, ko‘priklar va kema to‘xtash joylari maxsus belgilar bilan ko‘rsatiladi.",
+    "karakalpak": "Paromlar, kópirler hám keme toqtaytuǵın jaylar arnawlı belgiler menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 244,
+    "uzbek": "Yo‘llar turli xil qalinlikdagi va rangdagi chiziqlar bilan tasvirlanadi.",
+    "karakalpak": "Jollar túrli qalıńlıqtakı hám ráńdegi sızıqlar menen súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 245,
+    "uzbek": "Temiryo‘llar, avtomobil yo‘llari va toshyo‘llar alohida ko‘rsatiladi.",
+    "karakalpak": "Temir jollar, avtomobil jolları hám tas jollar ayrı kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 246,
+    "uzbek": "Shartli belgining shakli va rangi yo‘lning turini tasvirlaydi.",
+    "karakalpak": "Shártli belginiń forması hám ráńi jol túrin kórsetedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 247,
+    "uzbek": "Maxsus belgilar bilan yo‘lning kengligi, temiryo‘lning raqami va yo‘l qoplami ko‘rsatiladi.",
+    "karakalpak": "Arnawlı belgiler menen joldıń keńligi, temir joldıń nomeri hám jol qaplamı kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 248,
+    "uzbek": "O‘simlik qoplami turli xil zangori-yashil ranglar bilan beriladi.",
+    "karakalpak": "Ósimlik qaplamı túrli kók-jasıl ráńler menen beriledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 249,
+    "uzbek": "O‘tloqlar, bog‘lar, botqoqlar va hokazolar alohida belgilar bilan tasvirlanadi.",
+    "karakalpak": "Otlaqlar, baǵlar, batpaqlıqlar hám basqalar arnawlı belgiler menen súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 250,
+    "uzbek": "Relyef topografik xaritalarda gorizontallar bilan ko‘rsatiladi.",
+    "karakalpak": "Relyef topografiyalıq kartalarda gorizontallar menen kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 251,
+    "uzbek": "Yonbag‘ir qancha ko‘p gorizontallar bilan tasvirlansa, u shuncha baland bo‘ladi.",
+    "karakalpak": "Janbawır qanshelli kóp gorizontallar menen súwretlense, sonshelli biyik boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 252,
+    "uzbek": "Gorizontallar bir-biriga qancha yaqin bo‘lsa, yonbag‘ir shuncha tik bo‘ladi.",
+    "karakalpak": "Gorizontallar bir-birine qansha jaqın bolsa, janbawır sonsha tik boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 253,
+    "uzbek": "Gorizontallarga qarab nuqtalarning baland yoki pastligini aniqlash mumkin.",
+    "karakalpak": "Gorizontallarga qarap noqalardıń biyik yaki pás ekenin anıqlawǵa boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 254,
+    "uzbek": "Qo‘shni gorizontallar orasidagi masofaga qarab yonbag‘irning tikligini bilish mumkin.",
+    "karakalpak": "Qońsı gorizontallar arasındagı aralıqqa qarap janbawırdıń tikligin biliwge boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 255,
+    "uzbek": "Odatda, geografik xaritalarning masshtabi juda kichik bo‘ladi.",
+    "karakalpak": "Ádette geografiyalıq kartalardıń masshtabı óte kishi boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 256,
+    "uzbek": "Yer yuzasi million marta va undan ko‘proq marta kichraytirib ko‘rsatiladi.",
+    "karakalpak": "Jer beti million eseden hám onnan da kóbirék márte kishireytilip kórsetiledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 257,
+    "uzbek": "Yer yuzasining kichik qismini tasvirlovchi yirik masshtabli xaritalar topografik xaritalar deb ataladi.",
+    "karakalpak": "Jer betiniń kishkene bólimin súwretlewshi iri masshtablı kartalar topografiyalıq kartalar dep ataladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 258,
+    "uzbek": "Mazmuniga ko‘ra, ular umumiy geografik xaritalar hisoblanadi.",
+    "karakalpak": "Mazmunına qaray, olar ulıwma geografiyalıq kartalar bolıp esaplanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 259,
+    "uzbek": "Yirik masshtabli topografik xaritalar joyda bajariladigan topografik o‘lchov ishlari hamda aerosuratlar asosida tuziladi.",
+    "karakalpak": "Iri masshtablı topografiyalıq kartalar jerde orınlanatuǵın topografiyalıq ólshew isleri hám aerosúwretler tiykarında dúziledi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 260,
+    "uzbek": "Yirik masshtabli topografik xaritalarda katta maydonlar tasvirlanadigan bo‘lsa, xarita juda kattalashib ketadi.",
+    "karakalpak": "Iri masshtablı topografiyalıq kartalarda úlken maydanlar súwretlenetuǵın bolsa, karta júdá úlkeyip ketedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 261,
+    "uzbek": "Shuning uchun bunday xaritalar ayrim-ayrim varaqlarga bo‘linadi va ular ko‘p varaqli bo‘ladi.",
+    "karakalpak": "Sonıń ushın bunday kartalar ayrım-ayrım betlerge bólinedi hám olar kóp betli boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 262,
+    "uzbek": "Yirik masshtabli topografik xaritalarning har bir varag‘ida Yer yuzasining kichik qismi tasvirlanadi.",
+    "karakalpak": "Iri masshtablı topografiyalıq kartalardıń hár bir betinde jer betiniń kishkene bólimi súwretlenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 263,
+    "uzbek": "Shuning uchun bunday xaritalarda mayda masshtabli xaritalarga nisbatan xatoliklar juda kam bo‘ladi.",
+    "karakalpak": "Sonıń ushın bunday kartalarda mayda masshtablı kartalarǵa qaraǵanda qatelikler júdá az boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 264,
+    "uzbek": "Chunki kichik maydon yuzasi tekislikka yaqin bo‘ladi.",
+    "karakalpak": "Sebebi kishkene maydan beti tegislikke jaqın boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 265,
+    "uzbek": "Xaritaning masshtabi uning barcha qismida bir xil bo‘ladi.",
+    "karakalpak": "Kartanıń masshtabı onıń barlıq bólimlerinde birdey boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 266,
+    "uzbek": "Topografik xaritaning har bir varag‘i yon tomonlarda meridian, yuqori va past tomonlarda parallellar bilan chegaralanadi.",
+    "karakalpak": "Topografiyalıq kartanıń hár bir beti qaptal jaqlarında meridian, joqarı hám tómen jaqlarında paralleller menen shegaralanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 267,
+    "uzbek": "Masshtabi 1:1000 000 bo‘lgan xaritaning har bir varag‘i har 6° dan o‘tkazilgan meridianlar va har 4° dan o‘tkazilgan parallellar bilan chegaralangan.",
+    "karakalpak": "Masshtabı 1:1 000 000 bolǵan kartanıń hár bir beti hár 6° meridian hám hár 4° paralleller menen shegaralanadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 268,
+    "uzbek": "Natijada Yer yuzasida uzunligi 6° va kengligi 4° ga teng bo‘lgan trapetsiyalar hosil bo‘ladi.",
+    "karakalpak": "Nátiyjede jer betinde uzunlıǵı 6° hám keńligi 4° bolǵan trapeziyalar payda boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 269,
+    "uzbek": "Yirik masshtabli xaritalar uchun o‘lchami kichikroq bo‘lgan trapetsiyalardan foydalaniladi.",
+    "karakalpak": "Iri masshtablı kartalar ushın ólshemi kishirek bolǵan trapeziyalardan paydalanıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 270,
+    "uzbek": "Masalan, masshtabi 1:100 000 bo‘lgan xarita trapetsiyasining o‘lchami uzunlik bo‘yicha 30′ va kenglik bo‘yicha 20′ ga teng bo‘ladi.",
+    "karakalpak": "Mısalı, masshtabı 1:100 000 bolǵan karta trapeziyasınıń ólshemi uzunlıq boyınsha 30′ hám keńlik boyınsha 20′ ga teń boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 271,
+    "uzbek": "Masshtabi 1:25 000 li xarita trapetsiyasining o‘lchami uzunlik bo‘yicha 7′30′′, kenglik bo‘yicha 5′ ga teng bo‘ladi.",
+    "karakalpak": "Masshtabı 1:25 000 bolǵan karta trapeziyasınıń ólshemi uzunlıq boyınsha 7′30′′, keńlik boyınsha 5′ ga teń boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 272,
+    "uzbek": "Topografik xaritalarning har bir varag‘i kilometrli kataklarga ham bo‘lingan bo‘ladi.",
+    "karakalpak": "Topografiyalıq kartalardıń hár bir beti kilometrli torlarǵa da bólingen boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 273,
+    "uzbek": "Har bir katakning tomonlari 1000 m (1 km) ga teng qilib olinadi.",
+    "karakalpak": "Hár bir tor jaqları 1000 m (1 km) bolıp alınadı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 274,
+    "uzbek": "Xaritalar masshtabiga qarab kataklar har xil kattalikda bo‘ladi.",
+    "karakalpak": "Kartalardıń masshtabına qarap torlar hár qıylı úlkenlikte boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 275,
+    "uzbek": "Agar xarita masshtabi 1:100 000 bo‘lsa, katak tomonlari 1 sm bo‘ladi.",
+    "karakalpak": "Eger karta masshtabı 1:100 000 bolsa, tor jaqları 1 sm boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 276,
+    "uzbek": "Agar masshtab 1:50 000 bo‘lsa, katak tomonlari 2 sm bo‘ladi.",
+    "karakalpak": "Eger masshtab 1:50 000 bolsa, tor jaqları 2 sm boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 277,
+    "uzbek": "Agar masshtab 1:25 000 bo‘lsa, katak tomonlari 4 sm bo‘ladi.",
+    "karakalpak": "Eger masshtab 1:25 000 bolsa, tor jaqları 4 sm boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 278,
+    "uzbek": "Agar masshtab 1:10 000 bo‘lsa, katak tomonlari 10 sm ga teng bo‘ladi.",
+    "karakalpak": "Eger masshtab 1:10 000 bolsa, tor jaqları 10 sm ge teń boladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 279,
+    "uzbek": "Xaritaning pastki ramkasidan yuqori tomonga yo‘nalish x bilan belgilanadi.",
+    "karakalpak": "Kartanıń tómen rámkasınan joqarı jaqqa baǵıt x menen belgilenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 280,
+    "uzbek": "O‘ng tomonga gorizontal yo‘nalish bilan belgilanadi.",
+    "karakalpak": "Oń jaqqa gorizontal baǵıt menen belgilenedi.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 281,
+    "uzbek": "Ularning necha kilometrga teng ekanligi yozib qo‘yiladi.",
+    "karakalpak": "Olardıń neshe kilometrge teń ekenligi jazıp qoyıladı.",
+    "domain": "geografiya_darslik"
+  },
+  {
+    "id": 282,
+    "uzbek": "Shu raqamlarga qarab xaritadagi har bir nuqtaning vertikali va gorizontali nechanchi kilometrlarda ekanligini aniqlasa bo‘ladi.",
+    "karakalpak": "Sol sanlarǵa qarap kartadaǵı hár bir noqanıń vertikali hám gorizontali neshinshi kilometrlərdə ekenin anıqlawǵa boladı.",
+    "domain": "geografiya_darslik"
+  }
+]
