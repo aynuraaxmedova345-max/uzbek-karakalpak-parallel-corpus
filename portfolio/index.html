@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aynura Akhmedova — NLP researcher working on AI reliability for Uzbek, Karakalpak and other low-resource Turkic languages.">
+<title>Aynura Akhmedova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column with a lexicon-entry hero; projects as ruled entries, side facts in a narrow margin column on wide screens */
+:root{
+  --bg:#f3f6f5; --surface:#ffffff; --ink:#18232d; --muted:#5b6b73; --line:#d6dfdd;
+  --accent:#0b6e78; --accent-soft:#dcefee; --gold:#a8730f;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10181d; --surface:#172229; --ink:#e4ecea; --muted:#9aaeb1; --line:#2a3a41;
+  --accent:#5cc4cc; --accent-soft:#183a3e; --gold:#e0b24f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10181d; --surface:#172229; --ink:#e4ecea; --muted:#9aaeb1; --line:#2a3a41;
+  --accent:#5cc4cc; --accent-soft:#183a3e; --gold:#e0b24f; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6;padding-inline:20px;padding-block:0}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto}
+
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
+nav.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px;flex-wrap:wrap}
+.mark{font-family:var(--display);font-size:18px;color:var(--ink);text-decoration:none}
+nav.top ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav.top ul a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+nav.top ul a:hover{color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;padding-block:72px 56px;align-items:end}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,7vw,84px);line-height:1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.pron{font-family:var(--mono);font-size:14px;color:var(--muted);margin:14px 0 0}
+.pron i{font-style:normal;color:var(--gold)}
+.role{font-size:clamp(19px,2.2vw,23px);line-height:1.4;margin:22px 0 0;max-width:34ch;font-weight:500;text-wrap:balance}
+.contact{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:15px;align-items:center}
+.contact span{color:var(--muted)}
+.copy{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+
+.gloss{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:18px 20px;font-family:var(--mono);font-size:13px}
+.gloss h2{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.gloss dl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;margin:0}
+.gloss dt{color:var(--gold)}
+.gloss dd{margin:0}
+.gloss p{margin:14px 0 0;color:var(--muted);font-size:12px;line-height:1.5;font-family:var(--body)}
+
+/* figures */
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fig{padding:22px 20px 20px 0}
+.fig+.fig{padding-left:20px;border-left:1px solid var(--line)}
+.fig b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1.05;color:var(--accent);font-variant-numeric:tabular-nums}
+.fig span{display:block;font-size:14px;color:var(--muted);margin-top:6px;line-height:1.4}
+
+section{padding-block:64px 8px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:32px;margin:0;line-height:1.1}
+.sec-head small{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.lead{font-size:19px;line-height:1.65;max-width:66ch;margin:0}
+.lead strong{font-weight:600}
+
+/* projects */
+.proj{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;padding-block:30px;border-top:1px solid var(--line)}
+.proj:last-child{border-bottom:1px solid var(--line)}
+.proj-meta{font-size:14px;color:var(--muted)}
+.proj-meta .kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.stack li{list-style:none;font-family:var(--mono);font-size:11.5px;background:var(--accent-soft);color:var(--ink);padding:2px 8px;border-radius:3px}
+.stack{padding:0}
+.proj h3{font-family:var(--display);font-weight:400;font-size:25px;line-height:1.2;margin:0}
+.proj .sub{color:var(--muted);margin:6px 0 16px;font-size:15.5px}
+.proj ul.pts{margin:0;padding-left:18px;max-width:68ch}
+.proj ul.pts li{margin-bottom:9px}
+.proj ul.pts li::marker{color:var(--accent)}
+.metrics{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0 0 16px;padding:0;list-style:none;font-family:var(--mono);font-size:13px}
+.metrics b{color:var(--accent);font-weight:500}
+.proj .link{display:inline-block;margin-top:8px;font-size:14.5px;font-weight:600}
+
+/* two-column info */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.entry{padding-block:18px;border-top:1px solid var(--line)}
+.entry h3{font-size:17px;font-weight:600;margin:0}
+.entry .when{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:4px 0 8px}
+.entry p,.entry ul{margin:0;font-size:15.5px}
+.entry ul{padding-left:18px}
+.entry li{margin-bottom:6px}
+
+.skills{display:grid;grid-template-columns:200px minmax(0,1fr);border-top:1px solid var(--line)}
+.skills dt,.skills dd{padding-block:14px;border-bottom:1px solid var(--line);margin:0}
+.skills dt{font-weight:600;font-size:15px;padding-right:20px}
+.skills dd{font-size:15.5px;color:var(--ink)}
+.skills dd .sep{color:var(--line);padding-inline:6px}
+
+.langs{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.langs li{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:10px 14px;min-width:150px}
+.langs b{display:block;font-weight:600}
+.langs span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+footer{margin-top:80px;padding-block:40px 56px;border-top:1px solid var(--line)}
+footer .cta{font-family:var(--display);font-size:clamp(26px,4vw,38px);line-height:1.2;margin:0 0 18px;max-width:22ch;text-wrap:balance}
+footer .small{font-size:13px;color:var(--muted);margin-top:28px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-block:48px 40px}
+  .gloss{max-width:420px}
+  .figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fig:nth-child(3){padding-left:0;border-left:0}
+  .fig:nth-child(n+3){border-top:1px solid var(--line)}
+  .proj{grid-template-columns:1fr;gap:14px}
+  .cols{grid-template-columns:1fr;gap:16px}
+  .skills{grid-template-columns:1fr}
+  .skills dt{border-bottom:0;padding-bottom:2px}
+  .skills dd{padding-top:0}
+  nav.top ul{gap:14px}
+}
+@media (max-width:480px){
+  body{padding-inline:16px}
+  nav.top{margin-inline:-16px;padding-inline:16px}
+  nav.top ul{display:none}
+  .fig b{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top">Aynura Akhmedova</a>
+    <ul>
+      <li><a href="#focus">Focus</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Tashkent, Uzbekistan · NLP researcher</p>
+      <h1>Aynura Akhmedova</h1>
+      <p class="pron"><i>n.</i> builds language technology for Uzbek, Karakalpak and other Turkic languages</p>
+      <p class="role">Technical AI governance and reliability in low-resource, multilingual deployments.</p>
+      <div class="contact">
+        <a href="https://github.com/aynuraaxmedova345-max">GitHub</a>
+        <a href="https://www.linkedin.com/in/aynura-axmedova-4915673a9">LinkedIn</a>
+        <span id="email">aynuraaxmedova345@gmail.com</span>
+        <button class="copy" type="button" data-copy="aynuraaxmedova345@gmail.com">Copy email</button>
+      </div>
+    </div>
+    <aside class="gloss" aria-label="One word across my working languages">
+      <h2>“language” across my working languages</h2>
+      <dl>
+        <dt>uz</dt><dd>til</dd>
+        <dt>kaa</dt><dd>til</dd>
+        <dt>kk</dt><dd>тіл</dd>
+        <dt>tr</dt><dd>dil</dd>
+        <dt>ru</dt><dd>язык</dd>
+        <dt>en</dt><dd>language</dd>
+      </dl>
+      <p>Closely related languages, very unequal resources. Most evaluation tooling exists only for the last two rows.</p>
+    </aside>
+  </header>
+
+  <div class="figures" role="list">
+    <div class="fig" role="listitem"><b>11,178</b><span>synsets in UzWordNet-GoldCore, sole author</span></div>
+    <div class="fig" role="listitem"><b>4</b><span>Scopus-indexed papers as lead author</span></div>
+    <div class="fig" role="listitem"><b>0.903</b><span>test macro-F1 on 15 banking intents in 4 languages</span></div>
+    <div class="fig" role="listitem"><b>1,004</b><span>aligned Uzbek–Karakalpak sentence pairs</span></div>
+  </div>
+
+  <section id="focus">
+    <div class="sec-head"><h2>Focus</h2><small>Research agenda</small></div>
+    <p class="lead">I build AI systems for underrepresented languages, where safety and reliability failures are the least visible and the least studied. Most AI safety and evaluation infrastructure is built and tested in high-resource languages. That leaves models in <strong>Uzbek, Karakalpak and related Turkic languages</strong> effectively unaudited when they are deployed in high-stakes settings. My work closes that gap from both ends: I build the language resources that evaluation depends on, and I ship systems where low-resource failure is treated as a first-class risk from day one.</p>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><h2>Selected projects</h2><small>4 entries</small></div>
+
+    <article class="proj">
+      <div class="proj-meta">
+        <span class="kind">Deployed system</span>
+        Reliability and risk controls for a low-resource-language AI system
+        <ul class="stack"><li>Python</li><li>PyTorch</li><li>Qdrant</li><li>Whisper</li><li>Gradio</li></ul>
+      </div>
+      <div>
+        <h3>CustomerSignal AI</h3>
+        <p class="sub">Multilingual banking intelligence, fully local and API-free</p>
+        <ul class="metrics">
+          <li><b>0.903</b> macro-F1</li>
+          <li><b>0.884</b> critical-intent recall</li>
+          <li><b>31/31</b> regression tests</li>
+          <li><b>en · ru · uz · kaa</b></li>
+        </ul>
+        <ul class="pts">
+          <li>Classifies customer requests across 15 banking intents in English, Russian, Uzbek and Karakalpak. Critical-intent recall is tracked separately because a missed intent there is a compliance or safety failure.</li>
+          <li>Leakage-safe evaluation that splits on <code>source_id</code>, so reported scores reflect real generalisation instead of memorised overlap.</li>
+          <li>Confidence calibration with manual-review escalation: low-confidence or high-stakes outputs go to a human instead of being auto-resolved.</li>
+          <li>PII masking (regex plus Luhn checksum) and citation-grounded RAG over a 127-chunk policy base with hybrid dense–sparse retrieval, so every answer can be checked against source policy.</li>
+          <li>Integrates a fine-tuned Karakalpak Whisper ASR beta model, one of very few speech recognition systems for the language.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="proj-meta">
+        <span class="kind">Language resource · DOI</span>
+        Evaluation infrastructure for a language that had none
+        <ul class="stack"><li>Python</li><li>WordNet methodology</li><li>HuggingFace</li></ul>
+      </div>
+      <div>
+        <h3>UzWordNet-GoldCore</h3>
+        <p class="sub">The first DOI-registered Uzbek WordNet, built from scratch</p>
+        <ul class="metrics">
+          <li><b>11,178</b> synsets</li>
+          <li><b>CC-BY 4.0</b></li>
+          <li><b>sole</b> author</li>
+        </ul>
+        <ul class="pts">
+          <li>A structured lexical resource of the kind that language-model evaluation and safety benchmarks depend on, and that most Turkic languages still lack.</li>
+          <li>Now extending the methodology to Karakalpak and Kazakh as part of my M.Sc. thesis.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="proj-meta">
+        <span class="kind">Open dataset</span>
+        A resource for a language absent from most model evaluation
+        <ul class="stack"><li>Python</li><li>HTML</li><li>Corpus engineering</li></ul>
+      </div>
+      <div>
+        <h3>Uzbek–Karakalpak Parallel Corpus</h3>
+        <p class="sub">Public, searchable, aligned at sentence level</p>
+        <ul class="metrics"><li><b>1,004</b> sentence pairs</li><li><b>uz ↔ kaa</b></li></ul>
+        <ul class="pts">
+          <li>One of very few open resources for Karakalpak NLP, usable for building or evaluating translation and safety-relevant behaviour in a language with almost no benchmarks.</li>
+        </ul>
+        <a class="link" href="https://github.com/aynuraaxmedova345-max/uzbek-karakalpak-parallel-corpus">View the corpus on GitHub →</a>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div class="proj-meta">
+        <span class="kind">Evaluation case study</span>
+        Diagnosing a metrics-inflation failure
+        <ul class="stack"><li>scikit-learn</li><li>Annotation pipeline</li></ul>
+      </div>
+      <div>
+        <h3>Uzbek Sarcasm Detection</h3>
+        <p class="sub">590,000 YouTube and Telegram comments</p>
+        <ul class="pts">
+          <li>Built the annotation pipeline, then found a <code>StandardScaler</code> data-leakage bug that had inflated reported performance. It is the kind of quiet evaluation failure that is easy to miss and easy to over-trust.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="experience">
+    <div class="cols">
+      <div>
+        <div class="sec-head"><h2>Experience</h2></div>
+        <div class="entry">
+          <h3>Independent NLP Researcher &amp; Corpus Builder</h3>
+          <p class="when">TSUULL / self-directed · Tashkent · 2024–present</p>
+          <ul>
+            <li>4 Scopus-indexed papers: computational dialectology, dialect normalisation, spell-checking (UzbekSpell, TSD 2026, Springer) and geospatial dialect mapping.</li>
+            <li>10 national peer-reviewed articles; 8 public repositories of Uzbek and Karakalpak language resources.</li>
+            <li>Papers submitted to UBMK 2026; pursuing ACL-track venues and Erasmus+ / DAAD research mobility.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h3>Data Science &amp; Data Cleaning Intern</h3>
+          <p class="when">Yandex · UZINFOCOM · Mohirdev · Uzbekistan</p>
+          <p>Data cleaning, preprocessing and quality-control workflows on large structured datasets across three technology organisations.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sec-head"><h2>Education</h2></div>
+        <div class="entry">
+          <h3>M.Sc. Computational Linguistics &amp; NLP</h3>
+          <p class="when">TSUULL · 2024–2027 · defense May–June 2027</p>
+          <p>Thesis: UzWordNet — construction, enrichment, and cross-Turkic extension to Karakalpak and Kazakh.</p>
+        </div>
+        <div class="entry">
+          <h3>Certifications</h3>
+          <ul>
+            <li>DeepLearning.AI NLP Specialization: Course 1 completed Aug 2026, Courses 2–4 in progress</li>
+            <li>HuggingFace LLM Course (2026) · Kaggle Intro to Machine Learning (2025)</li>
+            <li>BePro Academy AI/ML Bootcamp: RAG, QLoRA, LangGraph, deployment (2025–2026)</li>
+            <li>IELTS B2, British Council (2026)</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h3>Award</h3>
+          <p>Winner, “Mirzo Ulug‘bek Vorislari” Republic Competition, Tashkent City / Yakkasaroy District stage (Ulug‘bek Foundation for Gifted Youth &amp; Ministry of Higher Education, Science and Innovation).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2><small>Technical</small></div>
+    <dl class="skills">
+      <dt>Languages &amp; frameworks</dt>
+      <dd>Python<span class="sep">/</span>JavaScript<span class="sep">/</span>SQL<span class="sep">/</span>PyTorch<span class="sep">/</span>HuggingFace Transformers<span class="sep">/</span>scikit-learn<span class="sep">/</span>spaCy<span class="sep">/</span>NLTK</dd>
+      <dt>LLM &amp; AI engineering</dt>
+      <dd>RAG (Qdrant, ChromaDB, hybrid retrieval + RRF)<span class="sep">/</span>QLoRA fine-tuning<span class="sep">/</span>LangChain<span class="sep">/</span>LangGraph<span class="sep">/</span>prompt engineering<span class="sep">/</span>AI agents</dd>
+      <dt>Evaluation &amp; reliability</dt>
+      <dd>Leakage-safe splitting<span class="sep">/</span>confidence calibration<span class="sep">/</span>ablation studies<span class="sep">/</span>anomaly detection (Z-score)<span class="sep">/</span>regression testing</dd>
+      <dt>Data engineering</dt>
+      <dd>Corpus construction<span class="sep">/</span>rule-based NER<span class="sep">/</span>annotation pipelines<span class="sep">/</span>PII masking<span class="sep">/</span>web scraping</dd>
+    </dl>
+
+    <div class="sec-head" style="margin-top:44px"><h2>Spoken languages</h2></div>
+    <ul class="langs">
+      <li><b>Uzbek</b><span>native</span></li>
+      <li><b>Karakalpak</b><span>native</span></li>
+      <li><b>Kazakh</b><span>fluent</span></li>
+      <li><b>Russian</b><span>professional</span></li>
+      <li><b>English</b><span>B2</span></li>
+      <li><b>Turkish</b><span>basic</span></li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <p class="cta">Working on multilingual evaluation or AI safety for underrepresented languages? Let’s talk.</p>
+    <div class="contact">
+      <span>aynuraaxmedova345@gmail.com</span>
+      <button class="copy" type="button" data-copy="aynuraaxmedova345@gmail.com">Copy email</button>
+      <a href="https://github.com/aynuraaxmedova345-max">github.com/aynuraaxmedova345-max</a>
+      <a href="https://www.linkedin.com/in/aynura-axmedova-4915673a9">LinkedIn</a>
+    </div>
+    <p class="small">© 2026 Aynura Akhmedova · Tashkent, Uzbekistan</p>
+  </footer>
+</main>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var text=btn.getAttribute('data-copy'), label=btn.textContent;
+    function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent=label},1600)}
+    function fallback(){var s=btn.previousElementSibling;if(s){var r=document.createRange();r.selectNodeContents(s);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);btn.textContent='Selected, press Ctrl+C';setTimeout(function(){btn.textContent=label},2200)}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
+  });
+});
+</script>
+</body>
+</html>
