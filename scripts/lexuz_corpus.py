@@ -60,13 +60,20 @@ CSV_FIELDS = [
     "moddalar_soni", "so'zlar_soni", "toliq", "yuklangan_sana",
 ]
 
-# Hujjat matni joylashishi mumkin bo'lgan konteynerlar (probe natijasida aniqlanadi/tasdiqlanadi).
-CONTENT_SELECTORS = ["#divCont", ".docBody", "#docBody", ".document-text", "article"]
+# lex.uz tuzilishi (07-hujjat probe natijasi bo'yicha):
+#   #divCont          — hujjat matni (server tomonida render qilinadi, JS shart emas)
+#   .lx_elem2         — har paragraf ichidagi tugmalar ("Hujjatga taklif yuborish" va h.k.)
+#   .INDEXES_ON_REF   — OKOZ/TSZ klassifikator indekslari
+#   .COMMENT          — "LexUZ sharhi" (tahririyat izohi)
+#   .UNOFFIAL         — "Norasmiy tarjima" belgisi
+#   #dvToc            — mundarija (matndan tashqarida)
+CONTENT_SELECTORS = ["#divCont"]
 # Korpusga kirmasligi kerak bo'lgan elementlar (sharhlar, interfeys, skriptlar).
 DROP_SELECTORS = [
-    "script", "style", "noscript", "nav", "header", "footer", "form", "button",
-    ".lx_comment", ".COMMENT", ".comment", ".lx-comment", ".dropdown-menu",
+    "script", "style", "noscript", "button", "img",
+    ".lx_elem2", ".INDEXES_ON_REF", ".COMMENT", ".UNOFFIAL",
 ]
+TOC_SELECTOR = "#dvToc"
 BLOCK_TAGS = {"p", "div", "br", "h1", "h2", "h3", "h4", "h5", "h6", "li", "tr", "table"}
 
 ARTICLE_RE = re.compile(r"^\s*(\d+)\s*[-–]\s*modda\b", re.IGNORECASE | re.MULTILINE)
@@ -76,6 +83,12 @@ WORD_RE = re.compile(r"[\wʻʼ'‘’`-]+", re.UNICODE)
 
 
 # ---------------------------------------------------------------- tarmoq
+
+class HTTPClientError(RuntimeError):
+    def __init__(self, status, msg):
+        super().__init__(msg)
+        self.status = status
+
 
 class Client:
     def __init__(self):
@@ -105,6 +118,8 @@ class Client:
                     r.encoding = r.apparent_encoding if not r.encoding or r.encoding.lower() == "iso-8859-1" else r.encoding
                     return r
                 last_err = f"HTTP {r.status_code}"
+                if 400 <= r.status_code < 500 and r.status_code != 429:
+                    raise HTTPClientError(r.status_code, f"{url}: {last_err}")
             except requests.RequestException as e:
                 self.last = time.time()
                 last_err = str(e)
@@ -112,7 +127,12 @@ class Client:
         raise RuntimeError(f"{url}: {last_err}")
 
     def check_robots(self):
-        r = self.get(BASE + "/robots.txt")
+        try:
+            r = self.get(BASE + "/robots.txt")
+        except HTTPClientError as e:
+            # robots.txt yo'q (404) — standart bo'yicha cheklov yo'q
+            self.robots = None
+            return f"(robots.txt topilmadi: HTTP {e.status} — cheklov yo'q deb hisoblanadi)"
         rp = robotparser.RobotFileParser()
         rp.parse(r.text.splitlines())
         self.robots = rp
@@ -173,10 +193,17 @@ def article_numbers(text):
 def toc_last_article(soup):
     """Sahifadagi mundarija (agar bo'lsa) dan oxirgi modda raqami."""
     nums = []
-    for sel in ["#docMenu", ".doc-menu", ".docMenu", "#treeMenu", ".content-menu", ".toc"]:
-        for el in soup.select(sel):
-            nums += article_numbers("\n".join(node_to_lines(el)))
+    for el in soup.select(TOC_SELECTOR):
+        nums += article_numbers("\n".join(node_to_lines(el)))
     return max(nums) if nums else None
+
+
+def lexuz_comments(content):
+    """LexUZ sharhlari (korpusga kirmaydi) — matni va undagi hujjat havolalari."""
+    out = []
+    for el in content.select(".COMMENT"):
+        out.append((re.sub(r"\s+", " ", el.get_text(" ", strip=True)), external_links(el)))
+    return out
 
 
 def external_links(content):
@@ -191,17 +218,26 @@ def external_links(content):
 
 
 def page_title(soup, lines):
-    for sel in [".ACT_TITLE", "h1", "title"]:
-        el = soup.select_one(sel)
-        if el and el.get_text(strip=True):
-            return re.sub(r"\s+", " ", el.get_text(" ", strip=True))
+    """<title> odatda "DD.MM.YYYY. Nomi" ko'rinishida: sanani olib tashlab nomni qaytaradi."""
+    parts = [re.sub(r"\s+", " ", el.get_text(" ", strip=True))
+             for el in soup.select("#divCont .ACT_TITLE > div[id], #divCont .ACT_FORM > div[id]")]
+    if parts:
+        return " ".join(parts)
+    el = soup.select_one("title")
+    if el and el.get_text(strip=True):
+        return re.sub(r"^\d{1,2}\.\d{1,2}\.\d{4}\.\s*", "", re.sub(r"\s+", " ", el.get_text(" ", strip=True)))
     return lines[0] if lines else ""
 
 
 DATE_RE = re.compile(r"\b(\d{1,2}\.\d{1,2}\.\d{4})\b")
 
 
-def doc_date(lines):
+def doc_date(soup, lines):
+    el = soup.select_one("title")
+    if el:
+        m = DATE_RE.match(el.get_text(strip=True))
+        if m:
+            return m.group(1)
     for ln in lines[:15] + lines[-15:]:
         m = DATE_RE.search(ln)
         if m:
@@ -211,19 +247,23 @@ def doc_date(lines):
 
 # ---------------------------------------------------------------- rejimlar
 
-def probe(client):
+def probe(client, local=False):
     num, name, doc_id = next(d for d in DOCS if d[0] == "07")
     url = URL_TMPL.format(id=doc_id)
-    print("robots.txt:\n" + client.check_robots())
-    print(f"{url} ruxsat etilganmi: {client.allowed(url)}")
-    if not client.allowed(url):
-        return
-    r = client.get(url)
-    HTML_DIR.mkdir(parents=True, exist_ok=True)
     out = HTML_DIR / f"{num}_{name}.html"
-    out.write_text(r.text, encoding="utf-8")
-    soup = BeautifulSoup(r.text, "html.parser")
-    print(f"HTML saqlandi: {out} ({len(r.text)} belgi)")
+    if local and out.exists():
+        html = out.read_text(encoding="utf-8")
+        print(f"Saqlangan HTML ishlatildi (saytga so'rov yuborilmadi): {out}")
+    else:
+        print("robots.txt:\n" + client.check_robots())
+        print(f"{url} ruxsat etilganmi: {client.allowed(url)}")
+        if not client.allowed(url):
+            return
+        html = client.get(url).text
+        HTML_DIR.mkdir(parents=True, exist_ok=True)
+        out.write_text(html, encoding="utf-8")
+        print(f"HTML saqlandi: {out} ({len(html)} belgi)")
+    soup = BeautifulSoup(html, "html.parser")
 
     # Eng ko'p matnli id/class lar — tuzilishni o'rganish uchun
     counts = Counter()
@@ -244,9 +284,24 @@ def probe(client):
         return
     lines = node_to_lines(content)
     print(f"Qatorlar: {len(lines)}; boshi:")
-    print("\n".join("  | " + ln for ln in lines[:40]))
+    print("\n".join("  | " + ln for ln in lines[:25]))
     print("  ...\n  oxiri:")
     print("\n".join("  | " + ln for ln in lines[-15:]))
+
+    text = "\n".join(lines) + "\n"
+    share, script = script_stats(text)
+    arts = article_numbers(text)
+    print("\nTekshiruvlar:")
+    print(f"  nomi: {page_title(soup, lines)}")
+    print(f"  sana: {doc_date(soup, lines)}")
+    print(f"  yozuv: {script} (kirill ulushi {share:.2%})")
+    print(f"  norasmiy tarjima: {'ha' if soup.select('#divCont .UNOFFIAL') else 'yo`q'}")
+    print(f"  mundarijadagi oxirgi modda: {toc_last_article(soup)}; matndagi oxirgi: {max(arts) if arts else None}")
+    print(f"  so'zlar: {len(WORD_RE.findall(text))}; qatorlar: {len(lines)}")
+    for t, links in lexuz_comments(content):
+        print(f"  LexUZ sharhi (chiqarib tashlandi): {t}")
+        for lt, lu in links:
+            print(f"     havola: {lt} -> {lu}")
 
 
 def fetch(client, only):
@@ -282,7 +337,7 @@ def fetch(client, only):
         cyr_share, script = script_stats(text)
         if script != "lotin":
             issues.append(f"kirill ulushi {cyr_share:.1%}")
-        unofficial = "norasmiy tarjima" in text.lower() or "норасмий таржима" in text.lower()
+        unofficial = bool(soup.select("#divCont .UNOFFIAL")) or "norasmiy tarjima" in text.lower()
         arts = article_numbers(text)
         n_arts = max(arts) if arts else 0
         toc_last = toc_last_article(soup)
@@ -311,7 +366,7 @@ def fetch(client, only):
 
         rows.append({
             "raqam": num, "fayl": f"data/raw/{fname}", "hujjat_nomi": page_title(soup, lines),
-            "sana": doc_date(lines), "URL": url, "yozuv": script,
+            "sana": doc_date(soup, lines), "URL": url, "yozuv": script,
             "norasmiy_tarjima": "ha" if unofficial else "yo'q", "moddalar_soni": n_arts,
             "so'zlar_soni": words, "toliq": complete, "yuklangan_sana": date.today().isoformat(),
         })
@@ -350,14 +405,15 @@ def print_report(report):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    sub.add_parser("probe")
+    pr = sub.add_parser("probe")
+    pr.add_argument("--local", action="store_true", help="saqlangan HTML'dan foydalanish (so'rovsiz)")
     f = sub.add_parser("fetch")
     f.add_argument("--confirmed", action="store_true", help="HTML tuzilishi tasdiqlangan")
     f.add_argument("--only", nargs="*", default=[])
     args = ap.parse_args()
     client = Client()
     if args.cmd == "probe":
-        probe(client)
+        probe(client, args.local)
     else:
         if not args.confirmed:
             sys.exit("Avval `probe` natijasini tasdiqlang, keyin --confirmed bilan ishga tushiring.")
