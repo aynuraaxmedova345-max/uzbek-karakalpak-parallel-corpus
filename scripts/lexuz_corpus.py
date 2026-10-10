@@ -58,6 +58,7 @@ DOCS = [
 CSV_FIELDS = [
     "raqam", "fayl", "hujjat_nomi", "sana", "URL", "yozuv", "norasmiy_tarjima",
     "moddalar_soni", "so'zlar_soni", "toliq", "yuklangan_sana",
+    "uz_kuchga_kirgan", "qoshilish_qarori_url",
 ]
 
 # lex.uz tuzilishi (07-hujjat probe natijasi bo'yicha):
@@ -66,13 +67,16 @@ CSV_FIELDS = [
 #   .INDEXES_ON_REF   — OKOZ/TSZ klassifikator indekslari
 #   .COMMENT          — "LexUZ sharhi" (tahririyat izohi)
 #   .UNOFFIAL         — "Norasmiy tarjima" belgisi
+#   .CHANGES_ORIGINS  — "(... Qonuni tahririda ...)" tahrir manbasi izohi
+#   .PUBLICATION_ORIGIN — "(Qonun hujjatlari maʼlumotlari milliy bazasi ...)" nashr manbasi
 #   #dvToc            — mundarija (matndan tashqarida)
 CONTENT_SELECTORS = ["#divCont"]
 # Korpusga kirmasligi kerak bo'lgan elementlar (sharhlar, interfeys, skriptlar).
 DROP_SELECTORS = [
     "script", "style", "noscript", "button", "img",
-    ".lx_elem2", ".INDEXES_ON_REF", ".COMMENT", ".UNOFFIAL",
+    ".lx_elem2", ".INDEXES_ON_REF", ".COMMENT", ".UNOFFIAL", ".CHANGES_ORIGINS", ".PUBLICATION_ORIGIN",
 ]
+SUPERSCRIPT = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
 TOC_SELECTOR = "#dvToc"
 BLOCK_TAGS = {"p", "div", "br", "h1", "h2", "h3", "h4", "h5", "h6", "li", "tr", "table"}
 
@@ -158,6 +162,10 @@ def node_to_lines(node):
     for sel in DROP_SELECTORS:
         for el in node.select(sel):
             el.decompose()
+    # "23<sup>1</sup>" -> "23¹" (aks holda "231" bo'lib qo'shilib ketadi)
+    for el in node.select("sup"):
+        t = el.get_text()
+        el.replace_with(t.translate(SUPERSCRIPT) if t.strip().isdigit() else t)
     parts = []
 
     def walk(el):
@@ -198,6 +206,13 @@ def toc_last_article(soup):
     return max(nums) if nums else None
 
 
+def toc_missing(soup, content):
+    """Mundarijadagi bandlar (scrollText('ID')) matnda borligini tekshiradi."""
+    ids = re.findall(r"scrollText\('([^']+)'\)", str(soup.select_one(TOC_SELECTOR) or ""))
+    missing = [i for i in ids if not content.find(id=i) or not content.find(id=i).get_text(strip=True)]
+    return len(ids), missing
+
+
 def lexuz_comments(content):
     """LexUZ sharhlari (korpusga kirmaydi) — matni va undagi hujjat havolalari."""
     out = []
@@ -235,7 +250,8 @@ DATE_RE = re.compile(r"\b(\d{1,2}\.\d{1,2}\.\d{4})\b")
 def doc_date(soup, lines):
     el = soup.select_one("title")
     if el:
-        m = DATE_RE.match(el.get_text(strip=True))
+        # "DD.MM.YYYY. Nomi" yoki "649-XII-сон DD.MM.YYYY. Nomi"
+        m = re.match(r"^(?:\S+\s+)?(\d{1,2}\.\d{1,2}\.\d{4})\.", el.get_text(strip=True))
         if m:
             return m.group(1)
     for ln in lines[:15] + lines[-15:]:
@@ -304,76 +320,174 @@ def probe(client, local=False):
             print(f"     havola: {lt} -> {lu}")
 
 
-def fetch(client, only):
+REMOVED_CSV = META_DIR / "removed_lines.csv"
+TYPOS_CSV = META_DIR / "typos_noticed.csv"
+
+UZ_MONTHS = {
+    "yanvar": 1, "fevral": 2, "mart": 3, "aprel": 4, "may": 5, "iyun": 6, "iyul": 7,
+    "avgust": 8, "sentabr": 9, "sentyabr": 9, "oktabr": 10, "oktyabr": 10, "noyabr": 11, "dekabr": 12,
+}
+# "(Oʻzbekiston Respublikasi uchun 1995-yil 28-dekabrdan kuchga kirgan)" kabi qavsli izohlar
+UZ_FORCE_RE = re.compile(r"^\(.*kuchga\s+kir.*\)$", re.IGNORECASE)
+UZ_FORCE_DATE_RE = re.compile(r"(\d{4})\s*-\s*yil\s+(\d{1,2})\s*-\s*([a-zʻʼ'‘’]+)", re.IGNORECASE)
+SIGNATURES_RE = re.compile(r"^\(\s*imzolar\s*\)$", re.IGNORECASE)
+ACCESSION_RE = re.compile(r"qo.?shil|ratifika", re.IGNORECASE)
+
+
+def uz_force_date(line):
+    m = UZ_FORCE_DATE_RE.search(line)
+    if not m:
+        return line
+    month = next((n for k, n in UZ_MONTHS.items() if m.group(3).lower().startswith(k)), None)
+    return f"{int(m.group(2)):02d}.{month:02d}.{m.group(1)}" if month else line
+
+
+def download(client, only, cached):
     client.check_robots()
-    for d in (RAW_DIR, HTML_DIR, META_DIR):
-        d.mkdir(parents=True, exist_ok=True)
-    rows, report = [], []
+    HTML_DIR.mkdir(parents=True, exist_ok=True)
+    failed = {}
     for num, name, doc_id in DOCS:
         if only and num not in only:
             continue
         url = URL_TMPL.format(id=doc_id)
-        print(f"[{num}] {name} <- {url}")
-        issues = []
+        out = HTML_DIR / f"{num}_{name}.html"
+        if cached and out.exists():
+            print(f"[{num}] {name}: saqlangan HTML ishlatiladi")
+            continue
         if not client.allowed(url):
-            report.append((num, name, 0, "yo'q", ["robots.txt ruxsat bermaydi"]))
+            failed[num] = "robots.txt ruxsat bermaydi"
             continue
+        print(f"[{num}] {name} <- {url}")
         try:
-            r = client.get(url)
+            out.write_text(client.get(url).text, encoding="utf-8")
         except RuntimeError as e:
-            report.append((num, name, 0, "yo'q", [f"yuklanmadi: {e}"]))
+            failed[num] = f"yuklanmadi: {e}"
+    return failed
+
+
+def process(only, failed=None):
+    """Saqlangan HTML'lardan toza matn, sources.csv va removed_lines.csv tayyorlaydi."""
+    failed = failed or {}
+    for d in (RAW_DIR, META_DIR):
+        d.mkdir(parents=True, exist_ok=True)
+    rows, report, removed = [], [], []
+    for num, name, doc_id in DOCS:
+        if only and num not in only:
             continue
-        (HTML_DIR / f"{num}_{name}.html").write_text(r.text, encoding="utf-8")
-        soup = BeautifulSoup(r.text, "html.parser")
+        url = URL_TMPL.format(id=doc_id)
+        html_path = HTML_DIR / f"{num}_{name}.html"
+        fname = f"{num}_{name}.txt"
+        if num in failed or not html_path.exists():
+            report.append(dict(num=num, name=name, words=0, complete="yo'q", toc=None, text_last=None,
+                               unofficial="", issues=[failed.get(num, "HTML yo'q")]))
+            continue
+        soup = BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
+        issues = []
         sel, content = find_content(soup)
         if content is None:
-            report.append((num, name, 0, "yo'q", ["matn konteyneri topilmadi (JS?)"]))
+            report.append(dict(num=num, name=name, words=0, complete="yo'q", toc=None, text_last=None,
+                               unofficial="", issues=["matn konteyneri topilmadi (JS?)"]))
             continue
-        lines = node_to_lines(content)
+
+        # Korpusdan chiqariladigan, lekin qayd etiladigan elementlar
+        for cls, reason in [(".INDEXES_ON_REF", "OKOZ/TSZ klassifikator indeksi"),
+                            (".UNOFFIAL", "\"Norasmiy tarjima\" belgisi (sources.csv da qayd etilgan)"),
+                            (".COMMENT", "LexUZ sharhi"),
+                            (".CHANGES_ORIGINS", "tahrir manbasi izohi (LexUZ)"),
+                            (".PUBLICATION_ORIGIN", "rasmiy nashr manbasi (LexUZ)")]:
+            for el in content.select(cls):
+                removed.append((fname, re.sub(r"\s+", " ", el.get_text(" ", strip=True)), reason))
+        uz_force = []
+        for el in content.select(".TEXT_CENTER"):
+            t = re.sub(r"\s+", " ", el.get_text(" ", strip=True))
+            if UZ_FORCE_RE.match(t):
+                uz_force.append(uz_force_date(t))
+                removed.append((fname, t, "O'zbekiston uchun kuchga kirish izohi (uz_kuchga_kirgan ustuniga)"))
+                el.decompose()
+
+        lines = []
+        for ln in node_to_lines(content):
+            if SIGNATURES_RE.match(ln):
+                removed.append((fname, ln, "\"(imzolar)\" belgisi"))
+            else:
+                lines.append(ln)
         text = "\n".join(lines) + "\n"
-        fname = f"{num}_{name}.txt"
         (RAW_DIR / fname).write_text(text, encoding="utf-8")
 
         cyr_share, script = script_stats(text)
-        if script != "lotin":
-            issues.append(f"kirill ulushi {cyr_share:.1%}")
+        if script != "lotin" or cyr_share > 0.01:
+            issues.append(f"kirill harflar ulushi {cyr_share:.1%}")
         unofficial = bool(soup.select("#divCont .UNOFFIAL")) or "norasmiy tarjima" in text.lower()
         arts = article_numbers(text)
         n_arts = max(arts) if arts else 0
         toc_last = toc_last_article(soup)
         words = len(WORD_RE.findall(text))
-        if toc_last is None:
-            complete = "shubhali" if not arts else "ha"
-            if not arts:
-                issues.append("moddalar topilmadi")
-            else:
-                issues.append("mundarija topilmadi — faqat matndagi moddalar ketma-ketligi tekshirildi")
-                missing = sorted(set(range(1, n_arts + 1)) - set(arts))
-                if missing:
-                    complete = "shubhali"
-                    issues.append(f"tushib qolgan moddalar: {missing[:10]}")
-        elif toc_last == n_arts:
-            complete = "ha"
-        else:
+        missing = sorted(set(range(1, n_arts + 1)) - set(arts))
+        n_toc, toc_gone = toc_missing(soup, content)
+        complete = "ha"
+        if toc_gone:
             complete = "yo'q"
-            issues.append(f"mundarijada {toc_last}-modda, matnda oxirgisi {n_arts}")
-        if words < 1500 and not arts:
-            links = external_links(content)
-            if links:
-                complete = "shubhali"
-                issues.append("faqat qo'shilish qarori bo'lishi mumkin; havolalar: "
-                              + "; ".join(f"{t} -> {u}" for t, u in links[:5]))
+            issues.append(f"mundarijadagi {len(toc_gone)}/{n_toc} band matnda yo'q")
+        if not arts:
+            issues.append(f"\"N-modda\" tuzilishi yo'q (mundarija bandlari: {n_toc}, hammasi matnda)"
+                          if n_toc and not toc_gone else "\"N-modda\" tuzilishi yo'q, mundarija ham yo'q")
+            if not n_toc:
+                # mundarija yo'q: hujjat oxiridagi rekvizit (raqam) bo'lsa, matn oxirigacha olingan
+                if content.select(".ACT_ESSENTIAL_ELEMENTS_NUM"):
+                    issues[-1] += "; oxiridagi rekvizitlar (sana, raqam) mavjud"
+                else:
+                    complete = "shubhali"
+        elif toc_last is not None and toc_last != n_arts:
+            complete = "yo'q"
+            issues.append(f"mundarijada oxirgi {toc_last}-modda, matnda {n_arts}-modda")
+        if missing:
+            complete = "shubhali" if complete == "ha" else complete
+            issues.append(f"matnda tushib qolgan modda raqamlari: {missing[:15]}")
+
+        # Qo'shilish/ratifikatsiya qarorlari: LexUZ sharhidagi havolalar (yuklanmaydi)
+        accession = []
+        for t, links in lexuz_comments(content):
+            if ACCESSION_RE.search(t):
+                accession += [u for _, u in links]
+        title = page_title(soup, lines)
+        # Sahifaning o'zi qaror bo'lsa — shartnoma matniga havolalarni ko'rsatish
+        body = BeautifulSoup(str(content), "html.parser")
+        for el in body.select(".COMMENT"):
+            el.decompose()
+        body_links = external_links(body)
+        if not arts and ACCESSION_RE.search(title):
+            treaty_links = [(t, u) for t, u in body_links if "#" not in u]
+            issues.append("sahifa — qo'shilish qarori, shartnoma matnlari boshqa havolalarda (yuklanmadi): "
+                          + ("; ".join(f"{t} -> {u}" for t, u in treaty_links) or "havola yo'q"))
 
         rows.append({
-            "raqam": num, "fayl": f"data/raw/{fname}", "hujjat_nomi": page_title(soup, lines),
+            "raqam": num, "fayl": f"data/raw/{fname}", "hujjat_nomi": title,
             "sana": doc_date(soup, lines), "URL": url, "yozuv": script,
             "norasmiy_tarjima": "ha" if unofficial else "yo'q", "moddalar_soni": n_arts,
-            "so'zlar_soni": words, "toliq": complete, "yuklangan_sana": date.today().isoformat(),
+            "so'zlar_soni": words, "toliq": complete,
+            "yuklangan_sana": date.fromtimestamp(html_path.stat().st_mtime).isoformat(),
+            "uz_kuchga_kirgan": "; ".join(uz_force),
+            "qoshilish_qarori_url": "; ".join(dict.fromkeys(accession)),
         })
-        report.append((num, name, words, complete, issues))
+        report.append(dict(num=num, name=name, words=words, complete=complete, toc=toc_last,
+                           text_last=n_arts, unofficial="ha" if unofficial else "yo'q", issues=issues))
 
     write_sources(rows)
+    write_removed(removed, {f"{n}_{m}.txt" for n, m, _ in DOCS if not only or n in only})
     print_report(report)
+
+
+def write_removed(removed, files):
+    keep = []
+    if REMOVED_CSV.exists():
+        with REMOVED_CSV.open(encoding="utf-8") as f:
+            keep = [r for r in csv.DictReader(f) if r["fayl"] not in files]
+    with REMOVED_CSV.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["fayl", "qator_matni", "sabab"])
+        w.writeheader()
+        w.writerows(keep)
+        for fname, t, reason in removed:
+            w.writerow({"fayl": fname, "qator_matni": t, "sabab": reason})
 
 
 def write_sources(rows):
@@ -384,22 +498,24 @@ def write_sources(rows):
     for r in rows:
         existing[r["raqam"]] = r
     with SOURCES_CSV.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=CSV_FIELDS)
+        w = csv.DictWriter(f, fieldnames=CSV_FIELDS, restval="")
         w.writeheader()
         for k in sorted(existing):
             w.writerow(existing[k])
 
 
 def print_report(report):
-    print("\n| № | Hujjat | So'zlar | To'liq | Muammolar |\n|---|---|---:|---|---|")
-    for num, name, words, complete, issues in report:
-        print(f"| {num} | {name} | {words} | {complete} | {'; '.join(issues) or '—'} |")
-    print(f"\nJami korpus: {sum(r[2] for r in report)} so'z, {len(report)} hujjat")
-    bad = [r for r in report if r[3] != "ha" or r[4]]
+    print("\n| № | Hujjat | So'zlar | Mundarija / matn (oxirgi modda) | Norasmiy | To'liq | Muammolar |")
+    print("|---|---|---:|---|---|---|---|")
+    for r in report:
+        print(f"| {r['num']} | {r['name']} | {r['words']} | {r['toc']} / {r['text_last']} | "
+              f"{r['unofficial']} | {r['complete']} | {'; '.join(r['issues']) or '—'} |")
+    print(f"\nJami korpus: {sum(r['words'] for r in report)} so'z, {len(report)} hujjat")
+    bad = [r for r in report if r["complete"] != "ha"]
     if bad:
-        print("\nMuammoli hujjatlar:")
-        for num, name, _, complete, issues in bad:
-            print(f"  - {num} {name} ({complete}): {'; '.join(issues)}")
+        print("\nKesilgan yoki shubhali hujjatlar:")
+        for r in bad:
+            print(f"  - {r['num']} {r['name']} ({r['complete']}): {'; '.join(r['issues'])}")
 
 
 def main():
@@ -410,14 +526,19 @@ def main():
     f = sub.add_parser("fetch")
     f.add_argument("--confirmed", action="store_true", help="HTML tuzilishi tasdiqlangan")
     f.add_argument("--only", nargs="*", default=[])
+    f.add_argument("--cached", action="store_true", help="mavjud HTML'larni qayta yuklamaslik")
+    pc = sub.add_parser("process", help="faqat saqlangan HTML'larni qayta ishlash (so'rovsiz)")
+    pc.add_argument("--only", nargs="*", default=[])
     args = ap.parse_args()
-    client = Client()
     if args.cmd == "probe":
-        probe(client, args.local)
+        probe(Client(), args.local)
+    elif args.cmd == "process":
+        process(set(args.only))
     else:
         if not args.confirmed:
             sys.exit("Avval `probe` natijasini tasdiqlang, keyin --confirmed bilan ishga tushiring.")
-        fetch(client, set(args.only))
+        failed = download(Client(), set(args.only), args.cached)
+        process(set(args.only), failed)
 
 
 if __name__ == "__main__":
