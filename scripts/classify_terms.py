@@ -435,7 +435,35 @@ def figures(stats, terms):
 STOP = set()
 
 
+WB_PATH = OUT / "terminlar_yakuniy.xlsx"
+YES, NO = {"ha"}, {"yo'q", "yoʻq", "yo‘q", "yoq"}
+
+
+def load_previous():
+    """Oldingi faylda foydalanuvchi to'ldirgan qiymatlarni o'qiydi: shubhalilar qarori va tekshiruv tanlanmasi."""
+    decisions, review = {}, None
+    if not WB_PATH.exists():
+        return decisions, review
+    from openpyxl import load_workbook
+    wb = load_workbook(WB_PATH, read_only=True)
+    if "shubhali_korib_chiqish" in wb.sheetnames:
+        rows = list(wb["shubhali_korib_chiqish"].iter_rows(values_only=True))
+        h = list(rows[0])
+        for r in rows[1:]:
+            v = (str(r[h.index("qaror")]).strip().lower() if r[h.index("qaror")] is not None else "")
+            if v:
+                decisions[r[h.index("lemmalar")]] = "ha" if v in YES else "yo'q" if v in NO else v
+    if "tekshiruv_100" in wb.sheetnames:
+        rows = list(wb["tekshiruv_100"].iter_rows(values_only=True))
+        review = [dict(zip(rows[0], r)) for r in rows[1:]]
+    return decisions, review
+
+
 def main():
+    decisions, prev_review = load_previous()
+    if WB_PATH.exists():                         # foydalanuvchi to'ldirgan faylning zaxira nusxasi
+        import shutil
+        shutil.copy2(WB_PATH, OUT / "terminlar_yakuniy.oldingi.xlsx")
     STOP.update(ln.strip() for ln in (ROOT / "data/meta/stopwords_uz.txt").read_text(encoding="utf-8").splitlines()
                 if ln.strip() and not ln.startswith("#"))
     rows = json.load(gzip.open(OUT / "candidates_full.json.gz", "rt", encoding="utf-8"))
@@ -448,6 +476,16 @@ def main():
         else:
             r["auto_termin"], r["auto_sabab"] = classify(r)
             kept.append(r)
+    shubhali = sorted((r for r in kept if r["auto_termin"] == "shubhali"),
+                      key=lambda r: (-r["norm_ball"], -r["hujjatlar_soni"], -r["chastota"]))
+    for r in shubhali:
+        r["qaror"] = decisions.get(r["lemmalar"], "")
+    bad_dec = sorted({v for v in decisions.values() if v not in ("ha", "yo'q")})
+    if bad_dec:
+        print("Tanilmagan qaror qiymatlari (e'tiborsiz qoldirildi):", bad_dec)
+    promoted = [r for r in shubhali if r["qaror"] == "ha"]
+    for r in promoted:
+        r["auto_termin"], r["auto_sabab"] = "ha", "Q: shubhali, qo'lda tasdiqlangan; " + r["auto_sabab"]
     ha = [r for r in kept if r["auto_termin"] == "ha"]
     ha.sort(key=lambda r: (-r["norm_ball"], -r["hujjatlar_soni"], -r["chastota"]))
     final = ha[:FINAL_N]
@@ -468,6 +506,9 @@ def main():
         r["orin"] = i
 
     sample, alloc = stratified_sample(final, SAMPLE_N, SEED)
+    if prev_review:                              # baholash boshlangan tanlanma o'zgarmasin
+        sample = prev_review
+        alloc = dict(Counter(r["mavzuiy_guruh"] for r in prev_review))
 
     # statistika
     stats = {k: dist(final, k, k) for k in ["mavzuiy_guruh", "tuzilish", "model", "komponentlar_soni", "kelib_chiqish"]}
@@ -506,7 +547,8 @@ def main():
                                  ("bolak", "nomenklatura", "umumiy_leksika", "zaxira"))),
         "tasnif": dict(Counter(r["auto_termin"] for r in kept)),
         "tasnif_sabablari": dict(Counter(r["auto_sabab"].split(":")[0] for r in kept)),
-        "ha_jami": len(ha), "yakuniy": len(final), "dublet_klasterlari": len(clusters_list),
+        "ha_jami": len(ha), "yakuniy": len(final), "shubhali_jami": len(shubhali),
+        "shubhali_qaror_berilgan": sum(1 for r in shubhali if r["qaror"]), "qolda_tasdiqlangan": len(promoted), "dublet_klasterlari": len(clusters_list),
         "dubletga_kirgan_terminlar": sum(len(g) for g in clusters_list),
         "tanlanma_taqsimoti": alloc,
         "kelib_chiqish_aniqlangan_komponentlar_%": round(100 * sum(
@@ -519,7 +561,7 @@ def main():
     (OUT / "stats.json").write_text(json.dumps({"counts": counts, **stats}, ensure_ascii=False, indent=1), encoding="utf-8")
     write_tables(stats)
     figures(stats, final)
-    write_workbook(final, sample, stats, removed, counts)
+    write_workbook(final, sample, stats, removed, counts, shubhali)
     print(json.dumps(counts, ensure_ascii=False, indent=1))
 
 
@@ -544,8 +586,9 @@ def write_tables(stats):
         wb.save(TABLES / f"{name}.xlsx")
 
 
-def write_workbook(final, sample, stats, removed, counts):
+def write_workbook(final, sample, stats, removed, counts, shubhali):
     from openpyxl import Workbook
+    from openpyxl.worksheet.datavalidation import DataValidation
     from openpyxl.styles import Font
     from openpyxl.utils import get_column_letter
     wb = Workbook()
@@ -567,11 +610,27 @@ def write_workbook(final, sample, stats, removed, counts):
     w = {"termin": 34, "variantlar": 40, "kontekst_1": 80, "kontekst_2": 80, "auto_sabab": 45, "model": 28,
          "kelib_chiqish_komponentlar": 40, "yasovchi_qoshimcha": 26, "sohalar": 30, "sabab_tafsiloti": 50,
          "kontekst": 90}
-    sheet("terminlar_1000", FINAL_COLS, final, w, first=True)
-    srows = [{"№": i, "termin": t["termin"], "mavzuiy_guruh": t["mavzuiy_guruh"], "kontekst": t["kontekst_1"],
-              "avtomatik_qaror": t["auto_termin"], "auto_sabab": t["auto_sabab"], "mening_bahoim": ""}
-             for i, t in enumerate(sample, 1)]
-    sheet("tekshiruv_100", list(srows[0]), srows, w)
+    sheet("terminlar_yakuniy", FINAL_COLS, final, w, first=True)
+    if sample and "mening_bahoim" in sample[0]:  # oldingi (to'ldirilayotgan) tanlanma o'zgarishsiz
+        srows = sample
+    else:
+        srows = [{"№": i, "termin": t["termin"], "mavzuiy_guruh": t["mavzuiy_guruh"], "kontekst": t["kontekst_1"],
+                  "avtomatik_qaror": t["auto_termin"], "auto_sabab": t["auto_sabab"], "mening_bahoim": ""}
+                 for i, t in enumerate(sample, 1)]
+    ws = sheet("tekshiruv_100", list(srows[0]), srows, w)
+    dv = DataValidation(type="list", formula1='"to\'g\'ri,noto\'g\'ri"', allow_blank=True)
+    ws.add_data_validation(dv)
+    dv.add(f"{get_column_letter(list(srows[0]).index('mening_bahoim') + 1)}2:"
+           f"{get_column_letter(list(srows[0]).index('mening_bahoim') + 1)}{len(srows) + 1}")
+    scols = ["№", "termin", "kontekst_1", "kontekst_2", "auto_sabab", "chastota", "hujjatlar_soni", "norm_ball",
+             "lemmalar", "qaror"]
+    ws = sheet("shubhali_korib_chiqish", scols, [dict(r, **{"№": i}) for i, r in enumerate(shubhali, 1)],
+               {**w, "kontekst_1": 70, "kontekst_2": 70, "lemmalar": 24})
+    dv = DataValidation(type="list", formula1='"ha,yo\'q"', allow_blank=True,
+                        promptTitle="Qaror", prompt="ha — yakuniy ro'yxatga qo'shiladi; yo'q — chiqariladi")
+    ws.add_data_validation(dv)
+    col = get_column_letter(len(scols))
+    dv.add(f"{col}2:{col}{len(shubhali) + 1}")
     ws = wb.create_sheet("statistika")
     for name, rows in stats.items():
         if name == "dubletlar_top20" or not rows:
@@ -589,7 +648,7 @@ def write_workbook(final, sample, stats, removed, counts):
     for k, v in METHOD_ROWS(counts):
         ws.append([k, v])
     ws.column_dimensions["A"].width = 30; ws.column_dimensions["B"].width = 130
-    wb.save(OUT / "terminlar_yakuniy.xlsx")
+    wb.save(WB_PATH)
 
 
 def METHOD_ROWS(c):

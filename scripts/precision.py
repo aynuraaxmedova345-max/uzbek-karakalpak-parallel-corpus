@@ -61,7 +61,8 @@ def main():
     print(f"Aniqlik (precision): {k / n:.3f}  [Wilson 95 % ishonch oralig'i: {lo:.3f} – {hi:.3f}]")
 
     # guruh ulushlari yakuniy ro'yxatdan
-    fin = list(wb["terminlar_1000"].iter_rows(values_only=True))
+    fin = list(wb["terminlar_yakuniy" if "terminlar_yakuniy" in wb.sheetnames else "terminlar_1000"]
+               .iter_rows(values_only=True))
     fg = fin[0].index("mavzuiy_guruh")
     size = defaultdict(int)
     for r in fin[1:]:
