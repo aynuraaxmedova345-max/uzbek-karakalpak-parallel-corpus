@@ -1,0 +1,636 @@
+{
+ "counts": {
+  "nomzodlar_jami": 13507,
+  "tozalash": {
+   "bolak": 4841,
+   "umumiy_leksika": 1539,
+   "nomenklatura": 297,
+   "zaxira": 3874
+  },
+  "tasnif": {
+   "shubhali": 222,
+   "ha": 410,
+   "yo'q": 2324
+  },
+  "tasnif_sabablari": {
+   "T5": 19,
+   "T1": 131,
+   "H2": 116,
+   "H1": 105,
+   "S4": 790,
+   "S7": 176,
+   "S1": 322,
+   "S5": 91,
+   "H2+P": 2,
+   "S2": 173,
+   "V2": 30,
+   "S8": 26,
+   "S6": 38,
+   "H5": 326,
+   "H1+P": 12,
+   "T4": 302,
+   "V1": 52,
+   "T3": 103,
+   "H3": 4,
+   "H4": 41,
+   "V0": 2,
+   "P4": 25,
+   "P2": 15,
+   "T2": 40,
+   "S0": 13,
+   "S3": 2
+  },
+  "ha_jami": 410,
+  "yakuniy": 410,
+  "dublet_klasterlari": 10,
+  "dubletga_kirgan_terminlar": 21,
+  "tanlanma_taqsimoti": {
+   "huquq_manbalari_va_hujjatlar": 17,
+   "subyektlar": 10,
+   "gumanitar_huquq": 17,
+   "inson_huquqlari": 10,
+   "huquqiy_yordam_va_jinoiy_protsess": 31,
+   "shartnoma_jarayoni": 2,
+   "xalqaro_tashkilotlar": 4,
+   "boshqa": 2,
+   "nizolar_va_javobgarlik": 5,
+   "diplomatik_konsullik": 2
+  },
+  "kelib_chiqish_aniqlangan_komponentlar_%": 96.5,
+  "bir_sozli_bolak_qoidasi_qollanganda_chiqishi_mumkin_edi": 302,
+  "yasovchili_terminlar": 85
+ },
+ "mavzuiy_guruh": [
+  {
+   "mavzuiy_guruh": "huquqiy_yordam_va_jinoiy_protsess",
+   "soni": 128,
+   "ulush_%": 31.2
+  },
+  {
+   "mavzuiy_guruh": "huquq_manbalari_va_hujjatlar",
+   "soni": 68,
+   "ulush_%": 16.6
+  },
+  {
+   "mavzuiy_guruh": "gumanitar_huquq",
+   "soni": 68,
+   "ulush_%": 16.6
+  },
+  {
+   "mavzuiy_guruh": "inson_huquqlari",
+   "soni": 42,
+   "ulush_%": 10.2
+  },
+  {
+   "mavzuiy_guruh": "subyektlar",
+   "soni": 40,
+   "ulush_%": 9.8
+  },
+  {
+   "mavzuiy_guruh": "nizolar_va_javobgarlik",
+   "soni": 19,
+   "ulush_%": 4.6
+  },
+  {
+   "mavzuiy_guruh": "xalqaro_tashkilotlar",
+   "soni": 16,
+   "ulush_%": 3.9
+  },
+  {
+   "mavzuiy_guruh": "boshqa",
+   "soni": 10,
+   "ulush_%": 2.4
+  },
+  {
+   "mavzuiy_guruh": "diplomatik_konsullik",
+   "soni": 10,
+   "ulush_%": 2.4
+  },
+  {
+   "mavzuiy_guruh": "shartnoma_jarayoni",
+   "soni": 9,
+   "ulush_%": 2.2
+  }
+ ],
+ "tuzilish": [
+  {
+   "tuzilish": "birikma",
+   "soni": 279,
+   "ulush_%": 68.0
+  },
+  {
+   "tuzilish": "sodda",
+   "soni": 100,
+   "ulush_%": 24.4
+  },
+  {
+   "tuzilish": "yasama",
+   "soni": 21,
+   "ulush_%": 5.1
+  },
+  {
+   "tuzilish": "qo'shma",
+   "soni": 10,
+   "ulush_%": 2.4
+  }
+ ],
+ "model": [
+  {
+   "model": "ot",
+   "soni": 119,
+   "ulush_%": 29.0
+  },
+  {
+   "model": "ot + ot",
+   "soni": 90,
+   "ulush_%": 22.0
+  },
+  {
+   "model": "sifat + ot",
+   "soni": 80,
+   "ulush_%": 19.5
+  },
+  {
+   "model": "ot + harakat nomi",
+   "soni": 28,
+   "ulush_%": 6.8
+  },
+  {
+   "model": "ot + ot + harakat nomi",
+   "soni": 17,
+   "ulush_%": 4.1
+  },
+  {
+   "model": "ot + ot + ot",
+   "soni": 16,
+   "ulush_%": 3.9
+  },
+  {
+   "model": "sifat + ot + ot",
+   "soni": 15,
+   "ulush_%": 3.7
+  },
+  {
+   "model": "sifat",
+   "soni": 12,
+   "ulush_%": 2.9
+  },
+  {
+   "model": "harakat nomi + ot",
+   "soni": 7,
+   "ulush_%": 1.7
+  },
+  {
+   "model": "sifat + sifat + ot",
+   "soni": 6,
+   "ulush_%": 1.5
+  },
+  {
+   "model": "ot + ot + ot + ot",
+   "soni": 5,
+   "ulush_%": 1.2
+  },
+  {
+   "model": "sifat + ot + harakat nomi",
+   "soni": 5,
+   "ulush_%": 1.2
+  },
+  {
+   "model": "ot + ot + ot + sifat + ot",
+   "soni": 3,
+   "ulush_%": 0.7
+  },
+  {
+   "model": "ot + fe'l + harakat nomi",
+   "soni": 2,
+   "ulush_%": 0.5
+  },
+  {
+   "model": "sifat + ot + ot + sifat + ot",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "model": "ot + ot + ot + ot + ot",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "model": "ot + harakat nomi + ot",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "model": "sifat + fe'l + ot",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "model": "ot + sifat + ot",
+   "soni": 1,
+   "ulush_%": 0.2
+  }
+ ],
+ "komponentlar_soni": [
+  {
+   "komponentlar_soni": 2,
+   "soni": 205,
+   "ulush_%": 50.0
+  },
+  {
+   "komponentlar_soni": 1,
+   "soni": 131,
+   "ulush_%": 32.0
+  },
+  {
+   "komponentlar_soni": 3,
+   "soni": 64,
+   "ulush_%": 15.6
+  },
+  {
+   "komponentlar_soni": 4,
+   "soni": 5,
+   "ulush_%": 1.2
+  },
+  {
+   "komponentlar_soni": 5,
+   "soni": 5,
+   "ulush_%": 1.2
+  }
+ ],
+ "kelib_chiqish": [
+  {
+   "kelib_chiqish": "arabcha-forscha",
+   "soni": 184,
+   "ulush_%": 44.9
+  },
+  {
+   "kelib_chiqish": "gibrid",
+   "soni": 142,
+   "ulush_%": 34.6
+  },
+  {
+   "kelib_chiqish": "ruscha-baynalmilal",
+   "soni": 49,
+   "ulush_%": 12.0
+  },
+  {
+   "kelib_chiqish": "aniqlanmagan",
+   "soni": 22,
+   "ulush_%": 5.4
+  },
+  {
+   "kelib_chiqish": "oʻzbekcha",
+   "soni": 13,
+   "ulush_%": 3.2
+  }
+ ],
+ "yasovchi_qoshimcha": [
+  {
+   "yasovchi_qoshimcha": "-lik",
+   "soni": 25,
+   "ulush_%": 6.1
+  },
+  {
+   "yasovchi_qoshimcha": "-chi",
+   "soni": 18,
+   "ulush_%": 4.4
+  },
+  {
+   "yasovchi_qoshimcha": "-iy",
+   "soni": 11,
+   "ulush_%": 2.7
+  },
+  {
+   "yasovchi_qoshimcha": "-li",
+   "soni": 10,
+   "ulush_%": 2.4
+  },
+  {
+   "yasovchi_qoshimcha": "-garlik",
+   "soni": 6,
+   "ulush_%": 1.5
+  },
+  {
+   "yasovchi_qoshimcha": "-chilik",
+   "soni": 5,
+   "ulush_%": 1.2
+  },
+  {
+   "yasovchi_qoshimcha": "-siz",
+   "soni": 5,
+   "ulush_%": 1.2
+  },
+  {
+   "yasovchi_qoshimcha": "-lashuvchi",
+   "soni": 3,
+   "ulush_%": 0.7
+  },
+  {
+   "yasovchi_qoshimcha": "-uvchi",
+   "soni": 3,
+   "ulush_%": 0.7
+  },
+  {
+   "yasovchi_qoshimcha": "-xona",
+   "soni": 3,
+   "ulush_%": 0.7
+  },
+  {
+   "yasovchi_qoshimcha": "-viy",
+   "soni": 3,
+   "ulush_%": 0.7
+  },
+  {
+   "yasovchi_qoshimcha": "-liq",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "yasovchi_qoshimcha": "-gar",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "yasovchi_qoshimcha": "-lashuv",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "yasovchi_qoshimcha": "-lov",
+   "soni": 1,
+   "ulush_%": 0.2
+  },
+  {
+   "yasovchi_qoshimcha": "-kor",
+   "soni": 1,
+   "ulush_%": 0.2
+  }
+ ],
+ "soha_x_guruh": [
+  {
+   "soha": "diplomatik_huquq",
+   "boshqa": 0,
+   "diplomatik_konsullik": 3,
+   "gumanitar_huquq": 0,
+   "huquq_manbalari_va_hujjatlar": 0,
+   "huquqiy_yordam_va_jinoiy_protsess": 0,
+   "inson_huquqlari": 0,
+   "nizolar_va_javobgarlik": 0,
+   "shartnoma_jarayoni": 0,
+   "subyektlar": 0,
+   "xalqaro_tashkilotlar": 0,
+   "jami": 3
+  },
+  {
+   "soha": "gumanitar_huquq",
+   "boshqa": 6,
+   "diplomatik_konsullik": 3,
+   "gumanitar_huquq": 65,
+   "huquq_manbalari_va_hujjatlar": 16,
+   "huquqiy_yordam_va_jinoiy_protsess": 25,
+   "inson_huquqlari": 10,
+   "nizolar_va_javobgarlik": 4,
+   "shartnoma_jarayoni": 1,
+   "subyektlar": 18,
+   "xalqaro_tashkilotlar": 7,
+   "jami": 155
+  },
+  {
+   "soha": "huquqiy_yordam",
+   "boshqa": 1,
+   "diplomatik_konsullik": 3,
+   "gumanitar_huquq": 1,
+   "huquq_manbalari_va_hujjatlar": 10,
+   "huquqiy_yordam_va_jinoiy_protsess": 65,
+   "inson_huquqlari": 3,
+   "nizolar_va_javobgarlik": 8,
+   "shartnoma_jarayoni": 0,
+   "subyektlar": 11,
+   "xalqaro_tashkilotlar": 0,
+   "jami": 102
+  },
+  {
+   "soha": "inson_huquqlari",
+   "boshqa": 2,
+   "diplomatik_konsullik": 1,
+   "gumanitar_huquq": 1,
+   "huquq_manbalari_va_hujjatlar": 29,
+   "huquqiy_yordam_va_jinoiy_protsess": 11,
+   "inson_huquqlari": 28,
+   "nizolar_va_javobgarlik": 2,
+   "shartnoma_jarayoni": 4,
+   "subyektlar": 6,
+   "xalqaro_tashkilotlar": 9,
+   "jami": 93
+  },
+  {
+   "soha": "jinoyatchilikka_qarshi",
+   "boshqa": 0,
+   "diplomatik_konsullik": 0,
+   "gumanitar_huquq": 1,
+   "huquq_manbalari_va_hujjatlar": 8,
+   "huquqiy_yordam_va_jinoiy_protsess": 26,
+   "inson_huquqlari": 1,
+   "nizolar_va_javobgarlik": 5,
+   "shartnoma_jarayoni": 3,
+   "subyektlar": 5,
+   "xalqaro_tashkilotlar": 0,
+   "jami": 49
+  },
+  {
+   "soha": "shartnomalar_huquqi",
+   "boshqa": 1,
+   "diplomatik_konsullik": 0,
+   "gumanitar_huquq": 0,
+   "huquq_manbalari_va_hujjatlar": 5,
+   "huquqiy_yordam_va_jinoiy_protsess": 1,
+   "inson_huquqlari": 0,
+   "nizolar_va_javobgarlik": 0,
+   "shartnoma_jarayoni": 1,
+   "subyektlar": 0,
+   "xalqaro_tashkilotlar": 0,
+   "jami": 8
+  }
+ ],
+ "maqom_x_kelib_chiqish": [
+  {
+   "kelib_chiqish": "aniqlanmagan",
+   "norasmiy_tarjima": 1601,
+   "asl_ozbekcha": 797,
+   "aniqlanmagan": 26,
+   "jami": 2424
+  },
+  {
+   "kelib_chiqish": "arabcha-forscha",
+   "norasmiy_tarjima": 10909,
+   "asl_ozbekcha": 4864,
+   "aniqlanmagan": 514,
+   "jami": 16287
+  },
+  {
+   "kelib_chiqish": "gibrid",
+   "norasmiy_tarjima": 1518,
+   "asl_ozbekcha": 779,
+   "aniqlanmagan": 77,
+   "jami": 2374
+  },
+  {
+   "kelib_chiqish": "oʻzbekcha",
+   "norasmiy_tarjima": 863,
+   "asl_ozbekcha": 251,
+   "aniqlanmagan": 22,
+   "jami": 1136
+  },
+  {
+   "kelib_chiqish": "ruscha-baynalmilal",
+   "norasmiy_tarjima": 3429,
+   "asl_ozbekcha": 869,
+   "aniqlanmagan": 234,
+   "jami": 4532
+  }
+ ],
+ "maqom_x_kelib_chiqish_ipm": [
+  {
+   "kelib_chiqish": "aniqlanmagan",
+   "norasmiy_tarjima": 11595,
+   "asl_ozbekcha": 16066,
+   "aniqlanmagan": 3915
+  },
+  {
+   "kelib_chiqish": "arabcha-forscha",
+   "norasmiy_tarjima": 79004,
+   "asl_ozbekcha": 98051,
+   "aniqlanmagan": 77398
+  },
+  {
+   "kelib_chiqish": "gibrid",
+   "norasmiy_tarjima": 10993,
+   "asl_ozbekcha": 15703,
+   "aniqlanmagan": 11595
+  },
+  {
+   "kelib_chiqish": "oʻzbekcha",
+   "norasmiy_tarjima": 6250,
+   "asl_ozbekcha": 5060,
+   "aniqlanmagan": 3313
+  },
+  {
+   "kelib_chiqish": "ruscha-baynalmilal",
+   "norasmiy_tarjima": 24833,
+   "asl_ozbekcha": 17518,
+   "aniqlanmagan": 35236
+  }
+ ],
+ "maqom_x_kelib_chiqish_terminlar": [
+  {
+   "maqom": "aniqlanmagan",
+   "aniqlanmagan": 2,
+   "arabcha-forscha": 23,
+   "gibrid": 17,
+   "oʻzbekcha": 3,
+   "ruscha-baynalmilal": 16,
+   "jami": 61
+  },
+  {
+   "maqom": "asl_ozbekcha",
+   "aniqlanmagan": 7,
+   "arabcha-forscha": 72,
+   "gibrid": 57,
+   "oʻzbekcha": 5,
+   "ruscha-baynalmilal": 17,
+   "jami": 158
+  },
+  {
+   "maqom": "norasmiy_tarjima",
+   "aniqlanmagan": 13,
+   "arabcha-forscha": 89,
+   "gibrid": 68,
+   "oʻzbekcha": 5,
+   "ruscha-baynalmilal": 16,
+   "jami": 191
+  }
+ ],
+ "dubletlar_top20": [
+  {
+   "klaster": "D001",
+   "terminlar_soni": 2,
+   "jami_chastota": 936,
+   "terminlar": "ishtirokchi davlat (607); ishtirokchi-davlat (329)",
+   "f_norasmiy_tarjima": 824,
+   "f_asl_ozbekcha": 0
+  },
+  {
+   "klaster": "D002",
+   "terminlar_soni": 2,
+   "jami_chastota": 461,
+   "terminlar": "iltimosnoma (340); soʻrovnoma (121)",
+   "f_norasmiy_tarjima": 149,
+   "f_asl_ozbekcha": 312
+  },
+  {
+   "klaster": "D003",
+   "terminlar_soni": 2,
+   "jami_chastota": 375,
+   "terminlar": "protokol (229); bayonnoma (146)",
+   "f_norasmiy_tarjima": 322,
+   "f_asl_ozbekcha": 12
+  },
+  {
+   "klaster": "D004",
+   "terminlar_soni": 2,
+   "jami_chastota": 269,
+   "terminlar": "kelishuv (137); bitim (132)",
+   "f_norasmiy_tarjima": 184,
+   "f_asl_ozbekcha": 80
+  },
+  {
+   "klaster": "D005",
+   "terminlar_soni": 2,
+   "jami_chastota": 169,
+   "terminlar": "prinsip (97); tamoyil (72)",
+   "f_norasmiy_tarjima": 132,
+   "f_asl_ozbekcha": 26
+  },
+  {
+   "klaster": "D006",
+   "terminlar_soni": 2,
+   "jami_chastota": 127,
+   "terminlar": "ustav (69); nizom (58)",
+   "f_norasmiy_tarjima": 56,
+   "f_asl_ozbekcha": 69
+  },
+  {
+   "klaster": "D007",
+   "terminlar_soni": 3,
+   "jami_chastota": 74,
+   "terminlar": "protsedura (33); tartib-taomil (21); taomil (20)",
+   "f_norasmiy_tarjima": 66,
+   "f_asl_ozbekcha": 8
+  },
+  {
+   "klaster": "D008",
+   "terminlar_soni": 2,
+   "jami_chastota": 72,
+   "terminlar": "manfaatdor davlat (45); manfaatdor tomonlar (27)",
+   "f_norasmiy_tarjima": 54,
+   "f_asl_ozbekcha": 16
+  },
+  {
+   "klaster": "D009",
+   "terminlar_soni": 2,
+   "jami_chastota": 38,
+   "terminlar": "manfaatdor ishtirokchi davlatlar (33); manfaatdor ishtirokchi-davlat (5)",
+   "f_norasmiy_tarjima": 31,
+   "f_asl_ozbekcha": 0
+  },
+  {
+   "klaster": "D010",
+   "terminlar_soni": 2,
+   "jami_chastota": 37,
+   "terminlar": "dushman tomonlar (29); dushman davlat (8)",
+   "f_norasmiy_tarjima": 37,
+   "f_asl_ozbekcha": 0
+  }
+ ]
+}

@@ -3,6 +3,9 @@
  "reference_tokenlari": 8967533,
  "min_chastota": 3,
  "LL_chegara": 10.83,
- "nomzodlar_kop_sozli": 6865,
- "nomzodlar_bir_sozli": 948
+ "nomzodlar_kop_sozli": 11230,
+ "nomzodlar_bir_sozli": 2277,
+ "max_n": 6,
+ "LL_otmagan_bir_sozli": 1329,
+ "C_value_manfiy_yoki_nol": 3666
 }

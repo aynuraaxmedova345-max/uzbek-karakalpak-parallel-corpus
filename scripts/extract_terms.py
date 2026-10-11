@@ -113,6 +113,7 @@ def nounlike(tok, pos, allow_adj):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-freq", type=int, default=3)
+    ap.add_argument("--max-n", type=int, default=6)
     args = ap.parse_args()
     stop = load_stop()
     docs = list(csv.DictReader(SOURCES.open(encoding="utf-8")))
@@ -122,6 +123,7 @@ def main():
 
     occ = defaultdict(list)          # key -> [(doc_i, line_i, start, end, modda)]
     surf = defaultdict(Counter)      # key -> sirt shakllar
+    surf_pos = {}                    # (key, sirt shakl) -> POS teglari
     target_lemmas = Counter()
     target_tokens = 0
     lines_by_doc = []
@@ -138,7 +140,7 @@ def main():
                 info = [(t, *lem(t)) for t, _, _ in seg]   # (token, lemma, pos)
                 target_tokens += len(seg)
                 target_lemmas.update(l for t, l, p in info if single_ok(t, l, p, stop))
-                for n in range(1, 5):
+                for n in range(1, args.max_n + 1):
                     for i in range(len(seg) - n + 1):
                         g = info[i:i + n]
                         if not all(ok_token(t) for t, _, _ in g):
@@ -153,7 +155,9 @@ def main():
                             continue
                         key = tuple(l for _, l, _ in g)
                         occ[key].append((di, li, seg[i][1], seg[i + n - 1][2], modda))
-                        surf[key][" ".join(t for t, _, _ in g)] += 1
+                        sv = " ".join(t for t, _, _ in g)
+                        surf[key][sv] += 1
+                        surf_pos.setdefault((key, sv), tuple(p for _, _, p in g))
 
     # Reference korpus lemmalari
     ref_lemmas, ref_tokens = Counter(), 0
@@ -193,12 +197,42 @@ def main():
         ll = 2 * (a * math.log(a / e1) + (b * math.log(b / e2) if b else 0))
         if ll >= LL_MIN:
             scores[k] = ("LL", ll)
+    ll_failed = single - set(scores)
+
+    # Uzunroq nomzod ichida kelish ulushi (bo'lak tekshiruvi uchun), satr darajasida
+    cand = multi | single
+    spans = defaultdict(list)
+    for k in cand:
+        for di, li, st, en, _ in occ[k]:
+            spans[(di, li)].append((st, en))
+    nested_occ = Counter()
+    for k in cand:
+        for di, li, st, en, _ in occ[k]:
+            if any(a <= st and b >= en and (a, b) != (st, en) for a, b in spans[(di, li)]):
+                nested_occ[k] += 1
+
+    # Kontekst belgilari: bosh harf, qisqartma, ta'rif va qo'shtirnoq
+    DEF_RE = re.compile(r"deganda|deb ataladi|deb yuritiladi|deb nomlanadi|tushuniladi|atamasi|degan ibora", re.I)
+    feats = {}
+    for k in cand:
+        cap = upper = dfn = quo = 0
+        for di, li, st, en, _ in occ[k]:
+            line = lines_by_doc[di][li]
+            words = line[st:en].split()
+            cap += all(w[:1].isupper() for w in words)
+            upper += all(w.isupper() and len(w) >= 2 for w in words)
+            dfn += bool(DEF_RE.search(line))
+            quo += line[max(0, st - 1):st] in "“«\"„" and st > 0
+        f = len(occ[k])
+        feats[k] = {"ichida_ulush": round(nested_occ[k] / f, 3), "bosh_harf_ulush": round(cap / f, 3),
+                    "qisqartma_ulush": round(upper / f, 3), "tarif_kontekst": dfn, "qoshtirnoq": quo}
 
     maxs = {t: max(s for tt, s in scores.values() if tt == t) for t in ("C-value", "LL")}
+    for k in ll_failed:
+        a, b = target_lemmas[k[0]], ref_lemmas[k[0]]
+        scores[k] = ("LL_otmadi", 0.0)
     rows = []
     for k, (stype, score) in scores.items():
-        if score <= 0:
-            continue
         o = occ[k]
         variants = surf[k].most_common()
         base = [v for v, _ in variants if not CASE_END_RE.search(v.split()[-1])]
@@ -232,7 +266,12 @@ def main():
             "chastota": freq[k], "hujjatlar_soni": len(doc_ids),
             "sohalar": "; ".join(f"{s}:{n}" for s, n in soha.most_common()),
             **{f"f_{s}": status[s] for s in STATUSES},
-            "ball": round(score, 2), "ball_turi": stype, "norm_ball": round(score / maxs[stype], 4),
+            "ball": round(score, 2), "ball_turi": stype,
+            "norm_ball": round(score / maxs[stype], 4) if stype in maxs else 0.0,
+            "pos": " ".join(surf_pos[(k, variants[0][0])]),
+            "ref_ipm": round(ref_lemmas[k[0]] / ref_tokens * 1e6, 2) if len(k) == 1 else "",
+            "korpus_ipm": round(target_lemmas[k[0]] / target_tokens * 1e6, 2) if len(k) == 1 else "",
+            **feats[k],
         }
         if stype == "LL":
             row["ref_chastota"] = ref_lemmas[k[0]]
@@ -252,12 +291,16 @@ def main():
         "min_chastota": args.min_freq, "LL_chegara": LL_MIN,
         "nomzodlar_kop_sozli": sum(1 for r in rows if r["sozlar_soni"] > 1),
         "nomzodlar_bir_sozli": sum(1 for r in rows if r["sozlar_soni"] == 1),
+        "max_n": args.max_n, "LL_otmagan_bir_sozli": len(ll_failed),
+        "C_value_manfiy_yoki_nol": sum(1 for r in rows if r["ball_turi"] == "C-value" and r["ball"] <= 0),
     }
     OUT.mkdir(exist_ok=True)
     with (OUT / "candidates.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader(); w.writerows(rows)
     write_xlsx(rows, cols, meta)
+    with gzip.open(OUT / "candidates_full.json.gz", "wt", encoding="utf-8") as f:
+        json.dump(rows, f, ensure_ascii=False)
     (OUT / "candidates_meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(meta, ensure_ascii=False))
 
