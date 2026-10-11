@@ -56,6 +56,22 @@ DOCS = [
     ("12", "inson_huquq_strat", "-4872355", MH, "inson_huquqlari"),
     ("13", "jeneva_qoshilish", "-2659335", MH, "gumanitar_huquq"),
     ("14", "jeneva_II", "-2627590", XS, "gumanitar_huquq"),
+    ("15", "bola_huquqlari", "-2595913", XS, "inson_huquqlari"),
+    ("16", "bhk_fb_qurolli_mojaro", "-2684942", XS, "inson_huquqlari"),
+    ("17", "bhk_fb_bolalar_savdosi", "-2683913", XS, "inson_huquqlari"),
+    ("18", "qiynoqlarga_qarshi", "-2655293", XS, "inson_huquqlari"),
+    ("19", "irqiy_kamsitish", "-2656183", XS, "inson_huquqlari"),
+    ("20", "fsxp", "-2640479", XS, "inson_huquqlari"),
+    ("21", "fsxp_fb2_olim_jazosi", "-1583864", XS, "inson_huquqlari"),
+    ("22", "iimhxp", "-2686000", XS, "inson_huquqlari"),
+    ("23", "ihud", "-7338189", XS, "inson_huquqlari"),
+    ("24", "bmt_korrupsiya", "-1461329", XS, "jinoyatchilikka_qarshi"),
+    ("25", "palermo_bayonnoma", "-1463681", XS, "jinoyatchilikka_qarshi"),
+    ("26", "shanxay_konv", "-2066680", XS, "jinoyatchilikka_qarshi"),
+    ("27", "shht_terrorizm", "-2068071", XS, "jinoyatchilikka_qarshi"),
+    ("28", "huquqiy_yordam_qozogiston", "-2176326", XS, "huquqiy_yordam"),
+    ("29", "huquqiy_yordam_qirgiziston", "-2548156", XS, "huquqiy_yordam"),
+    ("30", "huquqiy_yordam_afgoniston", "-4465244", XS, "huquqiy_yordam"),
 ]
 
 # Qo'lda tekshirilgan tuzatishlar (foydalanuvchi qarori bilan): ustun -> qiymat
@@ -65,12 +81,31 @@ OVERRIDES = {
         "izoh": "Saytdagi 12.07.1994 sanasi ziddiyatli. O'zbekiston 26.08.2019 dagi O'RQ-554 qonuni "
                 "bilan qo'shilgan: https://lex.uz/acts/-4487576",
     },
+    "23": {"izoh": "Deklaratsiya; xalqaro shartnoma emas"},
 }
+
+AUTH_RE = re.compile(r"(tillarida|tilida|tilidagi|matnlari).*(tuzildi|autentik|kuchga ega|bir xil)", re.IGNORECASE)
+
+
+def text_status(content, layer, lines):
+    """Matn maqomi faqat sahifadagi dalil asosida: (maqom, asos)."""
+    if content.select(".UNOFFIAL"):
+        return "norasmiy_tarjima", "sahifada \"Norasmiy tarjima\" belgisi bor"
+    if layer == MH:
+        return "asl_ozbekcha", "milliy hujjat (O'zbekiston Respublikasi hujjati)"
+    clauses = [ln for ln in lines if AUTH_RE.search(ln)]
+    for ln in clauses:
+        if re.search(r"o.?zbek", ln, re.IGNORECASE):
+            return "asl_ozbekcha", f"yakuniy band: \"{ln}\""
+    if clauses:
+        return "aniqlanmagan", (f"o'zbek tili autentik matnlar qatorida yo'q, \"Norasmiy tarjima\" belgisi ham yo'q; "
+                                f"yakuniy band: \"{clauses[-1]}\"")
+    return "aniqlanmagan", "\"Norasmiy tarjima\" belgisi ham, tillar haqidagi band ham topilmadi"
 
 CSV_FIELDS = [
     "raqam", "fayl", "hujjat_nomi", "sana", "URL", "yozuv", "norasmiy_tarjima",
     "moddalar_soni", "so'zlar_soni", "toliq", "yuklangan_sana",
-    "uz_kuchga_kirgan", "qoshilish_qarori_url", "qatlam", "soha", "izoh",
+    "uz_kuchga_kirgan", "qoshilish_qarori_url", "qatlam", "soha", "matn_maqomi", "matn_maqomi_asos", "izoh",
 ]
 
 # lex.uz tuzilishi (07-hujjat probe natijasi bo'yicha):
@@ -487,6 +522,7 @@ def process(only, failed=None):
             "qoshilish_qarori_url": "; ".join(dict.fromkeys(accession)),
             "qatlam": layer, "soha": domain, "izoh": "",
         })
+        rows[-1]["matn_maqomi"], rows[-1]["matn_maqomi_asos"] = text_status(content, layer, lines)
         rows[-1].update(OVERRIDES.get(num, {}))
         report.append(dict(num=num, name=name, words=words, complete=complete, toc=toc_last,
                            text_last=n_arts, unofficial="ha" if unofficial else "yo'q", issues=issues))
