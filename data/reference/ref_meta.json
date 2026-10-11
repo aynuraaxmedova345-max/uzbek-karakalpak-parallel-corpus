@@ -1,0 +1,23 @@
+{
+ "manbalar": [
+  {
+   "nomi": "MOT (VOA O'zbek xizmati, amerikaovozi.com), maqolalar",
+   "litsenziya": "CC BY 4.0",
+   "url": "https://github.com/bltlab/mot/releases/latest/download/uzb_amerikaovozi.tgz",
+   "tokenlar": 8453528
+  },
+  {
+   "nomi": "Uzbek Corpus Sample",
+   "litsenziya": "CC BY 4.0",
+   "url": "https://github.com/elmurod1202/Uzbek-Corpus-Sample",
+   "commit": "6286141e04196c627d00df156a4004d1f0dc8b46",
+   "tokenlar": 514005
+  }
+ ],
+ "jami_tokenlar": 8967533,
+ "turli_sozshakllar": 272723,
+ "voa_maqolalar": 27426,
+ "voa_chiqarilgan_lotin_emas": 8,
+ "sample_jumlalar": 95019,
+ "sample_takror_chiqarilgan": 4981
+}

@@ -1,0 +1,51 @@
+soz,korpusdagi_chastota,analizator_lemmasi,analizator_pos,togri_lemma,xato_turi,tuzatish,pipeline_natijasi
+ahdlashuvchi,1748,ahdlashuvch,NOUN,ahdlashuvchi,-chi agentlik qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,ahdlashuvchi
+ishtirokchi,619,ishtirokch,NOUN,ishtirokchi,-chi agentlik qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,ishtirokchi
+istilochi,94,istiloch,NOUN,istilochi,-chi agentlik qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,istilochi
+ayblanuvchi,28,ayblanuvch,NOUN,ayblanuvchi,-chi agentlik qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,ayblanuvchi
+iltimosnoma,181,iltimosno,ADJ,iltimosnoma,-noma (-ma) qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,iltimosnoma
+soʻrovnoma,98,soʻrovno,ADJ,soʻrovnoma,-noma (-ma) qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,soʻrovnoma
+bayonnoma,58,bayonno,ADJ,bayonnoma,-noma (-ma) qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,bayonnoma
+guvohnoma,44,guvohno,ADJ,guvohnoma,-noma (-ma) qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,guvohnoma
+xabarnoma,44,xabarno,ADJ,xabarnoma,-noma (-ma) qo'shimchasi kesilgan,avtomatik: lemma_lugatda_yoq,xabarnoma
+modda,1664,mod,NOUN,modda,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,modda
+yordam,408,yorda,NOUN,yordam,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,yordam
+hukmi,144,huk,NOUN,hukm,asosning oxiri qo'shimcha deb kesilgan,avtomatik: ortiqcha_kesilgan,hukm
+dushman,122,dush,NOUN,dushman,asosning oxiri qo'shimcha deb kesilgan,avtomatik: ortiqcha_kesilgan,dushman
+taʼlim,106,taʼl,NOUN,taʼlim,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,taʼlim
+muomala,84,muom,NUM,muomala,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,muomala
+sudlov,54,sudl,NUM,sudlov,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,sudlov
+masala,43,mas,NUM,masala,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,masala
+muhim,43,muh,NOUN,muhim,asosning oxiri qo'shimcha deb kesilgan,qo'lda (lemma_tuzatishlar.csv),muhim
+pochta,41,poch,NUM,pochta,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,pochta
+qoʻmitaga,33,qoʻmi,NUM,qoʻmita,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,qoʻmita
+shaxsini,26,shax,NOUN,shaxs,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,shaxs
+tomoni,19,tomo,NOUN,tomon,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,tomon
+majlisi,18,majli,NOUN,majlis,asosning oxiri qo'shimcha deb kesilgan,avtomatik: lemma_lugatda_yoq,majlis
+maqsadi,14,maqs,VERB,maqsad,asosning oxiri qo'shimcha deb kesilgan,qo'lda (lemma_tuzatishlar.csv),maqsad
+qonunchiligiga,244,qonunchilig,NOUN,qonunchilik,k/q ~ g/gʻ almashinuvi tiklanmagan,avtomatik: lemma_lugatda_yoq,qonunchilik
+vazirligi,207,vazirlig,NOUN,vazirlik,k/q ~ g/gʻ almashinuvi tiklanmagan,avtomatik: lemma_lugatda_yoq,vazirlik
+yorligʻi,48,yorligʻ,NOUN,yorliq,k/q ~ g/gʻ almashinuvi tiklanmagan,avtomatik: lemma_lugatda_yoq,yorliq
+fuqaroligi,47,fuqarolig,NOUN,fuqarolik,k/q ~ g/gʻ almashinuvi tiklanmagan,avtomatik: lemma_lugatda_yoq,fuqarolik
+xavfsizligiga,23,xavfsizlig,NOUN,xavfsizlik,k/q ~ g/gʻ almashinuvi tiklanmagan,avtomatik: lemma_lugatda_yoq,xavfsizlik
+sogʻligʻi,21,sogʻligʻ,NOUN,sogʻliq,k/q ~ g/gʻ almashinuvi tiklanmagan,avtomatik: lemma_lugatda_yoq,sogʻliq
+oshirish,276,osh,VERB,oshir,orttirma nisbat (-ir) tashlab yuborilgan,qo'lda (lemma_tuzatishlar.csv),oshir
+sodir,374,sod,VERB,sodir,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,sodir
+organlari,238,or,VERB,organ,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),organ
+ruxsat,179,rux,VERB,ruxsat,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,ruxsat
+qizil,159,qiz,VERB,qizil,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),qizil
+yuridik,134,yuri,VERB,yuridik,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),yuridik
+sanitar,95,sanit,VERB,sanitar,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,sanitar
+zarar,92,zar,VERB,zarar,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,zarar
+markaz,87,mar,VERB,markaz,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),markaz
+protokol,82,protoko,VERB,protokol,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,protokol
+taʼqib,74,taʼq,VERB,taʼqib,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),taʼqib
+erkin,65,er,VERB,erkin,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),erkin
+kotib,54,kot,VERB,kotib,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),kotib
+tartib,49,tart,VERB,tartib,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),tartib
+javobgar,45,javobg,VERB,javobgar,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,javobgar
+vakil,37,vak,VERB,vakil,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,vakil
+muassasa,37,muassa,VERB,muassasa,ot/sifat fe'l deb tahlil qilingan,avtomatik: soxta_fel_tahlili,muassasa
+tarkib,23,tark,VERB,tarkib,ot/sifat fe'l deb tahlil qilingan,qo'lda (lemma_tuzatishlar.csv),tarkib
+qilmish,30,qil,NOUN,qilmish,so'z yasovchi qo'shimcha kesilgan (boshqa so'z),avtomatik: ortiqcha_kesilgan,qilmish
+xavfsizligi,28,xavf,NOUN,xavfsizlik,so'z yasovchi qo'shimcha kesilgan (boshqa so'z),avtomatik: ortiqcha_kesilgan,xavfsizlik

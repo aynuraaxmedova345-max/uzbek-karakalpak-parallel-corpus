@@ -1,0 +1,4 @@
+requests
+beautifulsoup4
+UzMorphAnalyser==0.0.22
+openpyxl
