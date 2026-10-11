@@ -644,6 +644,12 @@ def write_workbook(final, sample, stats, removed, counts, shubhali):
     sheet("dubletlar", list(stats["dubletlar_top20"][0]), stats["dubletlar_top20"], {"terminlar": 90})
     removed.sort(key=lambda r: (r["sabab"], -r["chastota"]))
     sheet("chiqarilganlar", REMOVED_COLS, removed, w)
+    ek = OUT / "kelib_chiqish_tekshiruv.xlsx"     # check_etymology.py natijasi
+    if ek.exists():
+        from openpyxl import load_workbook
+        src = list(load_workbook(ek, read_only=True).active.iter_rows(values_only=True))
+        sheet("kelib_chiqish_tekshiruv", list(src[0]), [dict(zip(src[0], r)) for r in src[1:]],
+              {"etimologiya_xom": 60, "natija": 45})
     ws = wb.create_sheet("metod")
     for k, v in METHOD_ROWS(counts):
         ws.append([k, v])
