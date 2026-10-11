@@ -39,26 +39,38 @@ USER_AGENT = (
 DELAY_RANGE = (3.0, 5.0)
 MAX_RETRIES = 2
 
+# (raqam, nom, lex.uz id, qatlam, soha)
+XS, MH = "xalqaro_shartnoma", "milliy_hujjat"
 DOCS = [
-    ("01", "jeneva_I", "-2629153"),
-    ("02", "jeneva_III", "-2660045"),
-    ("03", "jeneva_IV", "-2665470"),
-    ("04", "protokol_I", "-2674804"),
-    ("05", "protokol_II", "-2698725"),
-    ("06", "cedaw", "-2685528"),
-    ("07", "fsxp_fakultativ", "-2702116"),
-    ("08", "kishinyov_konv", "-4907818"),
-    ("09", "xalqaro_shart_qonun", "-4193761"),
-    ("10", "diplomat_tayinlash", "-19064"),
-    ("11", "diplomat_daraja", "-19189"),
-    ("12", "inson_huquq_strat", "-4872355"),
-    ("13", "jeneva_qoshilish", "-2659335"),
+    ("01", "jeneva_I", "-2629153", XS, "gumanitar_huquq"),
+    ("02", "jeneva_III", "-2660045", XS, "gumanitar_huquq"),
+    ("03", "jeneva_IV", "-2665470", XS, "gumanitar_huquq"),
+    ("04", "protokol_I", "-2674804", XS, "gumanitar_huquq"),
+    ("05", "protokol_II", "-2698725", XS, "gumanitar_huquq"),
+    ("06", "cedaw", "-2685528", XS, "inson_huquqlari"),
+    ("07", "fsxp_fakultativ", "-2702116", XS, "inson_huquqlari"),
+    ("08", "kishinyov_konv", "-4907818", XS, "huquqiy_yordam"),
+    ("09", "xalqaro_shart_qonun", "-4193761", MH, "shartnomalar_huquqi"),
+    ("10", "diplomat_tayinlash", "-19064", MH, "diplomatik_huquq"),
+    ("11", "diplomat_daraja", "-19189", MH, "diplomatik_huquq"),
+    ("12", "inson_huquq_strat", "-4872355", MH, "inson_huquqlari"),
+    ("13", "jeneva_qoshilish", "-2659335", MH, "gumanitar_huquq"),
+    ("14", "jeneva_II", "-2627590", XS, "gumanitar_huquq"),
 ]
+
+# Qo'lda tekshirilgan tuzatishlar (foydalanuvchi qarori bilan): ustun -> qiymat
+OVERRIDES = {
+    "08": {
+        "uz_kuchga_kirgan": "",
+        "izoh": "Saytdagi 12.07.1994 sanasi ziddiyatli. O'zbekiston 26.08.2019 dagi O'RQ-554 qonuni "
+                "bilan qo'shilgan: https://lex.uz/acts/-4487576",
+    },
+}
 
 CSV_FIELDS = [
     "raqam", "fayl", "hujjat_nomi", "sana", "URL", "yozuv", "norasmiy_tarjima",
     "moddalar_soni", "so'zlar_soni", "toliq", "yuklangan_sana",
-    "uz_kuchga_kirgan", "qoshilish_qarori_url",
+    "uz_kuchga_kirgan", "qoshilish_qarori_url", "qatlam", "soha", "izoh",
 ]
 
 # lex.uz tuzilishi (07-hujjat probe natijasi bo'yicha):
@@ -75,6 +87,7 @@ CONTENT_SELECTORS = ["#divCont"]
 DROP_SELECTORS = [
     "script", "style", "noscript", "button", "img",
     ".lx_elem2", ".INDEXES_ON_REF", ".COMMENT", ".UNOFFIAL", ".CHANGES_ORIGINS", ".PUBLICATION_ORIGIN",
+    ".COMMENT_FOR_WARNING",
 ]
 SUPERSCRIPT = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
 TOC_SELECTOR = "#dvToc"
@@ -264,7 +277,7 @@ def doc_date(soup, lines):
 # ---------------------------------------------------------------- rejimlar
 
 def probe(client, local=False):
-    num, name, doc_id = next(d for d in DOCS if d[0] == "07")
+    num, name, doc_id = next(d for d in DOCS if d[0] == "07")[:3]
     url = URL_TMPL.format(id=doc_id)
     out = HTML_DIR / f"{num}_{name}.html"
     if local and out.exists():
@@ -346,7 +359,7 @@ def download(client, only, cached):
     client.check_robots()
     HTML_DIR.mkdir(parents=True, exist_ok=True)
     failed = {}
-    for num, name, doc_id in DOCS:
+    for num, name, doc_id, *_ in DOCS:
         if only and num not in only:
             continue
         url = URL_TMPL.format(id=doc_id)
@@ -371,7 +384,7 @@ def process(only, failed=None):
     for d in (RAW_DIR, META_DIR):
         d.mkdir(parents=True, exist_ok=True)
     rows, report, removed = [], [], []
-    for num, name, doc_id in DOCS:
+    for num, name, doc_id, layer, domain in DOCS:
         if only and num not in only:
             continue
         url = URL_TMPL.format(id=doc_id)
@@ -389,6 +402,8 @@ def process(only, failed=None):
                                unofficial="", issues=["matn konteyneri topilmadi (JS?)"]))
             continue
 
+        if content.select(".COMMENT_FOR_WARNING"):
+            issues.append("sahifada o'zbekcha matn yo'q: \"Hujjat matni rus tilida berilgan\"")
         # Korpusdan chiqariladigan, lekin qayd etiladigan elementlar
         for cls, reason in [(".INDEXES_ON_REF", "OKOZ/TSZ klassifikator indeksi"),
                             (".UNOFFIAL", "\"Norasmiy tarjima\" belgisi (sources.csv da qayd etilgan)"),
@@ -440,6 +455,8 @@ def process(only, failed=None):
         elif toc_last is not None and toc_last != n_arts:
             complete = "yo'q"
             issues.append(f"mundarijada oxirgi {toc_last}-modda, matnda {n_arts}-modda")
+        if content.select(".COMMENT_FOR_WARNING"):
+            complete = "yo'q"
         if missing:
             complete = "shubhali" if complete == "ha" else complete
             issues.append(f"matnda tushib qolgan modda raqamlari: {missing[:15]}")
@@ -468,12 +485,14 @@ def process(only, failed=None):
             "yuklangan_sana": date.fromtimestamp(html_path.stat().st_mtime).isoformat(),
             "uz_kuchga_kirgan": "; ".join(uz_force),
             "qoshilish_qarori_url": "; ".join(dict.fromkeys(accession)),
+            "qatlam": layer, "soha": domain, "izoh": "",
         })
+        rows[-1].update(OVERRIDES.get(num, {}))
         report.append(dict(num=num, name=name, words=words, complete=complete, toc=toc_last,
                            text_last=n_arts, unofficial="ha" if unofficial else "yo'q", issues=issues))
 
     write_sources(rows)
-    write_removed(removed, {f"{n}_{m}.txt" for n, m, _ in DOCS if not only or n in only})
+    write_removed(removed, {f"{d[0]}_{d[1]}.txt" for d in DOCS if not only or n in only})
     print_report(report)
 
 
