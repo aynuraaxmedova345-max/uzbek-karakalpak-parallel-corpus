@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-10-23T13:49:32+00:00",
+  "scanned_dirs": [
+    "input",
+    "dictionaries"
+  ],
+  "files": [
+    {
+      "path": "github:aynuraaxmedova345-max/uzwordnet-explorer@main:application/uzwordnet_rc1_1.xlsx",
+      "file_name": "uzwordnet_rc1_1.xlsx",
+      "size_bytes": 6950238,
+      "sha256": "f6f19d56c238852fd8d508c189b07ba3370d39494e4479c60d11bcb3c6ad38d0",
+      "sheets": [
+        {
+          "sheet": "Release Summary",
+          "nonempty_rows_incl_first_row": 17,
+          "data_rows_if_first_row_is_header": 16,
+          "first_row": [
+            "UzWordNet Explorer Dataset RC1.1",
+            null
+          ]
+        },
+        {
+          "sheet": "Synsets",
+          "nonempty_rows_incl_first_row": 15819,
+          "data_rows_if_first_row_is_header": 15818,
+          "first_row": [
+            "synset_id",
+            "pos",
+            "definition",
+            "definition_status",
+            "domain",
+            "release_tier",
+            "validation_status",
+            "confidence",
+            "source_record_ids",
+            "candidate_synset_key"
+          ]
+        },
+        {
+          "sheet": "Senses",
+          "nonempty_rows_incl_first_row": 26885,
+          "data_rows_if_first_row_is_header": 26884,
+          "first_row": [
+            "sense_id",
+            "synset_id",
+            "lemma",
+            "normalized_lemma",
+            "script",
+            "pos",
+            "sense_number",
+            "release_tier",
+            "validation_status",
+            "confidence",
+            "source_dataset",
+            "source_file",
+            "source_sheet",
+            "source_row",
+            "candidate_sense_key",
+            "style"
+          ]
+        },
+        {
+          "sheet": "Relations",
+          "nonempty_rows_incl_first_row": 266,
+          "data_rows_if_first_row_is_header": 265,
+          "first_row": [
+            "source_synset_id",
+            "target_synset_id",
+            "relation_type",
+            "direction",
+            "confidence",
+            "release_tier",
+            "validation_status",
+            "source_dataset",
+            "source_sheet",
+            "source_row",
+            "source_term",
+            "target_term",
+            "mapping_key",
+            "relation_id"
+          ]
+        },
+        {
+          "sheet": "Examples",
+          "nonempty_rows_incl_first_row": 15675,
+          "data_rows_if_first_row_is_header": 15674,
+          "first_row": [
+            "example_id",
+            "synset_id",
+            "example_text",
+            "release_tier",
+            "validation_status",
+            "source_record_ids",
+            "classification",
+            "classification_reason",
+            "display_as_example"
+          ]
+        },
+        {
+          "sheet": "Ontology",
+          "nonempty_rows_incl_first_row": 150,
+          "data_rows_if_first_row_is_header": 149,
+          "first_row": [
+            "ontology_annotation_id",
+            "sense_id",
+            "synset_id",
+            "ontology_concept",
+            "ontology_category",
+            "domain",
+            "original_category",
+            "release_tier",
+            "validation_status",
+            "source_file",
+            "source_sheet",
+            "source_row"
+          ]
+        },
+        {
+          "sheet": "Derivational",
+          "nonempty_rows_incl_first_row": 10,
+          "data_rows_if_first_row_is_header": 9,
+          "first_row": [
+            "derivational_relation_id",
+            "root_sense_id",
+            "form_sense_id",
+            "derivational_root",
+            "derivational_form",
+            "derivational_affix",
+            "release_tier",
+            "validation_status",
+            "source_file",
+            "source_sheet",
+            "source_row"
+          ]
+        },
+        {
+          "sheet": "Search Index",
+          "nonempty_rows_incl_first_row": 26885,
+          "data_rows_if_first_row_is_header": 26884,
+          "first_row": [
+            "normalized_lemma",
+            "display_lemma",
+            "sense_id",
+            "synset_id",
+            "pos",
+            "definition_preview",
+            "synonyms",
+            "relation_count",
+            "release_tier",
+            "validation_status"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "github:aynuraaxmedova345-max/uzbek-karakalpak-parallel-corpus@claude/quirky-einstein-103ocw:data/source/izohli_lugat_clean.xlsx",
+      "file_name": "izohli_lugat_clean.xlsx",
+      "size_bytes": 8793276,
+      "sha256": "8f4e0e3cead4be7f03d785497cbd23981dd134bcd0f195e088eea0027d91bbf0",
+      "sheets": [
+        {
+          "sheet": "Izohli lugat",
+          "nonempty_rows_incl_first_row": 46609,
+          "data_rows_if_first_row_is_header": 46608,
+          "first_row": [
+            "So‘z",
+            "Ma‘no raqami",
+            "Gloss (izoh)",
+            "Kontekst misoli",
+            "POS",
+            "POS_manba",
+            "manba_muallif",
+            "etimologiya",
+            "uslub_belgisi",
+            "id",
+            "entry_index",
+            "homonym",
+            "merged_entry",
+            "needs_review",
+            "needs_review_sabab"
+          ]
+        },
+        {
+          "sheet": "Junk (chiqarilgan)",
+          "nonempty_rows_incl_first_row": 3,
+          "data_rows_if_first_row_is_header": 2,
+          "first_row": [
+            "So‘z",
+            "Ma‘no raqami",
+            "Gloss (izoh)",
+            "Kontekst misoli",
+            "POS",
+            "POS_manba",
+            "manba_muallif",
+            "etimologiya",
+            "uslub_belgisi",
+            "id",
+            "entry_index",
+            "homonym",
+            "merged_entry",
+            "needs_review",
+            "needs_review_sabab",
+            "junk_sabab"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "github:aynuraaxmedova345-max/sinset-tekshiruvchi@main:samples/Namuna_Talaba_201.xlsx",
+      "file_name": "Namuna_Talaba_201.xlsx",
+      "size_bytes": 18632,
+      "sha256": "eb1bab2934aa30298798e2686dcd7392e0c6f6d9232d0a54c7a67c082b6d7c2a",
+      "sheets": [
+        {
+          "sheet": "sinset",
+          "nonempty_rows_incl_first_row": 71,
+          "data_rows_if_first_row_is_header": 70,
+          "first_row": [
+            "N",
+            "So‘z",
+            "Sinonimlari",
+            "Izohi (gloss)",
+            "Misol gap",
+            "Turkumi",
+            "Sohasi",
+            "Antonimi",
+            "Giperonimi",
+            "Giponimlari",
+            "Xolonimi",
+            "Meronimi",
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "project_dirs_state": {
+    "input/": "bo'sh",
+    "dictionaries/": "bo'sh",
+    "extracted/": "bo'sh (pilot bajarilmadi)",
+    "output/": "shu hisobotlar"
+  },
+  "files_location_note": "files[] dagi 3 fayl loyiha papkasida emas; ular GitHub repolaridan topildi va faqat o'qildi. Nusxa olinmadi: uzwordnet_rc1_1.xlsx shaxsiy (private) repodan, bu repo esa ochiq (public).",
+  "expected_but_missing": [
+    {
+      "item": "UzWordNet Excel dataseti #1 (asl)",
+      "status": "topilmadi",
+      "hint": "RC1.1 manba sifatida ko'rsatadi: Sinset_UzWordNet_11178(23.05)(1).xlsx (13 304 sense)"
+    },
+    {
+      "item": "UzWordNet Excel dataseti #2 (asl)",
+      "status": "topilmadi / qaysi fayl ekani noma'lum",
+      "hint": "RC1.1 manbalari: I. Sinset lugati(1).xlsx, II. Giper-giponim lug'ati(1).xlsx, III. Xolonim-meronim(1).xlsx, IV. Polisemiya lug'ati(1).xlsx, V. Antonim lug'ati(1).xlsx, UzWordNet_Giperonim_Giponim_Eliboyeva_Shaxnoza_!!!(1).xlsx, Polisemiya lug'ati.xlsx, Giper-giponim lug'ati.xlsx"
+    },
+    {
+      "item": "Audit notebook (.ipynb)",
+      "status": "topilmadi",
+      "hint": "Hech bir mavjud repoda .ipynb yo'q"
+    },
+    {
+      "item": "Izohli lug'at PDF, 1-jild",
+      "status": "topilmadi"
+    },
+    {
+      "item": "Izohli lug'at PDF, 2-5-jildlar",
+      "status": "topilmadi"
+    }
+  ]
+}

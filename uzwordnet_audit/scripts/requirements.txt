@@ -1,0 +1,7 @@
+pdfplumber>=0.11
+pypdf>=4
+openpyxl>=3.1
+# ixtiyoriy: xotirani aniqroq o'lchash uchun
+psutil
+# ixtiyoriy: faqat selftest_synthetic.py uchun
+reportlab

@@ -1,0 +1,9 @@
+# Asl va shaxsiy fayllar ochiq repoga commit qilinmasin
+input/*
+dictionaries/*
+!input/.gitkeep
+!dictionaries/.gitkeep
+extracted/**/page_images/
+extracted/**/ocr_test/
+*.png
+__pycache__/
