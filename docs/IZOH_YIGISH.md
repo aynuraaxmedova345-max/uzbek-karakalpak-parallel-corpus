@@ -65,6 +65,19 @@ python scripts/comments/collect_comments.py file --input izohlar.jsonl --text-co
 python scripts/comments/collect_comments.py file --input izohlar.txt   # har qatorda bitta izoh
 ```
 
+### 4. GitHub'dagi ochiq datasetlar
+
+Ochiq datasetlardagi haqiqiy foydalanuvchi izohlarini (Google Play sharhlari va
+restoran sharhlari) yuklab, leksikon bo'yicha tahlil qilish:
+
+```bash
+python scripts/comments/fetch_public_comments.py --out data/comments/ochiq_izohlar.csv
+python scripts/comments/collect_comments.py file --input data/comments/ochiq_izohlar.csv \
+    --out data/comments/izohlar_mosliklar.csv --min-length 3
+```
+
+Tayyor natijalar `data/comments/` papkasida (qarang: `data/comments/README.md`).
+
 ### Foydali parametrlar
 
 | Parametr | Vazifasi |

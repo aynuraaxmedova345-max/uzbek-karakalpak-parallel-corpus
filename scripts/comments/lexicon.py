@@ -105,12 +105,18 @@ _VERB_TAIL = "(?:" + "|".join(sorted(
     asan amiz asiz ay sa gun guncha gani ish ishdi tir dir il in
     ydi yman ysan""".split(), key=len, reverse=True)) + r")[\w']*"
 
+# Qisqa fe'l o'zaklari uchun faqat aniq fe'l shakllari (qiy+in != qiymoq).
+_VERB_TAIL_SHORT = "(?:" + "|".join(sorted(
+    """ma mo may mas di gan kan qan ib yap ayap ayotgan yotgan adi aman
+    asan amiz asiz ay sa gani ydi yman ysan""".split(), key=len, reverse=True)) + r")[\w']*"
+
 _MIN_STEM = 3
 
 # Ko'chma so'z sifatida hisoblanmaydigan ko'p uchraydigan vazifadosh so'zlar.
 _FUNCTION_WORDS = re.compile(
     r"^(?:bu|shu|u|ul|o'sha|ana|mana|men|sen|biz|siz|ular|bular|shular|"
-    r"nima|kim|qanday|qayer|hamma|o'z|bir|ikki|uch|har|hech)"
+    r"nima|kim|qanday|qayer|hamma|o'z|bir|ikki|uch|har|hech|bor|yo'q|"
+    r"ichi?(?:da|dan|ga)|ichi)"  # "dastur ichida" - ko'makchi, ko'chma emas
     + _NOUN_TAIL + "$"
 )
 
@@ -145,10 +151,11 @@ def _strip_suffixes(word: str, last: bool) -> tuple[str, bool]:
     return stem, False
 
 
-def _stem_regex(stem: str, alternate: bool = True) -> str:
+def _stem_regex(stem: str, alternate: bool = True, strict_apostrophe: bool = False) -> str:
     """O'zakni regexga aylantiradi.
 
-    * leksikondagi o' / g' matnda ' siz yozilsa ham mos keladi;
+    * leksikondagi o' / g' matnda ' siz yozilsa ham mos keladi (yakka ko'chma
+      so'zlarda emas: o'chmoq != ochmoq);
     * otlarda oxirgi k/q -> g almashinuvi (yurak -> yuragi, qishloq -> qishlog'i).
     """
     tail = ""
@@ -156,7 +163,9 @@ def _stem_regex(stem: str, alternate: bool = True) -> str:
         stem, tail = stem[:-1], "(?:q|g'?)"
     elif alternate and len(_plain(stem)) >= 3 and stem[-1] == "k":
         stem, tail = stem[:-1], "[kg]"
-    body = re.escape(stem).replace("o'", "o'?").replace("g'", "g'?")
+    body = re.escape(stem)
+    if not strict_apostrophe:
+        body = body.replace("o'", "o'?").replace("g'", "g'?")
     return body + tail
 
 
@@ -287,10 +296,13 @@ def load_kochma(path: Path = KOCHMA_PATH, include_aux: bool = False, gap: int = 
                 stems.append((w, False))
         parts = []
         for stem, is_verb in stems:
+            # Bitta so'zda kontekst yo'q, shuning uchun o' / g' aniq bo'lishi shart.
+            strict = len(stems) == 1
             if is_verb:
-                parts.append(_START + _stem_regex(stem, alternate=False) + _VERB_TAIL + _END)
+                tail = _VERB_TAIL_SHORT if len(_plain(stem)) <= 3 else _VERB_TAIL
+                parts.append(_START + _stem_regex(stem, False, strict) + tail + _END)
             else:
-                parts.append(_START + _stem_regex(stem) + _NOUN_TAIL + _END)
+                parts.append(_START + _stem_regex(stem, True, strict) + _NOUN_TAIL + _END)
         meanings = " | ".join(
             f"{r.get('ma‘no_raqami', '')}) {_short(r.get('kochma_izoh') or '', 150)}"
             for r in rows

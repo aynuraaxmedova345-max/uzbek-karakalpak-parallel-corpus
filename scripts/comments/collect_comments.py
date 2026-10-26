@@ -37,7 +37,7 @@ from lexicon import LexiconMatcher  # noqa: E402
 
 FIELDS = [
     "izoh_id", "manba", "manba_id", "manba_nomi", "muallif", "sana", "layklar",
-    "izoh_matni", "leksikon", "birlik", "topilgan_qism", "izoh_manosi",
+    "izoh_matni", "sentiment", "leksikon", "birlik", "topilgan_qism", "izoh_manosi",
     "uslub", "manba_sahifa", "tekshiruv_belgisi",
 ]
 
@@ -152,8 +152,10 @@ def file_comments(args) -> Iterator[dict]:
                 sys.exit(f"'{args.text_column}' ustuni topilmadi. Mavjud: {reader.fieldnames}")
             for i, row in enumerate(reader, 1):
                 yield {
-                    "id": row.get(args.id_column) or str(i), "source": args.source_name,
-                    "source_id": path.name, "source_title": "",
+                    "id": row.get(args.id_column) or str(i),
+                    "source": row.get("source") or args.source_name,
+                    "source_id": path.name, "source_title": row.get("dataset", ""),
+                    "sentiment": row.get("sentiment", ""),
                     "author": row.get("author", ""), "date": row.get("date", ""),
                     "likes": row.get("likes", ""), "text": row.get(args.text_column, ""),
                 }
@@ -233,7 +235,7 @@ def run(comments: Iterable[dict], matcher: LexiconMatcher, args) -> None:
                     "manba_nomi": c.get("source_title", ""),
                     "muallif": anonymize(c.get("author", ""), args.keep_author),
                     "sana": c.get("date", ""), "layklar": c.get("likes", ""),
-                    "izoh_matni": text, "leksikon": m.lexicon, "birlik": m.item,
+                    "izoh_matni": text, "sentiment": c.get("sentiment", ""), "leksikon": m.lexicon, "birlik": m.item,
                     "topilgan_qism": m.span, "izoh_manosi": m.meaning,
                     "uslub": m.extra.get("uslub", ""),
                     "manba_sahifa": m.extra.get("manba_sahifa", ""),

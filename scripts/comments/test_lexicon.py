@@ -45,6 +45,10 @@ hasnt("birga, dunyoda", "bir dunyo")                  # tinish belgisi orqali em
 hasnt("bularni ko'rdim", "bulamoq", "kochma")         # vazifadosh so'z
 hasnt("uch kishi keldi", "uchmoq", "kochma")          # uch (son) != uchmoq
 
+hasnt("rasmlarni ochishda muammo", "oʻchmoq", "kochma")  # ochmoq != o'chmoq
+hasnt("bu juda qiyin ish", "qiymoq", "kochma")           # qiyin != qiymoq
+hasnt("dastur ichida kamchilik bor", "", "kochma")      # ko'makchi / bor
+
 # Ko'chma so'zlar
 assert "chigal" in items("hammasi chigal bo'lib ketdi", "kochma")
 
