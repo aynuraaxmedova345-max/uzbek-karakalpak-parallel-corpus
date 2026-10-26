@@ -7,6 +7,7 @@ kompyuterda ishga tushiring (qarang: `docs/IZOH_YIGISH.md`).
 
 | Fayl | Mazmuni |
 |---|---|
+| `izohlar.xlsx` | **annotatsiya uchun Excel**: Umumiy (statistika), Iboralar, Ko'chma so'zlar, Barcha izohlar (`scripts/comments/export_excel.py`) |
 | `ochiq_izohlar.csv` | barcha manba izohlari (5 370 ta, takrorlarsiz): `id,text,source,sentiment,dataset` |
 | `izohlar_mosliklar.csv` | leksikondagi birlik topilgan izohlar, har moslik bitta qator |
 | `frazeologik_izohlar.csv` | faqat frazeologik iboralar (432 moslik, 399 izoh) |
