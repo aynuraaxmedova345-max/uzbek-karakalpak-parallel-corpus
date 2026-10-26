@@ -78,6 +78,15 @@ python scripts/comments/collect_comments.py file --input data/comments/ochiq_izo
 
 Tayyor natijalar `data/comments/` papkasida (qarang: `data/comments/README.md`).
 
+### 5. Sun'iy dataset
+
+Leksikon ma'nolari asosida qo'lda yozilgan 1 000 ta frazeologik va 1 000 ta
+ko'chma ma'noli izoh: `data/synthetic/` (qarang: `data/synthetic/README.md`).
+
+```bash
+python scripts/comments/build_synthetic.py --n 1000
+```
+
 ### Foydali parametrlar
 
 | Parametr | Vazifasi |

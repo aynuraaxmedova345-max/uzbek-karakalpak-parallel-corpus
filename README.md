@@ -88,6 +88,11 @@ dictionary (`data/lexicons/frazeologik_lugat.csv`) or the figurative-meaning lex
 apostrophes and Uzbek suffixes. See [docs/IZOH_YIGISH.md](docs/IZOH_YIGISH.md)
 (in Uzbek) for usage.
 
+`data/synthetic/` contains a synthetic dataset of 2,000 hand-written comments:
+1,000 using phraseological units and 1,000 using words in their figurative sense,
+each labeled with sentiment, emotion and platform style (see
+[data/synthetic/README.md](data/synthetic/README.md)).
+
 ```bash
 pip install -r scripts/comments/requirements.txt
 python scripts/comments/collect_comments.py youtube --search "o'zbek film" --videos-per-query 20

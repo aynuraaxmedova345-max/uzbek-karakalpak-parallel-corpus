@@ -140,6 +140,10 @@ def _strip_suffixes(word: str, last: bool) -> tuple[str, bool]:
         for end in _VERB_ENDINGS:
             if word.endswith(end) and len(_plain(word)) - len(end) >= _MIN_STEM:
                 return word[: -len(end)], True
+        # Qisqa fe'llar: yemoq, olmoq, etmoq (o'zak 2 harf, iboradagi kontekst yetarli).
+        for end in ("maslik", "moq", "mak"):
+            if word.endswith(end) and len(_plain(word)) - len(end) >= 2:
+                return word[: -len(end)], True
     stem = word
     for _ in range(2):
         for end in _NOUN_SUFFIXES:
@@ -185,7 +189,10 @@ def _clean_phrase(phrase: str) -> list[tuple[str, bool]]:
         # yurag(i)ga -> yurag, do'ppi(si)ni -> do'ppi
         core = re.split(r"[\(\[]", raw, maxsplit=1)[0]
         core = re.sub(r"[\]\)\[\(]", "", core)
-        core = normalize(core).strip(".,;:!«»\"'")
+        tail_apos = bool(core) and core[-1] in "'\u2018\u2019\u02bb\u02bc`"
+        core = normalize(core).strip(".,;:!«»\"").lstrip("'")
+        if tail_apos and core and core[-1] in "og":  # dimog'(i) -> dimog'
+            core += "'"
         if not core:
             continue
         if "(" in raw or "[" in raw:
@@ -300,6 +307,9 @@ def load_kochma(path: Path = KOCHMA_PATH, include_aux: bool = False, gap: int = 
             strict = len(stems) == 1
             if is_verb:
                 tail = _VERB_TAIL_SHORT if len(_plain(stem)) <= 3 else _VERB_TAIL
+                if len(_plain(stem)) >= 5 and stem[-1] in "aeiou":
+                    # unli bilan tugagan o'zak: yasha-b, chegarala-sh, porla-r
+                    tail = "(?:" + tail + r"|[bsr][\w']*)"
                 parts.append(_START + _stem_regex(stem, False, strict) + tail + _END)
             else:
                 parts.append(_START + _stem_regex(stem, True, strict) + _NOUN_TAIL + _END)
