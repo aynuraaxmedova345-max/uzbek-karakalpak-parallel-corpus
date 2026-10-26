@@ -40,13 +40,20 @@ uzbek-karakalpak-parallel-corpus/
 │   │   ├── geografiya_darslik.json
 │   │   ├── xabarlar.json
 │   │   └── parallel_corpus_all.json
+│   ├── lexicons/
+│   │   ├── frazeologik_lugat.csv
+│   │   └── kochma_leksikon.csv
 │   └── source/
 │       └── parallel_corpus_dataset.xlsx
 ├── docs/
 │   ├── DATA_CARD.md
 │   └── project_report.docx
 ├── scripts/
-│   └── validate_dataset.py
+│   ├── validate_dataset.py
+│   └── comments/
+│       ├── collect_comments.py
+│       ├── lexicon.py
+│       └── test_lexicon.py
 ├── CITATION.cff
 ├── DATA_LICENSE.md
 ├── LICENSE
@@ -70,6 +77,20 @@ To validate the normalized data:
 
 ```bash
 python scripts/validate_dataset.py
+```
+
+## Collecting comments with idioms and figurative words
+
+`scripts/comments/collect_comments.py` collects social-media comments (YouTube,
+Telegram, or any CSV/JSONL/TXT file) that contain entries from the phraseological
+dictionary (`data/lexicons/frazeologik_lugat.csv`) or the figurative-meaning lexicon
+(`data/lexicons/kochma_leksikon.csv`). Matching handles Cyrillic text, missing
+apostrophes and Uzbek suffixes. See [docs/IZOH_YIGISH.md](docs/IZOH_YIGISH.md)
+(in Uzbek) for usage.
+
+```bash
+pip install -r scripts/comments/requirements.txt
+python scripts/comments/collect_comments.py youtube --search "o'zbek film" --videos-per-query 20
 ```
 
 ## Suggested citation

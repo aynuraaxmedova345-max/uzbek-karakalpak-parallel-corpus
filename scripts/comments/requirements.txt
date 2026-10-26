@@ -1,0 +1,6 @@
+# YouTube izohlari (API kaliti shart emas)
+youtube-comment-downloader>=0.1.76
+# YouTube qidiruvi va kanal videolari ro'yxati (--search / --channel)
+yt-dlp>=2024.1.0
+# Telegram kanal izohlari (ixtiyoriy)
+telethon>=1.36
